@@ -21,6 +21,7 @@
             <div class="tabs">
                 <button class="tab-btn active" data-target="randomizer-tab">RANDOMIZER</button>
                 <button class="tab-btn" data-target="shop-tab">SHOP</button>
+                <button class="tab-btn" data-target="abilities-tab">ABILITIES</button>
             </div>
         </header>
 
@@ -96,6 +97,25 @@
             </aside>
             <div class="shop-content" id="shopContent">
                 <!-- Shop tiers will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="abilities-tab" class="tab-content">
+        <section class="controls" style="margin-bottom: 2rem;">
+            <h2 class="section-title">Ability Leveling Generator</h2>
+            <p style="color: var(--text-muted); text-align: center; margin-bottom: 1.5rem; max-width: 600px; line-height: 1.5;">
+                Generate a completely random 32 AP upgrade path. 4 abilities, 3 tiers each (1 AP, 2 AP, 5 AP).
+            </p>
+            <button id="generateBuildBtn" class="btn-roll">
+                <span class="roll-text">GENERATE BUILD</span>
+                <span class="shimmer"></span>
+            </button>
+        </section>
+        
+        <div class="ability-path" id="abilityPath">
+            <div class="idle-state" style="position: relative; height: 200px;">
+                <p>AWAITING INPUT...</p>
             </div>
         </div>
     </div>

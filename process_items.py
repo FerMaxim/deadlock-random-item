@@ -42,13 +42,17 @@ for item in raw_data:
     else: # Spirit
         img_url = f"https://placehold.co/200x250/271d2b/b976d9?text={text_encoded}"
 
+    activation = item.get('activation', 'passive')
+    is_active = activation in ['press', 'instant_cast_toggle', 'instant_cast']
+
     processed.append({
         "id": item.get('id'),
         "name": name,
         "price": cost,
         "category": slot_type,
         "description": desc,
-        "image": img_url
+        "image": img_url,
+        "isActive": is_active
     })
 
 # Write to data.json

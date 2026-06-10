@@ -99,16 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
     rollButton.addEventListener('click', () => {
         if (isRolling || itemsDatabase.length === 0) return;
         
+        // Count how many active items we already have
+        let activeCount = itemsDatabase.filter(i => exhaustedItems.includes(i.id) && i.isActive).length;
+        const maxActiveReached = activeCount >= 4;
+        
         // Filter items by price, type, and exclude exhausted ones
         let pool = itemsDatabase.filter(item => {
             const matchPrice = currentCategoryPrice === 'all' || item.price == currentCategoryPrice;
             const matchType = currentCategoryType === 'all' || item.category === currentCategoryType;
             const notExhausted = !exhaustedItems.includes(item.id);
-            return matchPrice && matchType && notExhausted;
+            const activeLimitOk = !maxActiveReached || !item.isActive;
+            return matchPrice && matchType && notExhausted && activeLimitOk;
         });
 
         if (pool.length === 0) {
-            alert('Items in this category have run out! (No repeats rule)');
+            if (maxActiveReached) {
+                alert('No items available! You have reached the maximum of 4 active items, and no passive items are left in this category.');
+            } else {
+                alert('Items in this category have run out! (No repeats rule)');
+            }
             return;
         }
 
@@ -229,5 +238,70 @@ document.addEventListener('DOMContentLoaded', () => {
             
             shopContainer.appendChild(tierBlock);
         });
+    }
+
+    // 4. Ability Randomizer Logic
+    const generateBuildBtn = document.getElementById('generateBuildBtn');
+    const abilityPathContainer = document.getElementById('abilityPath');
+
+    if (generateBuildBtn) {
+        generateBuildBtn.addEventListener('click', generateAbilityBuild);
+    }
+
+    function generateAbilityBuild() {
+        generateBuildBtn.style.pointerEvents = 'none';
+        generateBuildBtn.style.opacity = '0.5';
+        
+        // 4 abilities, each has 3 tiers. State tracks current tier for each (0 to 3)
+        // 0 = locked/no upgrades, 1 = T1, 2 = T2, 3 = T3
+        let abilities = [
+            { name: 'Skill 1', tier: 0 },
+            { name: 'Skill 2', tier: 0 },
+            { name: 'Skill 3', tier: 0 },
+            { name: 'Ultimate', tier: 0 }
+        ];
+        
+        let path = [];
+        let costMap = { 1: 1, 2: 2, 3: 5 }; // T1=1, T2=2, T3=5 AP
+        
+        for (let i = 0; i < 12; i++) {
+            // Find abilities that can still be upgraded (tier < 3)
+            let available = abilities.filter(a => a.tier < 3);
+            
+            // Pick a random ability to upgrade
+            let pick = available[Math.floor(Math.random() * available.length)];
+            pick.tier++;
+            
+            path.push({
+                name: pick.name,
+                tier: pick.tier,
+                cost: costMap[pick.tier]
+            });
+        }
+        
+        // Render
+        abilityPathContainer.innerHTML = '';
+        
+        path.forEach((step, index) => {
+            const stepDiv = document.createElement('div');
+            stepDiv.className = 'path-step';
+            stepDiv.style.animationDelay = `${index * 0.1}s`;
+            
+            stepDiv.innerHTML = `
+                <div class="step-number">${index + 1}</div>
+                <div class="step-details">
+                    <span class="step-ability">${step.name}</span>
+                    <span class="step-tier tier-${step.tier}">Tier ${step.tier}</span>
+                </div>
+                <div class="step-cost">${step.cost} AP</div>
+            `;
+            
+            abilityPathContainer.appendChild(stepDiv);
+        });
+        
+        setTimeout(() => {
+            generateBuildBtn.style.pointerEvents = 'auto';
+            generateBuildBtn.style.opacity = '1';
+        }, 1200);
     }
 });
