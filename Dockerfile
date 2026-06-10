@@ -7,6 +7,14 @@ ENV PYTHONUNBUFFERED 1
 # Рабочая директория
 WORKDIR /app
 
+# Установка системных зависимостей для сборки C-расширений (pycairo и др.)
+RUN apt-get update && apt-get install -y \
+    gcc \
+    libcairo2-dev \
+    pkg-config \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # Установка зависимостей
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
