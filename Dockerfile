@@ -14,5 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Копирование проекта
 COPY . /app/
 
+# Сборка статических файлов
+RUN python manage.py collectstatic --noinput
+
 # Запуск ASGI-сервера Daphne
 CMD ["daphne", "-b", "0.0.0.0", "-p", "80", "deadlock_project.asgi:application"]
