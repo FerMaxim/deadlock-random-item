@@ -203,7 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < 15; i++) {
                 if (i < itemsArr.length) {
                     const item = itemsArr[i];
-                    html += `<div class="inventory-slot filled cat-${item.category.toLowerCase()}"><span class="slot-number">${i+1}</span><img src="${item.image}" title="${item.name}"></div>`;
+                    html += `<div class="inventory-slot filled cat-${item.category.toLowerCase()}">
+                                <span class="slot-number">${i+1}</span>
+                                <img src="${item.image}" title="${item.name}">
+                                <div class="h-price" style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.8); text-align: center; font-size: 0.55rem; font-family: var(--font-ui); padding: 1px 0; font-weight: bold; color: var(--color-${item.category.toLowerCase()});">${item.price}</div>
+                             </div>`;
                 } else {
                     html += `<div class="inventory-slot"><span class="slot-number">${i+1}</span></div>`;
                 }
@@ -388,6 +392,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'join',
                 nickname: myNickname
             }));
+            
+            if (window.partyPingInterval) clearInterval(window.partyPingInterval);
+            window.partyPingInterval = setInterval(() => {
+                if (partySocket.readyState === WebSocket.OPEN) {
+                    partySocket.send(JSON.stringify({ type: 'ping' }));
+                }
+            }, 3000);
         };
         
         partySocket.onmessage = function(e) {
@@ -396,12 +407,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         partySocket.onclose = function(e) {
+            if (window.partyPingInterval) clearInterval(window.partyPingInterval);
             console.error('Party socket closed unexpectedly');
             leaveRoom();
         };
     }
 
     function leaveRoom() {
+        if (window.partyPingInterval) clearInterval(window.partyPingInterval);
         if (partySocket) {
             partySocket.close();
             partySocket = null;
