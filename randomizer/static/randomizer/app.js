@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let exhaustedItems = []; // Global history to prevent ANY repeats
 
     const rollButton = document.getElementById('rollButton');
+    const rollAllButton = document.getElementById('rollAllButton');
     const priceButtons = document.querySelectorAll('.price-group .btn');
     const typeButtons = document.querySelectorAll('.type-group .btn');
     const itemShowcase = document.getElementById('itemShowcase');
@@ -106,6 +107,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startRollAnimation(pool);
     });
+
+    if (rollAllButton) {
+        rollAllButton.addEventListener('click', () => {
+            if (isRolling || itemsDatabase.length === 0) return;
+            
+            let currentItemsCount = playersState[localPlayerNickname].items.length;
+            let itemsNeeded = 15 - currentItemsCount;
+            if (itemsNeeded <= 0) return;
+
+            let pickedItems = [];
+
+            for (let i = 0; i < itemsNeeded; i++) {
+                let activeCount = itemsDatabase.filter(item => exhaustedItems.includes(item.id) && item.isActive).length;
+                const maxActiveReached = activeCount >= 4;
+                
+                let pool = itemsDatabase.filter(item => {
+                    const matchPrice = currentCategoryPrice === 'all' || item.price == currentCategoryPrice;
+                    const matchType = currentCategoryType === 'all' || item.category === currentCategoryType;
+                    const notExhausted = !exhaustedItems.includes(item.id);
+                    const activeLimitOk = !maxActiveReached || !item.isActive;
+                    return matchPrice && matchType && notExhausted && activeLimitOk;
+                });
+
+                if (pool.length === 0) break;
+
+                const winner = pool[Math.floor(Math.random() * pool.length)];
+                exhaustedItems.push(winner.id);
+                pickedItems.push(winner);
+                playersState[localPlayerNickname].items.push(winner);
+                addToHistory(winner);
+            }
+
+            if (pickedItems.length > 0) {
+                renderShowcaseContent(pickedItems[pickedItems.length - 1], false);
+                updatePlayerCard(localPlayerNickname, true, playersState[localPlayerNickname]);
+                
+                if (typeof partySocket !== 'undefined' && partySocket && partySocket.readyState === WebSocket.OPEN) {
+                    partySocket.send(JSON.stringify({
+                        type: 'sync',
+                        nickname: myNickname,
+                        state: playersState[localPlayerNickname]
+                    }));
+                }
+            } else {
+                alert('No more items available based on current limits/filters.');
+            }
+        });
+    }
 
     function startRollAnimation(pool) {
         isRolling = true;

@@ -81,12 +81,16 @@
                             <button class="btn btn-type type-spirit" data-type="Spirit">Spirit</button>
                         </div>
                     </div>
-                    
-                    <button id="rollButton" class="btn-roll">
-                        <span class="roll-text">ROLL ITEM</span>
-                        <span class="shimmer"></span>
-                    </button>
-                </section>
+                    <div style="display: flex; gap: 10px; width: 100%;">
+                        <button id="rollButton" class="btn-roll" style="flex: 2;">
+                            <span class="roll-text">ROLL ITEM</span>
+                            <span class="shimmer"></span>
+                        </button>
+                        <button id="rollAllButton" class="btn-roll" style="flex: 1; background: var(--color-spirit); color: #fff;">
+                            <span class="roll-text">ROLL ALL</span>
+                            <span class="shimmer"></span>
+                        </button>
+                    </div>
 
                 <!-- 3. Ability Timeline Bottom -->
                 <section class="controls panel-glass" style="margin-top: 15px;">
