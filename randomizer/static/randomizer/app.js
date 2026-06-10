@@ -457,6 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handlePartyMessage(data) {
+        if (data.type === 'ping') return;
         if (data.nickname === myNickname) return; // Ignore my own messages
         
         if (data.type === 'leave') {
