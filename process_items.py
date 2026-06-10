@@ -1,5 +1,11 @@
 import json
 import urllib.parse
+import os
+import urllib.request
+
+# Create images directory
+img_dir = os.path.join('randomizer', 'static', 'randomizer', 'images', 'items')
+os.makedirs(img_dir, exist_ok=True)
 
 with open('api_response.json', 'r') as f:
     raw_data = json.load(f)
@@ -31,24 +37,41 @@ for item in raw_data:
     desc = " | ".join(desc_lines) if desc_lines else "No specific description."
 
     name = item.get('name', 'Unknown')
+    item_id = item.get('id')
     
-    # Get image from API or use placeholder
-    if item.get('image'):
-        img_url = item.get('image')
+    # Get correct shop image from API
+    remote_img = item.get('shop_image') or item.get('image')
+    img_url = ""
+    
+    if remote_img:
+        local_img_path = os.path.join(img_dir, f"{item_id}.png")
+        if not os.path.exists(local_img_path):
+            try:
+                print(f"Downloading {name}...")
+                req = urllib.request.Request(remote_img, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req) as response:
+                    with open(local_img_path, 'wb') as out_file:
+                        out_file.write(response.read())
+            except Exception as e:
+                print(f"Failed to download image for {name}: {e}")
+        
+        # Whether it downloaded or already existed, point to the local file
+        img_url = f"/static/randomizer/images/items/{item_id}.png"
     else:
+        # Fallback to placehold.co
         text_encoded = urllib.parse.quote(name.replace(" ", "\\n"))
         if slot_type == "Weapon":
             img_url = f"https://placehold.co/200x250/2b2519/d3783a?text={text_encoded}"
         elif slot_type == "Vitality":
             img_url = f"https://placehold.co/200x250/192b1a/5ebd40?text={text_encoded}"
-        else: # Spirit
+        else:
             img_url = f"https://placehold.co/200x250/271d2b/b976d9?text={text_encoded}"
 
     activation = item.get('activation', 'passive')
     is_active = activation in ['press', 'instant_cast_toggle', 'instant_cast']
 
     processed.append({
-        "id": item.get('id'),
+        "id": item_id,
         "name": name,
         "price": cost,
         "category": slot_type,
@@ -57,8 +80,9 @@ for item in raw_data:
         "isActive": is_active
     })
 
-# Write to data.json
-with open('data.json', 'w') as f:
+# Write to data.json locally
+out_json_path = os.path.join('randomizer', 'static', 'randomizer', 'data.json')
+with open(out_json_path, 'w') as f:
     json.dump(processed, f, indent=2)
 
-print(f"Successfully processed {len(processed)} items with placehold images.")
+print(f"Successfully processed {len(processed)} items with local images.")
