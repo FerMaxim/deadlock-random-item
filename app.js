@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let itemsDatabase = [];
-    let currentCategoryPrice = '800'; // Default
+    let currentCategoryPrice = 'all'; // Default
     let currentCategoryType = 'all'; // 'all', 'Weapon', 'Vitality', 'Spirit'
     let isRolling = false;
     let exhaustedItems = []; // Global history to prevent ANY repeats
