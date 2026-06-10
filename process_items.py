@@ -32,15 +32,17 @@ for item in raw_data:
 
     name = item.get('name', 'Unknown')
     
-    # Generate placehold.co URL based on category
-    text_encoded = urllib.parse.quote(name.replace(" ", "\\n"))
-    
-    if slot_type == "Weapon":
-        img_url = f"https://placehold.co/200x250/2b2519/d3783a?text={text_encoded}"
-    elif slot_type == "Vitality":
-        img_url = f"https://placehold.co/200x250/192b1a/5ebd40?text={text_encoded}"
-    else: # Spirit
-        img_url = f"https://placehold.co/200x250/271d2b/b976d9?text={text_encoded}"
+    # Get image from API or use placeholder
+    if item.get('image'):
+        img_url = item.get('image')
+    else:
+        text_encoded = urllib.parse.quote(name.replace(" ", "\\n"))
+        if slot_type == "Weapon":
+            img_url = f"https://placehold.co/200x250/2b2519/d3783a?text={text_encoded}"
+        elif slot_type == "Vitality":
+            img_url = f"https://placehold.co/200x250/192b1a/5ebd40?text={text_encoded}"
+        else: # Spirit
+            img_url = f"https://placehold.co/200x250/271d2b/b976d9?text={text_encoded}"
 
     activation = item.get('activation', 'passive')
     is_active = activation in ['press', 'instant_cast_toggle', 'instant_cast']
