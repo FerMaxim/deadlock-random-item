@@ -252,30 +252,32 @@ document.addEventListener('DOMContentLoaded', () => {
         generateBuildBtn.style.pointerEvents = 'none';
         generateBuildBtn.style.opacity = '0.5';
         
-        // 4 abilities, each has 3 tiers. State tracks current tier for each (0 to 3)
-        // 0 = locked/no upgrades, 1 = T1, 2 = T2, 3 = T3
+        // 4 abilities, each has 4 stages: 0=locked, 1=unlocked, 2=T1, 3=T2, 4=T3
         let abilities = [
-            { name: 'Skill 1', tier: 0 },
-            { name: 'Skill 2', tier: 0 },
-            { name: 'Skill 3', tier: 0 },
-            { name: 'Ultimate', tier: 0 }
+            { name: 'Skill 1', stage: 0 },
+            { name: 'Skill 2', stage: 0 },
+            { name: 'Skill 3', stage: 0 },
+            { name: 'Ultimate', stage: 0 }
         ];
         
         let path = [];
-        let costMap = { 1: 1, 2: 2, 3: 5 }; // T1=1, T2=2, T3=5 AP
+        let costMap = { 1: 0, 2: 1, 3: 2, 4: 5 }; // stage -> AP cost
+        let labelMap = { 1: 'UNLOCK', 2: 'Tier 1', 3: 'Tier 2', 4: 'Tier 3' };
+        let classMap = { 1: 'tier-unlock', 2: 'tier-1', 3: 'tier-2', 4: 'tier-3' };
         
-        for (let i = 0; i < 12; i++) {
-            // Find abilities that can still be upgraded (tier < 3)
-            let available = abilities.filter(a => a.tier < 3);
+        for (let i = 0; i < 16; i++) {
+            // Find abilities that can still be upgraded (stage < 4)
+            let available = abilities.filter(a => a.stage < 4);
             
             // Pick a random ability to upgrade
             let pick = available[Math.floor(Math.random() * available.length)];
-            pick.tier++;
+            pick.stage++;
             
             path.push({
                 name: pick.name,
-                tier: pick.tier,
-                cost: costMap[pick.tier]
+                label: labelMap[pick.stage],
+                cssClass: classMap[pick.stage],
+                cost: costMap[pick.stage]
             });
         }
         
@@ -291,9 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="step-number">${index + 1}</div>
                 <div class="step-details">
                     <span class="step-ability">${step.name}</span>
-                    <span class="step-tier tier-${step.tier}">Tier ${step.tier}</span>
+                    <span class="step-tier ${step.cssClass}">${step.label}</span>
                 </div>
-                <div class="step-cost">${step.cost} AP</div>
+                <div class="step-cost" style="${step.cost === 0 ? 'color:#5ebd40;' : ''}">${step.cost} AP</div>
             `;
             
             abilityPathContainer.appendChild(stepDiv);
