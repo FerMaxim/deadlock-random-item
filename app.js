@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let rollInterval = setInterval(() => {
             const randomTempItem = pool[Math.floor(Math.random() * pool.length)];
             renderShowcaseContent(randomTempItem, true);
-        }, 50);
+        }, 30);
 
         setTimeout(() => {
             clearInterval(rollInterval);
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rollButton.style.cursor = 'pointer';
             rollButton.querySelector('.roll-text').innerText = "INITIALIZE RANDOMIZER";
             
-        }, 800);
+        }, 300);
     }
 
     function renderShowcaseContent(item, isTemp) {
