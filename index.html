@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Random Item Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob weapon-blob"></div>
+        <div class="blob vitality-blob"></div>
+        <div class="blob spirit-blob"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="glitch" data-text="DEADLOCK">DEADLOCK</h1>
+            <p class="subtitle">Item Randomizer & Shop</p>
+            <div class="tabs">
+                <button class="tab-btn active" data-target="randomizer-tab">RANDOMIZER</button>
+                <button class="tab-btn" data-target="shop-tab">SHOP</button>
+            </div>
+        </header>
+
+        <div id="randomizer-tab" class="tab-content active">
+            <section class="controls">
+                <h2 class="section-title">Select Soul Cost Category</h2>
+                <div class="button-group price-group">
+                    <button class="btn btn-tier1 active" data-price="800">
+                    <span class="price">800</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier2" data-price="1600">
+                    <span class="price">1600</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier3" data-price="3200">
+                    <span class="price">3200</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier4" data-price="6400">
+                    <span class="price">6400</span>
+                    <div class="glow"></div>
+                </button>
+            </div>
+            
+            <h2 class="section-title" style="margin-top: 10px;">Select Item Type</h2>
+            <div class="button-group type-group">
+                <button class="btn btn-type active" data-type="all">Any</button>
+                <button class="btn btn-type" data-type="Weapon" style="color: var(--color-weapon)">Weapon</button>
+                <button class="btn btn-type" data-type="Vitality" style="color: var(--color-vitality)">Vitality</button>
+                <button class="btn btn-type" data-type="Spirit" style="color: var(--color-spirit)">Spirit</button>
+            </div>
+            
+            <button id="rollButton" class="btn-roll">
+                <span class="roll-text">INITIALIZE RANDOMIZER</span>
+                <span class="shimmer"></span>
+            </button>
+        </section>
+
+        <section class="display-area">
+            <div class="item-showcase" id="itemShowcase">
+                <div class="idle-state">
+                    <div class="scanner-line"></div>
+                    <p>AWAITING INPUT...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="history-area">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="margin-bottom: 0;">Recent Items</h3>
+                <button id="newGameBtn" class="btn" style="padding: 0.4rem 1rem; font-size: 0.9rem; border-color: rgba(255,255,255,0.3); color: white;">
+                    &#x21bb; NEW GAME
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- History items will be populated here -->
+            </div>
+        </section>
+    </div>
+
+    <div id="shop-tab" class="tab-content">
+        <div class="shop-layout">
+            <aside class="shop-sidebar">
+                <button class="shop-cat-btn active" data-cat="all">★</button>
+                <button class="shop-cat-btn btn-weap" data-cat="Weapon">⯌</button>
+                <button class="shop-cat-btn btn-vit" data-cat="Vitality">✚</button>
+                <button class="shop-cat-btn btn-spir" data-cat="Spirit">☪</button>
+            </aside>
+            <div class="shop-content" id="shopContent">
+                <!-- Shop tiers will be rendered here -->
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="app.js"></script>
+</body>
+</html>

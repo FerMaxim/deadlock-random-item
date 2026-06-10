@@ -1,0 +1,29 @@
+[
+  { "id": 1, "name": "Headshot Booster", "price": 500, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Headshot\nBooster" },
+  { "id": 2, "name": "Basic Magazine", "price": 500, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Basic\nMagazine" },
+  { "id": 3, "name": "Extra Health", "price": 500, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Extra\nHealth" },
+  { "id": 4, "name": "Healing Rite", "price": 500, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Healing\nRite" },
+  { "id": 5, "name": "Extra Spirit", "price": 500, "category": "Spirit", "image": "https://placehold.co/271d2b/b976d9?text=Extra\nSpirit" },
+  { "id": 6, "name": "Mystic Burst", "price": 500, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Mystic\nBurst" },
+  
+  { "id": 7, "name": "Active Reload", "price": 1250, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Active\nReload" },
+  { "id": 8, "name": "Kinetic Dash", "price": 1250, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Kinetic\nDash" },
+  { "id": 9, "name": "Divine Barrier", "price": 1250, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Divine\nBarrier" },
+  { "id": 10, "name": "Enrage", "price": 1250, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Enrage" },
+  { "id": 11, "name": "Suppressor", "price": 1250, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Suppressor" },
+  { "id": 12, "name": "Withering Whip", "price": 1250, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Withering\nWhip" },
+
+  { "id": 13, "name": "Burst Fire", "price": 3000, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Burst\nFire" },
+  { "id": 14, "name": "Titanic Magazine", "price": 3000, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Titanic\nMagazine" },
+  { "id": 15, "name": "Fortitude", "price": 3000, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Fortitude" },
+  { "id": 16, "name": "Lifestrike", "price": 3000, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Lifestrike" },
+  { "id": 17, "name": "Improved Cooldown", "price": 3000, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Improved\nCooldown" },
+  { "id": 18, "name": "Surge of Power", "price": 3000, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Surge of\nPower" },
+
+  { "id": 19, "name": "Frenzy", "price": 6200, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Frenzy" },
+  { "id": 20, "name": "Glass Cannon", "price": 6200, "category": "Weapon", "image": "https://placehold.co/200x250/2b2519/d3783a?text=Glass\nCannon" },
+  { "id": 21, "name": "Colossus", "price": 6200, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Colossus" },
+  { "id": 22, "name": "Unstoppable", "price": 6200, "category": "Vitality", "image": "https://placehold.co/200x250/192b1a/5ebd40?text=Unstoppable" },
+  { "id": 23, "name": "Boundless Spirit", "price": 6200, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Boundless\nSpirit" },
+  { "id": 24, "name": "Diviner's Kevlar", "price": 6200, "category": "Spirit", "image": "https://placehold.co/200x250/271d2b/b976d9?text=Diviner's\nKevlar" }
+]

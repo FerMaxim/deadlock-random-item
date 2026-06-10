@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Random Item Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob weapon-blob"></div>
+        <div class="blob vitality-blob"></div>
+        <div class="blob spirit-blob"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="glitch" data-text="DEADLOCK">DEADLOCK</h1>
+            <p class="subtitle">Item Randomizer</p>
+        </header>
+
+        <section class="controls">
+            <h2 class="section-title">Select Soul Cost Category</h2>
+            <div class="button-group">
+                <button class="btn btn-all active" data-price="all">
+                    <span>Any</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier1" data-price="500">
+                    <span class="price">500</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier2" data-price="1250">
+                    <span class="price">1250</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier3" data-price="3000">
+                    <span class="price">3000</span>
+                    <div class="glow"></div>
+                </button>
+                <button class="btn btn-tier4" data-price="6200">
+                    <span class="price">6200</span>
+                    <div class="glow"></div>
+                </button>
+            </div>
+            
+            <button id="rollButton" class="btn-roll">
+                <span class="roll-text">INITIALIZE RANDOMIZER</span>
+                <span class="shimmer"></span>
+            </button>
+        </section>
+
+        <section class="display-area">
+            <div class="item-showcase" id="itemShowcase">
+                <div class="idle-state">
+                    <div class="scanner-line"></div>
+                    <p>AWAITING INPUT...</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="history-area">
+            <h3>Recent Items</h3>
+            <div class="history-list" id="historyList">
+                <!-- History items will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
