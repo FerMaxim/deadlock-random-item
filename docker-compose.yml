@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: deadlock_web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=deadlock_project.settings
+
+  redis:
+    image: redis:7-alpine
+    container_name: deadlock_redis
+    restart: unless-stopped
+    expose:
+      - "6379"
