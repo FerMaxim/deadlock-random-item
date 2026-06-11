@@ -1,13 +1,12 @@
 import json
 import urllib.parse
 import os
-import urllib.request
+import re
 
-# Create images directory
-img_dir = os.path.join('randomizer', 'static', 'randomizer', 'images', 'items')
-os.makedirs(img_dir, exist_ok=True)
+def sanitize_filename(name):
+    return re.sub(r'[\\/*?:"<>|]', "", name)
 
-with open('api_response.json', 'r') as f:
+with open('api_response.json', 'r', encoding='utf-8') as f:
     raw_data = json.load(f)
 
 processed = []
@@ -39,26 +38,13 @@ for item in raw_data:
     name = item.get('name', 'Unknown')
     item_id = item.get('id')
     
-    # Get correct shop image from API
     remote_img = item.get('shop_image') or item.get('image')
-    img_url = ""
     
     if remote_img:
-        local_img_path = os.path.join(img_dir, f"{item_id}.png")
-        if not os.path.exists(local_img_path):
-            try:
-                print(f"Downloading {name}...")
-                req = urllib.request.Request(remote_img, headers={'User-Agent': 'Mozilla/5.0'})
-                with urllib.request.urlopen(req) as response:
-                    with open(local_img_path, 'wb') as out_file:
-                        out_file.write(response.read())
-            except Exception as e:
-                print(f"Failed to download image for {name}: {e}")
-        
-        # Whether it downloaded or already existed, point to the local file
-        img_url = f"/static/randomizer/images/items/{item_id}.png"
+        safe_name = sanitize_filename(name)
+        ext = remote_img.split('.')[-1]
+        img_url = f"/static/randomizer/images/items/{slot_type}/{safe_name}.{ext}"
     else:
-        # Fallback to placehold.co
         text_encoded = urllib.parse.quote(name.replace(" ", "\\n"))
         if slot_type == "Weapon":
             img_url = f"https://placehold.co/200x250/2b2519/d3783a?text={text_encoded}"
@@ -85,4 +71,4 @@ out_json_path = os.path.join('randomizer', 'static', 'randomizer', 'data.json')
 with open(out_json_path, 'w') as f:
     json.dump(processed, f, indent=2)
 
-print(f"Successfully processed {len(processed)} items with local images.")
+print(f"Successfully processed {len(processed)} items with placehold images.")
