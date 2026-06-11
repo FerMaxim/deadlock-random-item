@@ -405,9 +405,107 @@ body {
 .mini-t-tier2 { color: #3a8cd3; border-bottom: 1px solid #3a8cd3; }
 .mini-t-tier3 { color: var(--color-weapon); border-bottom: 1px solid var(--color-weapon); }
 
+/* ── Smart Row: Hero + Temperature ───────────────────────── */
+.smart-row {
+    display: flex; gap: 20px; align-items: flex-start;
+    width: 100%; margin-bottom: 18px;
+}
+.filter-label {
+    font-family: var(--font-ui); font-size: 0.65rem;
+    color: var(--text-muted); letter-spacing: 2px; margin-bottom: 6px; display: block;
+}
+
+/* Hero Selector */
+.hero-selector-wrap { display: flex; flex-direction: column; flex-shrink: 0; }
+.hero-select-inner { display: flex; align-items: center; gap: 8px; }
+.hero-portrait {
+    width: 44px; height: 44px; border-radius: 6px;
+    border: 1px solid var(--panel-border);
+    background: rgba(0,0,0,0.5);
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; color: #555; flex-shrink: 0;
+    transition: border-color 0.3s;
+}
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.hero-portrait.has-hero { border-color: var(--color-gold); box-shadow: 0 0 10px rgba(195,161,86,0.3); }
+.custom-select {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--panel-border);
+    color: white; padding: 0.45rem 0.8rem;
+    font-family: var(--font-body); font-size: 0.85rem;
+    border-radius: 4px; outline: none; cursor: pointer;
+    max-width: 160px;
+}
+.custom-select:focus { border-color: rgba(255,255,255,0.3); }
+.custom-select option { background: #1c1f26; }
+
+/* Temperature Slider */
+.temp-wrap { flex: 1; display: flex; flex-direction: column; }
+.temp-label-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.temp-badge {
+    font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 1px; padding: 2px 8px; border-radius: 3px;
+}
+.temp-meta    { background: rgba(58,140,211,0.15); color: #3a8cd3; border: 1px solid #3a8cd3; }
+.temp-normal  { background: rgba(255,255,255,0.08); color: #aaa;    border: 1px solid #555; }
+.temp-mixed   { background: rgba(195,161,86,0.15);  color: var(--color-gold); border: 1px solid var(--color-gold); }
+.temp-wild    { background: rgba(211,120,58,0.15);  color: var(--color-weapon); border: 1px solid var(--color-weapon); }
+.temp-chaos   { background: rgba(185,118,217,0.2);  color: var(--color-spirit); border: 1px solid var(--color-spirit); }
+
+.temp-track-wrap { display: flex; align-items: center; gap: 8px; }
+.temp-icon { font-size: 1rem; line-height: 1; }
+.temp-slider {
+    -webkit-appearance: none; appearance: none;
+    flex: 1; height: 4px; border-radius: 2px; outline: none;
+    background: linear-gradient(to right, #3a8cd3 0%, #c3a156 50%, #d3783a 100%);
+    cursor: pointer;
+}
+.temp-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: white; cursor: pointer;
+    box-shadow: 0 0 8px rgba(255,255,255,0.5);
+    border: 2px solid rgba(0,0,0,0.3);
+    transition: transform 0.15s;
+}
+.temp-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+.temp-pips {
+    display: flex; justify-content: space-between;
+    padding: 0 2px; margin-top: 4px;
+}
+.pip {
+    font-family: var(--font-ui); font-size: 0.6rem;
+    color: #444; transition: color 0.2s;
+    width: 18px; text-align: center;
+}
+.pip.active { color: #888; }
+
+/* ── Inventory slot delete button ────────────────────────── */
+.inventory-slot { position: relative; }
+.slot-delete-btn {
+    display: none;
+    position: absolute; top: 1px; right: 1px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: rgba(200, 50, 50, 0.9);
+    border: none; color: white; font-size: 9px; font-weight: bold;
+    line-height: 1; cursor: pointer; z-index: 10;
+    align-items: center; justify-content: center;
+    transition: background 0.15s, transform 0.15s;
+}
+.inventory-slot.filled:hover .slot-delete-btn { display: flex; }
+.slot-delete-btn:hover { background: #ff2222; transform: scale(1.2); }
+
+/* ── Build cost badge ────────────────────────────────────── */
+.p-build-cost {
+    color: var(--color-gold); font-weight: 700;
+    font-size: 0.6rem; font-family: var(--font-ui);
+    margin-left: 4px; opacity: 0.85;
+}
+
 @media (max-width: 1200px) {
     .game-layout { flex-wrap: wrap; justify-content: center; }
     .center-column { order: -1; width: 100%; max-width: 100%; }
     .players-column { flex: 1; min-width: 300px; }
     .app-header { flex-direction: column; gap: 15px; }
+    .smart-row { flex-direction: column; }
 }

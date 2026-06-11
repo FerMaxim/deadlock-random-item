@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Weights Test</title>
+    <link rel="stylesheet" href="{% static 'randomizer/styles.css' %}">
+    <style>
+        body { padding: 20px; color: #eee; font-family: 'Inter', sans-serif; background: #111; }
+        h1 { color: #d3783a; }
+        select, button { padding: 10px; margin: 10px 0; background: #222; border: 1px solid #444; color: white; border-radius: 5px;}
+        button { cursor: pointer; background: #d3783a; font-weight: bold; }
+        button:hover { background: #e88d4f; }
+        
+        .build-card { background: rgba(255,255,255,0.05); border: 1px solid #444; padding: 15px; margin-bottom: 20px; border-radius: 8px;}
+        .build-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #444; padding-bottom: 10px; margin-bottom: 10px;}
+        .items-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .item-slot { width: 80px; text-align: center; }
+        .item-slot img { width: 100%; border-radius: 8px; border: 2px solid #555; }
+        .item-name { font-size: 11px; margin-top: 5px; }
+        
+        .cat-Weapon img { border-color: #d3783a; }
+        .cat-Vitality img { border-color: #71b443; }
+        .cat-Spirit img { border-color: #b976d9; }
+    </style>
+</head>
+<body>
+    <h1>ML Build Generator Test</h1>
+    <p>Выбираем героя, берем случайный архетип (кластер) из нашего файла и генерируем предметы по их вероятности.</p>
+    
+    <div>
+        <label>Hero ID:</label>
+        <select id="heroSelect">
+            <option value="">Загрузка...</option>
+        </select>
+        
+        <label style="margin-left:20px;">Diversity (0.1 - 1.0):</label>
+        <input type="range" id="diversitySlider" min="0.1" max="1.0" step="0.1" value="0.5">
+        <span id="divValue">0.5</span>
+        
+        <button id="generateBtn" style="margin-left:20px;">Сгенерировать 5 сборок</button>
+    </div>
+
+    <div id="buildsContainer"></div>
+
+    <script>
+        let allItems = {};
+        let metaRules = {};
+
+        const heroNames = {
+            "1": "Infernus", "2": "Seven", "3": "Vindicta", "4": "Lady Geist",
+            "6": "Abrams", "7": "Wraith", "8": "McGinnis", "10": "Paradox",
+            "11": "Dynamo", "12": "Kelvin", "13": "Haze", "14": "Holliday",
+            "15": "Pocket", "17": "Mirage", "18": "Bebop", "25": "Grey Talon",
+            "27": "Mo & Krill", "31": "Shiv", "35": "Viscous", "50": "Yamato", "52": "Lash"
+        };
+
+        document.getElementById('diversitySlider').addEventListener('input', function() {
+            document.getElementById('divValue').innerText = this.value;
+        });
+
+        async function loadData() {
+            try {
+                const itemsRes = await fetch('/static/randomizer/data.json');
+                const itemsData = await itemsRes.json();
+                itemsData.forEach(item => { allItems[item.id] = item; });
+
+                const rulesRes = await fetch('/static/randomizer/meta_rules.json');
+                if (!rulesRes.ok) throw new Error("meta_rules.json not found");
+                metaRules = await rulesRes.json();
+                console.log("Данные загружены!");
+
+                const heroSelect = document.getElementById('heroSelect');
+                heroSelect.innerHTML = '';
+                for (let heroId in metaRules) {
+                    if (heroNames[heroId]) {
+                        heroSelect.innerHTML += `<option value="${heroId}">${heroNames[heroId]} (${heroId})</option>`;
+                    }
+                }
+            } catch (e) {
+                document.getElementById('heroSelect').innerHTML = `<option value="">Ошибка: ${e.message}</option>`;
+                console.error(e);
+            }
+        }
+
+        function weightedRandomChoice(itemsDict) {
+            let totalWeight = 0;
+            for (let id in itemsDict) totalWeight += itemsDict[id];
+            
+            let randomNum = Math.random() * totalWeight;
+            for (let id in itemsDict) {
+                randomNum -= itemsDict[id];
+                if (randomNum <= 0) return id;
+            }
+            return Object.keys(itemsDict)[0];
+        }
+
+        function generateControlledBuild(heroId, diversity) {
+            const heroData = metaRules[heroId];
+            if (!heroData) return null;
+
+            // 1. Выбираем архетип
+            const archetypes = Object.keys(heroData);
+            const selectedArchetype = archetypes[Math.floor(Math.random() * archetypes.length)];
+            const archetypeData = heroData[selectedArchetype];
+            
+            let build = [];
+            let pickedIds = new Set();
+            let spent = { "Weapon": 0, "Vitality": 0, "Spirit": 0 };
+
+            // 2. Симуляция 15 покупок
+            for (let slot = 0; slot < 15; slot++) {
+                let currentWeights = {};
+                
+                // Копируем базовые веса и применяем Diversity
+                for (let itemId in archetypeData.base_weights) {
+                    if (!allItems[itemId] || pickedIds.has(itemId)) continue;
+                    
+                    let weight = archetypeData.base_weights[itemId];
+                    // Diversity: 0.1 возводит в степень 2 (усиливает мету), 1.0 берет корень (уравнивает шансы)
+                    let power = 1.0 + ((0.5 - diversity) * 2); // 0.1 -> 1.8, 1.0 -> 0.0
+                    weight = Math.pow(weight, power);
+                    currentWeights[itemId] = weight;
+                }
+
+                if (Object.keys(currentWeights).length === 0) break;
+
+                // Применяем модификаторы к весам
+                for (let itemId in currentWeights) {
+                    const item = allItems[itemId];
+                    if (!item) continue;
+
+                    // А. Фаза игры (Early -> Mid -> Late)
+                    if (slot < 4) { // Early
+                        if (item.price >= 3000) currentWeights[itemId] *= 0.01;
+                    } else if (slot < 9) { // Mid
+                        if (item.price >= 6200) currentWeights[itemId] *= 0.05;
+                        if (item.price <= 800) currentWeights[itemId] *= 0.5;
+                    } else { // Late
+                        if (item.price <= 1250) currentWeights[itemId] *= 0.1;
+                    }
+
+                    // Б. Спайк на 4800 (Самое важное правило)
+                    let cat = item.category;
+                    if (cat === "Weapon" || cat === "Vitality" || cat === "Spirit") {
+                        if (spent[cat] >= 2000 && spent[cat] < 4800) {
+                            // Мы близки к спайку! Жестко приоритезируем эту ветку
+                            currentWeights[itemId] *= 3.0;
+                        } else if (spent[cat] >= 4800 && spent[cat] < 5000) {
+                            // Спайк достигнут. Чуть снижаем приоритет, чтобы дать шанс другим веткам
+                            currentWeights[itemId] *= 0.7;
+                        }
+                    }
+                }
+
+                // В. Синергия (Ассоциативные правила из FP-Growth)
+                archetypeData.synergy_rules.forEach(rule => {
+                    // Проверяем, выполнены ли условия (antecedents)
+                    const conditionMet = rule.antecedents.every(id => pickedIds.has(id.toString()));
+                    if (conditionMet) {
+                        // Если условие выполнено, бустим следствия (consequents)
+                        rule.consequents.forEach(consId => {
+                            let strId = consId.toString();
+                            if (currentWeights[strId]) {
+                                // Увеличиваем вес пропорционально Lift
+                                currentWeights[strId] *= rule.lift * 2.0;
+                            }
+                        });
+                    }
+                });
+
+                // 3. Выбор предмета
+                let pickedId = weightedRandomChoice(currentWeights);
+                if (!pickedId) break;
+
+                pickedIds.add(pickedId);
+                const pickedItem = allItems[pickedId];
+                build.push(pickedItem);
+                
+                // Обновляем экономику
+                if (spent[pickedItem.category] !== undefined) {
+                    spent[pickedItem.category] += pickedItem.price;
+                }
+            }
+
+            return {
+                archetype: `Архетип ${selectedArchetype}`,
+                spent: spent,
+                items: build
+            };
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', () => {
+            const heroId = document.getElementById('heroSelect').value;
+            const diversity = parseFloat(document.getElementById('diversitySlider').value);
+            const container = document.getElementById('buildsContainer');
+            container.innerHTML = '';
+
+            if (!metaRules[heroId]) {
+                container.innerHTML = '<p style="color:red">Нет данных.</p>';
+                return;
+            }
+
+            for(let i=1; i<=5; i++) {
+                const buildData = generateControlledBuild(heroId, diversity);
+                
+                let html = `<div class="build-card">
+                    <div class="build-header">
+                        <h3>Сборка #${i}</h3>
+                        <div style="color:#aaa; text-align:right;">
+                            <strong>${buildData.archetype}</strong><br>
+                            <span style="font-size:12px">Спайки: 
+                                <span style="color:#d3783a">W: ${buildData.spent.Weapon}</span> | 
+                                <span style="color:#71b443">V: ${buildData.spent.Vitality}</span> | 
+                                <span style="color:#b976d9">S: ${buildData.spent.Spirit}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="items-grid">`;
+                
+                buildData.items.forEach(item => {
+                    html += `
+                        <div class="item-slot cat-${item.category}">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="item-name">${item.name}<br><b style="color:#ee0">${item.price}</b></div>
+                        </div>
+                    `;
+                });
+
+                html += `</div></div>`;
+                container.innerHTML += html;
+            }
+        });
+
+        loadData();
+    </script>
+</body>
+</html>

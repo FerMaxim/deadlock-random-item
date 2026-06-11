@@ -4,3 +4,8 @@ channels==4.3.2
 channels_redis==4.2.0
 requests
 whitenoise
+psycopg2-binary
+pandas
+scikit-learn
+python-dotenv
+duckdb
