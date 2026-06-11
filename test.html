@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Random Item Selector</title>
+    <link rel="stylesheet" href="randomizer/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob weapon-blob"></div>
+        <div class="blob vitality-blob"></div>
+        <div class="blob spirit-blob"></div>
+    </div>
+    <div class="grain-overlay"></div>
+
+    <main class="container">
+        <header class="app-header">
+            <div class="header-title">
+                <h1 class="glitch" data-text="DEADLOCK">DEADLOCK</h1>
+                <p class="subtitle">Item Randomizer</p>
+            </div>
+            
+            <div class="party-panel panel-glass" id="partyPanel">
+                <div id="partyControlsInputs" class="party-inputs">
+                    <input type="text" id="nicknameInput" placeholder="Nickname" class="custom-input">
+                    <button id="createRoomBtn" class="custom-btn btn-spirit">CREATE ROOM</button>
+                    <div class="join-group">
+                        <input type="text" id="roomCodeInput" placeholder="Code" class="custom-input room-code-input">
+                        <button id="joinRoomBtn" class="custom-btn">JOIN</button>
+                    </div>
+                </div>
+                
+                <div id="roomInfo" class="room-info" style="display: none;">
+                    <div class="room-details">
+                        <span class="room-label">ROOM:</span>
+                        <strong id="currentRoomCode" class="room-code"></strong>
+                        <span class="room-label" style="margin-left: 15px;">USER:</span>
+                        <strong id="currentNickname" class="room-nick"></strong>
+                    </div>
+                    <button id="leaveRoomBtn" class="custom-btn btn-vitality">LEAVE ROOM</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-layout">
+            <!-- Left Players Column -->
+            <div class="players-column" id="playersLeft">
+                <!-- Player cards injected here -->
+            </div>
+            
+            <!-- Center Controls & Showcase -->
+            <div class="center-column">
+                <!-- 1. Showcase Top -->
+                <section class="display-area">
+                    <div class="item-showcase panel-glass" id="itemShowcase">
+                        <div class="idle-state">
+                            <div class="scanner-line"></div>
+                            <div class="occult-rune"></div>
+                            <p>AWAITING INPUT...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Controls Middle -->
+                <section class="controls panel-glass">
+                    <div class="filters-container">
+                        <div class="filter-group price-group">
+                            <button class="btn btn-all active" data-price="all">Any Souls</button>
+                            <button class="btn btn-tier1" data-price="800">800</button>
+                            <button class="btn btn-tier2" data-price="1600">1600</button>
+                            <button class="btn btn-tier3" data-price="3200">3200</button>
+                            <button class="btn btn-tier4" data-price="6400">6400</button>
+                        </div>
+                        <div class="filter-group type-group">
+                            <button class="btn btn-type active" data-type="all">Any Type</button>
+                            <button class="btn btn-type type-weapon" data-type="Weapon">Weapon</button>
+                            <button class="btn btn-type type-vitality" data-type="Vitality">Vitality</button>
+                            <button class="btn btn-type type-spirit" data-type="Spirit">Spirit</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; width: 100%;">
+                        <button id="rollButton" class="btn-roll" style="flex: 2;">
+                            <span class="roll-text">ROLL ITEM</span>
+                            <span class="shimmer"></span>
+                        </button>
+                        <button id="rollAllButton" class="btn-roll" style="flex: 1; background: var(--color-spirit); color: #fff;">
+                            <span class="roll-text">ROLL ALL</span>
+                            <span class="shimmer"></span>
+                        </button>
+                    </div>
+
+                <!-- 3. Ability Timeline Bottom -->
+                <section class="controls panel-glass" style="margin-top: 15px;">
+                    <button id="generateBuildBtn" class="btn-roll btn-build">
+                        <span class="roll-text">GENERATE BUILD</span>
+                        <span class="shimmer"></span>
+                    </button>
+                    <div id="abilityPath" class="ability-timeline"></div>
+                </section>
+
+                <!-- 4. History -->
+                <section class="my-history panel-glass" style="margin-top: 15px;">
+                    <div class="history-header">
+                        <h3>MY HISTORY</h3>
+                        <button id="newGameBtn" class="custom-btn btn-reset">&#x21bb; RESET</button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <!-- populated from app.js -->
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Right Players Column -->
+            <div class="players-column" id="playersRight">
+                <!-- Player cards injected here -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const INITIAL_ROOM_CODE = "";
+    </script>
+    <script src="randomizer/app.js"></script>
+</body>
+</html>
