@@ -21,11 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const pips = document.querySelectorAll('.pip');
 
     const HERO_NAMES = {
-        '1':'Infernus','2':'Seven','3':'Vindicta','4':'Lady Geist',
-        '6':'Abrams','7':'Wraith','8':'McGinnis','10':'Paradox',
-        '11':'Dynamo','12':'Kelvin','13':'Haze','14':'Holliday',
-        '15':'Pocket','17':'Mirage','18':'Bebop','25':'Grey Talon',
-        '27':'Mo & Krill','31':'Shiv','35':'Viscous','50':'Yamato','52':'Lash'
+        '1':'Infernus', '2':'Seven', '3':'Vindicta', '4':'Lady Geist',
+        '6':'Abrams', '7':'Wraith', '8':'McGinnis', '10':'Paradox',
+        '11':'Dynamo', '12':'Kelvin', '13':'Haze', '14':'Holliday',
+        '15':'Pocket', '16':'Calico', '17':'Mirage', '18':'Bebop',
+        '20':'Ivy', '25':'Grey Talon', '27':'Mo & Krill', '31':'Shiv',
+        '35':'Viscous', '40':'Warden', '48':'Silver', '50':'Yamato',
+        '52':'Lash', '58':'Vyper', '60':'Sinclair', '63':'Mina',
+        '64':'Drifter', '65':'Venator', '66':'Victor', '67':'Paige',
+        '69':'The Doorman', '72':'Billy', '76':'Graves', '77':'Apollo',
+        '79':'Rem', '81':'Celeste'
     };
     const TEMP_CONFIG = [
         null,
