@@ -1,0 +1,4569 @@
+{
+  "/v1/analytics/ability-order-stats": {
+    "GET": {
+      "desc": "Retrieves statistics for the ability order of a hero.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_ability_upgrades": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their minimum number of ability upgrades over the whole match."
+        },
+        "max_ability_upgrades": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their maximum number of ability upgrades over the whole match."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for an ability order to be included in the response.",
+          "default": 20
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include (only players who have purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude (only players who have not purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Ability Order Stats",
+          "type": "array[AnalyticsAbilityOrderStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch ability order stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/badge-distribution": {
+    "GET": {
+      "desc": "This endpoint returns the player badge distribution.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "is_high_skill_range_parties": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the high skill range."
+        },
+        "is_low_pri_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the low priority pool."
+        },
+        "is_new_player_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the new player pool."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Badge Distribution",
+          "type": "array[BadgeDistribution]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch badge distribution"
+        }
+      }
+    }
+  },
+  "/v1/analytics/build-item-stats": {
+    "GET": {
+      "desc": "Retrieves item statistics from hero builds.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "hero_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter builds based on the hero ID. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_last_updated_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter builds based on their last updated time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_last_updated_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter builds based on their last updated time (Unix timestamp)."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Build Item Stats",
+          "type": "array[BuildItemStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch build item stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/game-stats": {
+    "GET": {
+      "desc": "Retrieves aggregate game-level statistics.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "bucket": {
+          "type": "string (enum: no_bucket, avg_badge, start_time_hour, start_time_day, start_time_week, start_time_month)",
+          "req": false,
+          "desc": "Bucket allows you to group the stats by a specific field."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>\nOnly works for `game_modes` with badge data (e.g. `normal`, not `street_brawl`)."
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>\nOnly works for `game_modes` with badge data (e.g. `normal`, not `street_brawl`)."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Game Stats",
+          "type": "array[AnalyticsGameStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch game stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-ban-stats": {
+    "GET": {
+      "desc": "Retrieves ban statistics for each hero based on historical match data from demo analysis.\n\nOnly matches with successfully extracted ban data are included. Matches where ban extraction failed (empty `banned_hero_ids`) are excluded entirely.\n\nResults are cached for **1 hour** based on the combination of query parameters provided.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "bucket": {
+          "type": "string (enum: no_bucket, avg_badge, start_time_hour, start_time_day, start_time_week, start_time_month)",
+          "req": false,
+          "desc": "Bucket allows you to group the stats by a specific field."
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago. **Minimum:** March 1, 2026.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Ban Stats",
+          "type": "array[HeroBanStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero ban stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-build-stats/{hero_id}": {
+    "GET": {
+      "desc": "Retrieves performance statistics for hero builds based on historical match data from demo analysis.\n\nOnly includes builds that exist in the hero builds database.\n\nThe `hero_build_id` is the first build the player had selected when the game started. It does not reflect any build changes made during the match.\n\nResults are cached for **1 hour** based on the combination of query parameters provided.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch build stats for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago. **Minimum:** March 1, 2026.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "hero_build_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter results for a specific hero build."
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for a build to be included in the response.",
+          "default": 20
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Build Stats",
+          "type": "array[HeroBuildStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero build stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-comb-stats": {
+    "GET": {
+      "desc": "Retrieves overall statistics for each hero combination.\n\nResults are cached for **1 hour**. The cache key is determined by the specific combination of filter parameters used in the query. Subsequent requests using the exact same filters within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "include_hero_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of hero ids to include. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "exclude_hero_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of hero ids to exclude. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "include_enemy_hero_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of enemy hero ids to include. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "exclude_enemy_hero_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of enemy hero ids to exclude. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for a hero combination to be included in the response.",
+          "default": 20
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches played for a hero combination to be included in the response."
+        },
+        "comb_size": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The combination size to return.",
+          "default": 6
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Comb Stats",
+          "type": "array[HeroCombStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero comb stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-counter-stats": {
+    "GET": {
+      "desc": "Retrieves hero-versus-hero matchup statistics based on historical match data.\n\nThis endpoint analyzes completed matches to calculate how often a specific hero (`hero_id`) wins against an enemy hero (`enemy_hero_id`) and the total number of times they have faced each other under the specified filter conditions.\n\nResults are cached for **1 hour** based on the combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_enemy_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter enemy players based on their net worth."
+        },
+        "max_enemy_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter enemy players based on their net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "same_lane_filter": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "When `true`, only considers matchups where both `hero_id` and `enemy_hero_id` were assigned to the same lane (e.g., both Mid Lane). When `false`, considers all matchups regardless of assigned lane.",
+          "default": true
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for a hero combination to be included in the response.",
+          "default": 20
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches played for a hero combination to be included in the response."
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Counter Stats",
+          "type": "array[HeroCounterStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero counter stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-stats": {
+    "GET": {
+      "desc": "Retrieves performance statistics for each hero based on historical match data.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "bucket": {
+          "type": "string (enum: no_bucket, avg_badge, start_time_hour, start_time_day, start_time_week, start_time_month)",
+          "req": false,
+          "desc": "Bucket allows you to group the stats by a specific field."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_hero_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on the number of matches they have played with a specific hero within the filtered time range."
+        },
+        "max_hero_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on the number of matches they have played with a specific hero within the filtered time range."
+        },
+        "min_hero_matches_total": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on the number of matches they have played with a specific hero in their entire history."
+        },
+        "max_hero_matches_total": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on the number of matches they have played with a specific hero in their entire history."
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include (only players who have purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude (only players who have not purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Stats",
+          "type": "array[AnalyticsHeroStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/hero-synergy-stats": {
+    "GET": {
+      "desc": "Retrieves hero pair synergy statistics based on historical match data.\n\nThis endpoint analyzes completed matches to calculate how often a specific pair of heroes (`hero_id1` and `hero_id2`) won when playing *together on the same team*, and the total number of times they have played together under the specified filter conditions.\n\nResults are cached for **1 hour** based on the combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "same_lane_filter": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "When `true`, only considers matchups where both `hero_id1` and `hero_id2` were assigned to the same lane (e.g., both Mid Lane). When `false`, considers all matchups regardless of assigned lane.",
+          "default": true
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for a hero combination to be included in the response.",
+          "default": 20
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches played for a hero combination to be included in the response."
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Synergy Stats",
+          "type": "array[HeroSynergyStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero synergy stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/item-flow-stats": {
+    "GET": {
+      "desc": "Retrieves item build-flow statistics: per-phase item win/pick rates and the transitions between them.\n\nItems are grouped into columns by the in-match phase they were bought in (controlled by\n`phase_interval_s` and `phase_count`). The response contains `nodes` (items aggregated within a phase)\nand `edges` (transitions between an item and items in the next phase). A locked build path can be\nsupplied via `locked_item_ids` / `locked_columns` to restrict the population to players who bought\nthose items in the given stage columns.\n\nEach node also carries `adjusted_win_rate`: the item's win rate standardized to the stage's\nnet-worth-at-buy distribution. Because players who are already ahead have more souls and buy items\nsooner, raw win rate is heavily confounded by wealth; the adjusted figure re-weights each item's win\nrate across net-worth buckets to the stage-wide distribution, isolating the item's contribution from\nthe buyer's lead. It is still observational, not a controlled/causal estimate. `reached_per_column`\ngives the distinct baseline games that bought any upgrade in each column, so consumers can show how\nsurvivorship-selected (e.g. long-game-only) a late stage is.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "phase_interval_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Deprecated/unused. `normal` mode uses fixed phase boundaries (0-9m, 9-20m, 20-30m, 30m+)\naligned to the stats time-series; `street_brawl` columns are rounds.",
+          "default": 600
+        },
+        "phase_count": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Number of columns for `street_brawl` (rounds). Ignored for `normal`, which has fixed time\nphases. **Default:** 4.",
+          "default": 4
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches for a node or edge to be included in the response.",
+          "default": 20
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include (only players who have purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude (only players who have not purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "locked_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids forming a \"locked\" build path. Pairs positionally with\n`locked_columns`: the i-th item must have been bought in the i-th `locked_columns` stage.\nSee more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "locked_columns": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated 0-based stage column indices for each `locked_item_ids` entry (time phase for\n`normal`, round for `street_brawl`). Must have the same length as `locked_item_ids`."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Item Flow Stats",
+          "type": "ItemFlowStats"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch item flow stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/item-permutation-stats": {
+    "GET": {
+      "desc": "Retrieves item permutation statistics based on historical match data.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids. See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "comb_size": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The combination size to return.",
+          "default": 2
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "hero_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the hero ID. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Item Stats",
+          "type": "array[ItemPermutationStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch item stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/item-stats": {
+    "GET": {
+      "desc": "Retrieves item statistics based on historical match data.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "bucket": {
+          "type": "string (enum: no_bucket, hero, team, start_time_hour, start_time_day, start_time_week, start_time_month, game_time_min, game_time_normalized_percentage, net_worth_by_1000, net_worth_by_2000, net_worth_by_3000, net_worth_by_5000, net_worth_by_10000)",
+          "req": false,
+          "desc": "Bucket allows you to group the stats by a specific field."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "hero_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the hero ID. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "enemy_hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter to matches where one or more of these heroes were on the opposing team. Comma separated. When set, returns \"what items beat hero(es) X?\" stats. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "enemy_hero_ids_all_match": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "When `true`, requires *all* of the specified `enemy_hero_ids` to be on the same enemy team. When `false` (default), matches if *any* of the specified hero(es) are on the enemy team. Ignored when `enemy_hero_ids` is unset."
+        },
+        "min_enemy_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter the specified enemy hero(es) by their final net worth. Ignored when `enemy_hero_ids` is unset."
+        },
+        "max_enemy_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter the specified enemy hero(es) by their final net worth. Ignored when `enemy_hero_ids` is unset."
+        },
+        "same_lane_filter": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "When `true`, only counts buyers in the same `assigned_lane` as one of the specified enemy heroes. Ignored when `enemy_hero_ids` is unset. **Default:** `false`."
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include. See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude. See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for an item to be included in the response.",
+          "default": 20
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches played for a hero combination to be included in the response."
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        },
+        "min_bought_at_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter items bought after this game time (seconds)."
+        },
+        "max_bought_at_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter items bought before this game time (seconds)."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Item Stats",
+          "type": "array[ItemStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch item stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/kill-death-stats": {
+    "GET": {
+      "desc": "This endpoint returns the kill-death statistics across a 128x128 pixel raster.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "team": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter by team number."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Filter matches by account IDs of players that participated in the match."
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "is_high_skill_range_parties": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the high skill range."
+        },
+        "is_low_pri_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the low priority pool."
+        },
+        "is_new_player_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the new player pool."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_kills_per_raster": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter Raster cells based on minimum kills."
+        },
+        "max_kills_per_raster": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter Raster cells based on maximum kills."
+        },
+        "min_deaths_per_raster": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter Raster cells based on minimum deaths."
+        },
+        "max_deaths_per_raster": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter Raster cells based on maximum deaths."
+        },
+        "min_game_time_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter kills based on their game time."
+        },
+        "max_game_time_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter kills based on their game time."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Kill Death Stats",
+          "type": "array[KillDeathStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch kill death stats"
+        }
+      }
+    }
+  },
+  "/v1/analytics/player-performance-curve": {
+    "GET": {
+      "desc": "Retrieves player performance statistics (net worth, kills, deaths, assists) over time throughout matches.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "resolution": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Resolution for relative game times in percent (0-100).\n**Default:** 10 (buckets of 10%).\nSet to **0** to use absolute game time (seconds).",
+          "default": 10
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include (only players who have purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude (only players who have not purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Player Performance Curve",
+          "type": "array[PlayerPerformanceCurvePoint]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch player performance curve"
+        }
+      }
+    }
+  },
+  "/v1/analytics/player-stats/metrics": {
+    "GET": {
+      "desc": "Returns comprehensive statistical analysis of player performance.\n\nResults are cached for **1 hour** based on the unique combination of query parameters provided. Subsequent identical requests within this timeframe will receive the cached response.\n\n> Note: Quantiles are calculated using the [DDSketch](https://www.vldb.org/pvldb/vol12/p2195-masson.pdf) algorithm, so they are not exact but have a maximum relative error of 0.01.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches to analyze."
+        },
+        "include_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include (only players who have purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "exclude_item_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude (only players who have not purchased these items). See more: <https://api.deadlock-api.com/v1/assets/items>"
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Stats",
+          "type": "HashMap"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch player stats metrics"
+        }
+      }
+    }
+  },
+  "/v1/analytics/scoreboards/heroes": {
+    "GET": {
+      "desc": "This endpoint returns the hero scoreboard.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "sort_by": {
+          "type": "string (enum: matches, wins, losses, winrate, max_kills_per_match, avg_kills_per_match, kills, max_deaths_per_match, avg_deaths_per_match, deaths, max_damage_taken_per_match, avg_damage_taken_per_match, damage_taken, max_assists_per_match, avg_assists_per_match, assists, max_net_worth_per_match, avg_net_worth_per_match, net_worth, max_last_hits_per_match, avg_last_hits_per_match, last_hits, max_denies_per_match, avg_denies_per_match, denies, max_player_level_per_match, avg_player_level_per_match, player_level, max_creep_kills_per_match, avg_creep_kills_per_match, creep_kills, max_neutral_kills_per_match, avg_neutral_kills_per_match, neutral_kills, max_creep_damage_per_match, avg_creep_damage_per_match, creep_damage, max_player_damage_per_match, avg_player_damage_per_match, player_damage, max_neutral_damage_per_match, avg_neutral_damage_per_match, neutral_damage, max_boss_damage_per_match, avg_boss_damage_per_match, boss_damage, max_max_health_per_match, avg_max_health_per_match, max_health, max_shots_hit_per_match, avg_shots_hit_per_match, shots_hit, max_shots_missed_per_match, avg_shots_missed_per_match, shots_missed, max_hero_bullets_hit_per_match, avg_hero_bullets_hit_per_match, hero_bullets_hit, max_hero_bullets_hit_crit_per_match, avg_hero_bullets_hit_crit_per_match, hero_bullets_hit_crit)",
+          "req": true,
+          "desc": "The field to sort by."
+        },
+        "sort_direction": {
+          "type": "string (enum: desc, asc)",
+          "req": false,
+          "desc": "The direction to sort heroes in."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter by min number of matches played."
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter for matches with a specific player account ID."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Scoreboard",
+          "type": "array[HeroEntry]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero scoreboard"
+        }
+      }
+    }
+  },
+  "/v1/analytics/scoreboards/players": {
+    "GET": {
+      "desc": "This endpoint returns the player scoreboard.\n\n### Rate Limits:\n> The rate limits below are **shared across all analytics endpoints**.\n\n| Type | Limit |\n| ---- | ----- |\n| IP | 200req/min |\n| Key | 400req/min |\n| Global | 2000req/min |",
+      "params": {
+        "sort_by": {
+          "type": "string (enum: matches, wins, losses, winrate, max_kills_per_match, avg_kills_per_match, kills, max_deaths_per_match, avg_deaths_per_match, deaths, max_damage_taken_per_match, avg_damage_taken_per_match, damage_taken, max_assists_per_match, avg_assists_per_match, assists, max_net_worth_per_match, avg_net_worth_per_match, net_worth, max_last_hits_per_match, avg_last_hits_per_match, last_hits, max_denies_per_match, avg_denies_per_match, denies, max_player_level_per_match, avg_player_level_per_match, player_level, max_creep_kills_per_match, avg_creep_kills_per_match, creep_kills, max_neutral_kills_per_match, avg_neutral_kills_per_match, neutral_kills, max_creep_damage_per_match, avg_creep_damage_per_match, creep_damage, max_player_damage_per_match, avg_player_damage_per_match, player_damage, max_neutral_damage_per_match, avg_neutral_damage_per_match, neutral_damage, max_boss_damage_per_match, avg_boss_damage_per_match, boss_damage, max_max_health_per_match, avg_max_health_per_match, max_health, max_shots_hit_per_match, avg_shots_hit_per_match, shots_hit, max_shots_missed_per_match, avg_shots_missed_per_match, shots_missed, max_hero_bullets_hit_per_match, avg_hero_bullets_hit_per_match, hero_bullets_hit, max_hero_bullets_hit_crit_per_match, avg_hero_bullets_hit_crit_per_match, hero_bullets_hit_crit)",
+          "req": true,
+          "desc": "The field to sort by."
+        },
+        "sort_direction": {
+          "type": "string (enum: desc, asc)",
+          "req": false,
+          "desc": "The direction to sort players in."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "hero_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the hero ID. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The minimum number of matches played for a player to be included in the scoreboard.",
+          "default": 20
+        },
+        "max_matches": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of matches played for a hero combination to be included in the response."
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "start": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The offset to start fetching players from."
+        },
+        "limit": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The maximum number of players to fetch.",
+          "default": "100"
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Player Scoreboard",
+          "type": "array[PlayerEntry]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch player scoreboard"
+        }
+      }
+    }
+  },
+  "/v1/assets/accolades": {
+    "GET": {
+      "desc": "Returns the per-accolade metadata used by the game client, parsed from the patch's KV3 source files.",
+      "params": {
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Accolade]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/accolades/by-name/{name}": {
+    "GET": {
+      "desc": "Returns a single accolade by `class_name` or `tracked_stat_name` (case-insensitive).",
+      "params": {
+        "name": {
+          "type": "string",
+          "req": true,
+          "desc": "Accolade `class_name` (e.g. `kills`) or `tracked_stat_name`"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Accolade"
+        },
+        "404": {
+          "desc": "Unknown accolade name or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/accolades/{accolade_id}": {
+    "GET": {
+      "desc": "Returns a single accolade by id.",
+      "params": {
+        "accolade_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "Accolade id (`m_unAccoladeID`)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Accolade"
+        },
+        "404": {
+          "desc": "Unknown accolade id or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/build-tags": {
+    "GET": {
+      "desc": "Returns the build tag taxonomy used by the game client, derived from per-version localization keys.",
+      "params": {
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[BuildTag]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/build-tags/by-name/{name}": {
+    "GET": {
+      "desc": "Returns a single build tag by `class_name` (case-insensitive).",
+      "params": {
+        "name": {
+          "type": "string",
+          "req": true,
+          "desc": "Build tag `class_name` (e.g. `citadel_build_tag_weapon`)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "BuildTag"
+        },
+        "404": {
+          "desc": "Unknown build tag name or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/build-tags/{build_tag_id}": {
+    "GET": {
+      "desc": "Returns a single build tag by id.",
+      "params": {
+        "build_tag_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "Build tag id (murmurhash2 of `class_name`)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "BuildTag"
+        },
+        "404": {
+          "desc": "Unknown build tag id or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/client-versions": {
+    "GET": {
+      "desc": "Returns all known Deadlock client/game versions for which versioned assets are available, sorted ascending (oldest first).",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/colors": {
+    "GET": {
+      "desc": "Panorama color palette (`@define <name>: #RRGGBB[AA];` declarations from `citadel_base_styles.css`), keyed by `snake_case` name.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "object"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/fonts": {
+    "GET": {
+      "desc": "Nested file-tree of all hosted fonts, mapping each name to its public CDN URL.",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/generic-data": {
+    "GET": {
+      "desc": "Returns the game-wide generic configuration (street brawl, lane info, glitch settings, damage flash, item draft, etc.) parsed from the patch's `generic_data.vdata` KV3 source file.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "GenericData"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/heroes": {
+    "GET": {
+      "desc": "Returns the per-hero metadata used by the game client, parsed from the patch's KV3 source files.",
+      "params": {
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        },
+        "only_active": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "When true, hides heroes that aren't player-selectable or are disabled / in-development."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Hero]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/heroes/by-name/{name}": {
+    "GET": {
+      "desc": "Returns a single hero by `class_name` or display `name`. Matches the bare value as well as the `hero_`-prefixed form.",
+      "params": {
+        "name": {
+          "type": "string",
+          "req": true,
+          "desc": "Hero class name (e.g. `hero_atlas`) or short name (e.g. `atlas`)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Hero"
+        },
+        "404": {
+          "desc": "Unknown hero name or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/heroes/{hero_id}": {
+    "GET": {
+      "desc": "Returns a single hero by id.",
+      "params": {
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "Hero id (`m_HeroID`)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Hero"
+        },
+        "404": {
+          "desc": "Unknown hero id or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/icons": {
+    "GET": {
+      "desc": "Nested file-tree of all hosted icons, mapping each name to its public CDN URL.",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/images": {
+    "GET": {
+      "desc": "Nested file-tree of all hosted images, mapping each name to its public CDN URL.",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/items": {
+    "GET": {
+      "desc": "Returns the full per-patch item list — abilities, weapons, and upgrades.",
+      "params": {
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Item]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/items/by-hero-id/{id}": {
+    "GET": {
+      "desc": "Hero-bound abilities, excluding the generic movement abilities.",
+      "params": {
+        "id": {
+          "type": "integer",
+          "req": true,
+          "desc": "Hero id (`m_HeroID`)."
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Item]"
+        }
+      }
+    }
+  },
+  "/v1/assets/items/by-slot-type/{slot_type}": {
+    "GET": {
+      "desc": "List Items By Slot Type",
+      "params": {
+        "slot_type": {
+          "type": "ItemSlotType",
+          "req": true,
+          "desc": "Slot type: `weapon`, `spirit`, or `vitality`."
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Item]"
+        }
+      }
+    }
+  },
+  "/v1/assets/items/by-type/{type}": {
+    "GET": {
+      "desc": "List Items By Type",
+      "params": {
+        "type": {
+          "type": "ItemType",
+          "req": true,
+          "desc": "Item type: `ability`, `weapon`, or `upgrade`."
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Item]"
+        }
+      }
+    }
+  },
+  "/v1/assets/items/{id_or_class_name}": {
+    "GET": {
+      "desc": "Get Item",
+      "params": {
+        "id_or_class_name": {
+          "type": "string",
+          "req": true,
+          "desc": "Numeric `id` or string `class_name`."
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Item"
+        },
+        "404": {
+          "desc": "Unknown item id/class_name or client_version"
+        }
+      }
+    }
+  },
+  "/v1/assets/loot-tables": {
+    "GET": {
+      "desc": "Returns the per-table loot definitions used by the game client, parsed from the patch's KV3 source files. Keyed by table `class_name`.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "object"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/map": {
+    "GET": {
+      "desc": "Map metadata for a client version: the minimap radius, image-layer CDN URLs, the relative positions of every objective/tower marker, and the three zip-line lane cubic splines. Defaults to the latest known client version.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "MapData"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/misc-entities": {
+    "GET": {
+      "desc": "Returns the per-misc-entity metadata used by the game client, parsed from the patch's KV3 source files.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[MiscEntity]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/misc-entities/{id_or_classname}": {
+    "GET": {
+      "desc": "Returns a single misc entity by numeric id or by `class_name` (case-insensitive).",
+      "params": {
+        "id_or_classname": {
+          "type": "string",
+          "req": true,
+          "desc": "Misc entity id (`murmurhash2(class_name)`) or `class_name`"
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "MiscEntity"
+        },
+        "404": {
+          "desc": "Unknown misc entity id/class_name or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/npc-units": {
+    "GET": {
+      "desc": "Returns the per-NPC-unit metadata used by the game client, parsed from the patch's KV3 source files.",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[NpcUnit]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/npc-units/{id_or_classname}": {
+    "GET": {
+      "desc": "Returns a single NPC unit by numeric id or by `class_name` (case-insensitive).",
+      "params": {
+        "id_or_classname": {
+          "type": "string",
+          "req": true,
+          "desc": "NPC unit id (`murmurhash2(class_name)`) or `class_name`"
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "NpcUnit"
+        },
+        "404": {
+          "desc": "Unknown NPC unit id/class_name or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/ranks": {
+    "GET": {
+      "desc": "Returns the 12 player ranks (tier, localized name, badge image URLs, hex color).",
+      "params": {
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Rank]"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/ranks/{tier}": {
+    "GET": {
+      "desc": "Returns a single rank by tier index.",
+      "params": {
+        "tier": {
+          "type": "integer",
+          "req": true,
+          "desc": "Rank tier (0-11)"
+        },
+        "language": {
+          "type": "null | string (enum: brazilian, bulgarian, czech, danish, dutch, english, finnish, french, german, greek, hungarian, indonesian, italian, japanese, koreana, latam, norwegian, polish, portuguese, romanian, russian, schinese, spanish, swedish, tchinese, thai, turkish, ukrainian, vietnamese)",
+          "req": false,
+          "desc": "Language code. Defaults to `english`."
+        },
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Rank"
+        },
+        "404": {
+          "desc": "Unknown tier or client_version"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/sounds": {
+    "GET": {
+      "desc": "Nested file-tree of all hosted sounds, mapping each name to its public CDN URL.",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/steam-info": {
+    "GET": {
+      "desc": "Returns the `steam.inf` manifest published with the patch (client/server version, app IDs, source revision, build timestamp).",
+      "params": {
+        "client_version": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Client/game version (e.g. `6518`). Defaults to the latest known version."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "SteamInfo"
+        },
+        "404": {
+          "desc": "Requested client_version is not available"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/assets/steam-info/all": {
+    "GET": {
+      "desc": "Returns the `steam.inf` manifest for every known patch as a single array, newest version first. Replaces the legacy `/v1/steam-info/all` endpoint.",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[SteamInfo]"
+        },
+        "500": {
+          "desc": "Failed to load source assets"
+        }
+      }
+    }
+  },
+  "/v1/builds": {
+    "GET": {
+      "desc": "Search for builds based on various criteria.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "min_unix_timestamp": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds based on their `last_updated` time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds based on their `last_updated` time (Unix timestamp)."
+        },
+        "min_published_unix_timestamp": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds based on their published time (Unix timestamp)."
+        },
+        "max_published_unix_timestamp": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds based on their published time (Unix timestamp)."
+        },
+        "sort_by": {
+          "type": "string (enum: weekly_favorites, favorites, ignores, reports, updated_at, published_at, version)",
+          "req": false,
+          "desc": "The field to sort the builds by."
+        },
+        "start": {
+          "type": "integer",
+          "req": false,
+          "desc": "The index of the first build to return."
+        },
+        "limit": {
+          "type": "integer",
+          "req": false,
+          "desc": "The maximum number of builds to return.",
+          "default": "100"
+        },
+        "sort_direction": {
+          "type": "string (enum: desc, asc)",
+          "req": false,
+          "desc": "The direction to sort the builds in."
+        },
+        "search_name": {
+          "type": "string",
+          "req": false,
+          "desc": "Search for builds with a name containing this string."
+        },
+        "search_description": {
+          "type": "string",
+          "req": false,
+          "desc": "Search for builds with a description containing this string."
+        },
+        "only_latest": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Only return the latest version of each build."
+        },
+        "language": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by language."
+        },
+        "build_language": {
+          "type": "string (enum: English, German, French, Italian, Korean, SpanishSpain, ChineseSimplified, Russian, Thai, Japanese, PortuguesePortugal, Polish, Czech, Turkish, PortugueseBrazil, Ukrainian, SpanishLatinAmerica, Vietnamese)",
+          "req": false,
+          "desc": "Filter builds by language."
+        },
+        "build_id": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by ID."
+        },
+        "version": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by version."
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by hero ID. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "tag": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by tag."
+        },
+        "rollup_category": {
+          "type": "integer",
+          "req": false,
+          "desc": "Filter builds by rollup category."
+        },
+        "author_id": {
+          "type": "integer",
+          "req": false,
+          "desc": "The author's `SteamID3`"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Build]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Internal server error"
+        }
+      }
+    }
+  },
+  "/v1/commands/resolve": {
+    "GET": {
+      "desc": "Resolves a command and returns the resolved command.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 60req/60s |\n| Key | - |\n| Global | 300req/60s |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": false,
+          "desc": "The players region"
+        },
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "template": {
+          "type": "string",
+          "req": false,
+          "desc": "The command template to resolve"
+        },
+        "hero_name": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Hero name to check for hero specific stats"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "string"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        }
+      }
+    }
+  },
+  "/v1/commands/variables/available": {
+    "GET": {
+      "desc": "Returns a list of available variables that can be used in the command endpoint.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[VariableDescription]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        }
+      }
+    }
+  },
+  "/v1/commands/variables/resolve": {
+    "GET": {
+      "desc": "Resolves variables and returns a map of variable name to resolved value.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 60req/min |\n| Key | - |\n| Global | 300req/min |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": false
+        },
+        "account_id": {
+          "type": "integer",
+          "req": true
+        },
+        "variables": {
+          "type": "string",
+          "req": false,
+          "desc": "Variables to resolve, separated by commas."
+        },
+        "hero_name": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Hero name to check for hero specific stats"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "object"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        }
+      }
+    }
+  },
+  "/v1/commands/widgets/versions": {
+    "GET": {
+      "desc": "Returns a map of str->int of widget versions.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "object"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        }
+      }
+    }
+  },
+  "/v1/graphql": {
+    "GET": {
+      "desc": "Interactive GraphiQL playground for exploring the GraphQL API.\n\nOpen this endpoint in a browser to access the playground. Send GraphQL queries via `POST /v1/graphql` with a JSON body of the form `{ \"query\": \"...\", \"variables\": {...} }`.\n\n### Rate Limits (POST):\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/min |\n| Key | 10req/10s |\n| Global | 100req/min |",
+      "responses": {
+        "200": {
+          "desc": "GraphiQL playground UI"
+        }
+      }
+    }
+  },
+  "/v1/info": {
+    "GET": {
+      "desc": "Returns information about the API.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "APIInfo"
+        },
+        "500": {
+          "desc": "",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "/v1/info/health": {
+    "GET": {
+      "desc": "Checks the health of the services.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Status"
+        },
+        "500": {
+          "desc": "",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "/v1/leaderboard/{region}": {
+    "GET": {
+      "desc": "Returns the leaderboard.\n\n### Note:\n\nValve updates the leaderboard once per hour.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": true,
+          "desc": "The region to fetch the leaderboard for."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Leaderboard"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Fetching or parsing the leaderboard failed"
+        }
+      }
+    }
+  },
+  "/v1/leaderboard/{region}/raw": {
+    "GET": {
+      "desc": "Returns the leaderboard, serialized as protobuf message.\n\nYou have to decode the protobuf message.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Message:\n- CMsgClientToGcGetLeaderboardResponse\n\n### Note:\n\nValve updates the leaderboard once per hour.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": true,
+          "desc": "The region to fetch the leaderboard for."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Fetching the leaderboard failed"
+        }
+      }
+    }
+  },
+  "/v1/leaderboard/{region}/{hero_id}": {
+    "GET": {
+      "desc": "Returns the leaderboard for a specific hero.\n\n### Note:\n\nValve updates the leaderboard once per hour.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": true,
+          "desc": "The region to fetch the leaderboard for."
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch the leaderboard for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "Leaderboard"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Fetching or parsing the hero leaderboard failed"
+        }
+      }
+    }
+  },
+  "/v1/leaderboard/{region}/{hero_id}/raw": {
+    "GET": {
+      "desc": "Returns the leaderboard for a specific hero, serialized as protobuf message.\n\nYou have to decode the protobuf message.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Message:\n- CMsgClientToGcGetLeaderboardResponse\n\n### Note:\n\nValve updates the leaderboard once per hour.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "region": {
+          "type": "string (enum: Europe, Asia, NAmerica, SAmerica, Oceania)",
+          "req": true,
+          "desc": "The region to fetch the leaderboard for."
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch the leaderboard for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Fetching the hero leaderboard failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/active": {
+    "GET": {
+      "desc": "Returns active matches that are currently being played.\n\nFetched from the watch tab in game, which is limited to the **top 200 matches**.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "account_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "The account ID to filter active matches by (`SteamID3`)"
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of account ids to include"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[ActiveMatch]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Fetching or parsing active matches failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/active/raw": {
+    "GET": {
+      "desc": "Returns active matches that are currently being played, serialized as protobuf message.\n\nFetched from the watch tab in game, which is limited to the **top 200 matches**.\n\nYou have to decode the protobuf message.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Message:\n- CMsgClientToGcGetActiveMatchesResponse\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "500": {
+          "desc": "Fetching active matches failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/create": {
+    "POST": {
+      "desc": "This endpoint creates a custom match using a bot account.\n\n**Process:**\n1. A party is created with your provided settings.\n2. The system waits for the party code to be generated.\n3. The party code is returned in the response.\n4. The bot switches to spectator mode.\n5. The bot marks itself as ready.\n6. You and other players join, ready up, and start the match.\n\n**Callbacks:**\nIf a callback URL is provided, POST requests will be sent to it:\n- **settings:** When lobby settings change, a POST is sent to `{callback_url}/settings` with the `CsoCitadelParty` protobuf message as JSON.\n- **match start:** When the match starts, a POST is sent to `{callback_url}` with the match ID.\n\n_Protobuf definitions: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)_\n\n**Note:**\nThe bot will leave the match 15 minutes after creation, regardless of match state.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/h |\n| Key | 100req/30min |\n| Global | 1000req/h |",
+      "responses": {
+        "200": {
+          "desc": "Successfully fetched custom match id.",
+          "type": "CreateCustomResponse"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Creating custom match failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/{lobby_id}/leave": {
+    "POST": {
+      "desc": "This endpoint makes the bot leave the custom match lobby early.\nBy default the bot leaves automatically after 15 minutes, but this endpoint allows you to trigger it sooner.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/h |\n| Key | 100req/30min |\n| Global | 1000req/h |",
+      "params": {
+        "lobby_id": {
+          "type": "string",
+          "req": true
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Successfully left the lobby."
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Leaving lobby failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/{lobby_id}/ready": {
+    "POST": {
+      "desc": "This endpoint allows you to ready up for a custom match.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/h |\n| Key | 100req/30min |\n| Global | 1000req/h |",
+      "params": {
+        "lobby_id": {
+          "type": "string",
+          "req": true
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Successfully ready up."
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Ready up failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/{lobby_id}/start": {
+    "POST": {
+      "desc": "This endpoint starts a custom match.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/h |\n| Key | 100req/30min |\n| Global | 1000req/h |",
+      "params": {
+        "lobby_id": {
+          "type": "string",
+          "req": true
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Successfully started the match."
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Starting match failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/{lobby_id}/unready": {
+    "POST": {
+      "desc": "This endpoint allows you to unready for a custom match.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/h |\n| Key | 100req/30min |\n| Global | 1000req/h |",
+      "params": {
+        "lobby_id": {
+          "type": "string",
+          "req": true
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Successfully unready."
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Unready failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/custom/{party_id}/match-id": {
+    "GET": {
+      "desc": "This endpoint allows you to get the match id of a custom match.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "party_id": {
+          "type": "integer",
+          "req": true
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Successfully fetched custom match id.",
+          "type": "GetCustomMatchIdResponse"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetch Custom Match ID failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/live/urls": {
+    "GET": {
+      "desc": "Returns a list of all currently available live broadcast URLs.\n\nThese can be used in any demofile broadcast parser:\n- [Demofile-Net](https://github.com/saul/demofile-net)\n- [Haste](https://github.com/blukai/haste/)\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[LiveUrl]"
+        },
+        "500": {
+          "desc": "Fetching live URLs failed"
+        }
+      }
+    },
+    "POST": {
+      "desc": "Submit one or more live broadcast URLs so they show up in the `GET /live/urls` listing.\n\nEach submitted URL is stored for 15 minutes; re-submit periodically to keep a match listed\nwhile it is still live. Existing entries for the same `match_id` are overwritten.\n\nThese URLs can be used in any demofile broadcast parser:\n- [Demofile-Net](https://github.com/saul/demofile-net)\n- [Haste](https://github.com/blukai/haste/)\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Ingesting live URLs failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/metadata": {
+    "GET": {
+      "desc": "This endpoints lets you fetch multiple match metadata at once. The response is a JSON array of match metadata.\n\nWhen player info is included, each player object contains a `hero_build_id` field (if available) from demo analysis.\n\n> **Note:** The `hero_build_id` represents the first build the player had selected when the game started. It does not reflect any build changes made during the match.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/min |\n| Key | 10req/10s |\n| Global | 100req/min |",
+      "params": {
+        "include_info": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include match info in the response.",
+          "default": "true"
+        },
+        "include_more_info": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include more match info in the response."
+        },
+        "include_objectives": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include objectives in the response."
+        },
+        "include_mid_boss": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include midboss in the response."
+        },
+        "include_player_info": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include player info in the response."
+        },
+        "include_player_kda": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include only K/D/A fields (`kills`, `deaths`, `assists`) for players."
+        },
+        "include_player_items": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include player items in the response."
+        },
+        "include_player_stats": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include player stats in the response."
+        },
+        "include_player_final_stats": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include only the final per-player stats (last sample of every `stats.*`\ntime-series) as a single `final_stats` object. Far cheaper than\n`include_player_stats`, which returns the whole array per field."
+        },
+        "include_player_death_details": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Include player death details in the response."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. Omit or pass empty string for no filter."
+        },
+        "match_mode": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the match mode. Valid values: `unranked`, `private_lobby`, `coop_bot`, `ranked`, `server_test`, `tutorial`, `hero_labs`. **Default:** `ranked,unranked`."
+        },
+        "match_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Comma separated list of match ids, limited by `limit`"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "is_high_skill_range_parties": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the high skill range."
+        },
+        "is_low_pri_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the low priority pool."
+        },
+        "is_new_player_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the new player pool."
+        },
+        "account_ids": {
+          "type": "array | null",
+          "req": false,
+          "desc": "Filter matches by account IDs of players that participated in the match."
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "item_filter_hero_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Hero ID to scope item filters to. Required when using `include_item_ids` or `exclude_item_ids`."
+        },
+        "include_item_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to include.\nRequires `item_filter_hero_id`. Returns matches where a player on the specified hero has ALL of these items."
+        },
+        "exclude_item_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Comma separated list of item ids to exclude.\nRequires `item_filter_hero_id`. Returns matches where a player on the specified hero has NONE of these items."
+        },
+        "extra_match_columns": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Comma separated list of extra match-level columns to include in the response.\nEach column is aggregated with `any(...)`. Only alphanumeric characters, underscores, and\ndots (for nested field access) are allowed.\nExample: `objectives_mask_team0,team_score`."
+        },
+        "extra_player_columns": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Comma separated list of extra player-level columns to include in the response.\nEach column is added inside the player tuple. Only alphanumeric characters, underscores,\nand dots (for nested field access) are allowed.\nExample: `stats.player_damage,stats.player_healing`. Implicitly enables player fields."
+        },
+        "order_by": {
+          "type": "string (enum: match_id, start_time, average_badge)",
+          "req": false,
+          "desc": "The field to order the results by."
+        },
+        "order_direction": {
+          "type": "string (enum: desc, asc)",
+          "req": false,
+          "desc": "The direction to order the results by."
+        },
+        "limit": {
+          "type": "integer",
+          "req": false,
+          "desc": "The maximum number of matches to return.",
+          "default": 1000
+        },
+        "format": {
+          "type": "string (enum: json, ndjson)",
+          "req": false,
+          "desc": "The response format. Valid values: `json` (a JSON array), `ndjson` (newline-delimited JSON objects).",
+          "default": "json"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        }
+      }
+    }
+  },
+  "/v1/matches/recently-fetched": {
+    "GET": {
+      "desc": "This endpoint returns a list of match ids that have been fetched within the last 10 minutes.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "Recently fetched match info",
+          "type": "array[ClickhouseMatchInfo]"
+        },
+        "500": {
+          "desc": "Failed to fetch recently fetched matches"
+        }
+      }
+    }
+  },
+  "/v1/matches/salts": {
+    "POST": {
+      "desc": "You can use this endpoint to help us collecting data.\n\nThe endpoint accepts a list of MatchSalts objects, which contain the following fields:\n\n- `match_id`: The match ID\n- `cluster_id`: The cluster ID\n- `metadata_salt`: The metadata salt\n- `replay_salt`: The replay salt\n- `username`: The username of the person who submitted the match\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": ""
+        },
+        "400": {
+          "desc": "Provided parameters are invalid or the salt check failed."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Ingest failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/{match_id}/live/url": {
+    "GET": {
+      "desc": "This endpoints spectates a match and returns the live URL to be used in any demofile broadcast parser.\n\nExample Parsers:\n- [Demofile-Net](https://github.com/saul/demofile-net)\n- [Haste](https://github.com/blukai/haste/)\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 2req/h |\n| Key | 5req/m, 100req/h |\n| Global | 5req/10s, 500req/h |",
+      "params": {
+        "match_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The match ID"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "MatchSpectateResponse"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Spectating match failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/{match_id}/metadata": {
+    "GET": {
+      "desc": "This endpoint returns the match metadata for the given `match_id` parsed into JSON.\n\nEach player object is enriched with a `hero_build_id` field (if available) from demo analysis.\n\n> **Note:** The `hero_build_id` represents the first build the player had selected when the game started. It does not reflect any build changes made during the match.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Messages:\n- CMsgMatchMetaData\n- CMsgMatchMetaDataContents\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | From Cache: 100req/s<br>From S3: 100req/10s<br>From Steam: 3req/h |\n| Key | From Cache: 100req/s<br>From S3: 100req/s<br>From Steam: 300req/h |\n| Global | From Cache: 100req/s<br>From S3: 700req/s<br>From Steam: 1500req/h |",
+      "params": {
+        "match_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The match ID"
+        },
+        "is_custom": {
+          "type": "boolean | null",
+          "req": false
+        },
+        "disable_steam": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "If `true`, skip the Steam fallback when the metadata is not available in S3\nand return an error instead."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Match metadata, see protobuf type: CMsgMatchMetaDataContents"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "404": {
+          "desc": "Match metadata not found"
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetching or parsing match metadata failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/{match_id}/metadata/raw": {
+    "GET": {
+      "desc": "This endpoints returns the raw .meta.bz2 file for the given `match_id`.\n\nYou have to decompress it and decode the protobuf message.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Messages:\n- CMsgMatchMetaData\n- CMsgMatchMetaDataContents\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | From Cache: 100req/s<br>From S3: 100req/10s<br>From Steam: 3req/h |\n| Key | From Cache: 100req/s<br>From S3: 100req/s<br>From Steam: 300req/h |\n| Global | From Cache: 100req/s<br>From S3: 700req/s<br>From Steam: 1500req/h |",
+      "params": {
+        "match_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The match ID"
+        },
+        "is_custom": {
+          "type": "boolean | null",
+          "req": false
+        },
+        "disable_steam": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "If `true`, skip the Steam fallback when the metadata is not available in S3\nand return an error instead."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "404": {
+          "desc": "Match metadata not found"
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetching match metadata failed"
+        }
+      }
+    }
+  },
+  "/v1/matches/{match_id}/salts": {
+    "GET": {
+      "desc": "This endpoints returns salts that can be used to fetch metadata and demofile for a match.\n\n**Note:** We currently fetch many matches without salts, so for these matches we do not have salts stored.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | From DB: 100req/s<br>From Steam: 10req/30mins |\n| Key | From DB: -<br>From Steam: 10req/min |\n| Global | From DB: -<br>From Steam: 10req/10s |",
+      "params": {
+        "match_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The match ID"
+        },
+        "disable_steam": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "If `true`, skip the Steam fallback when the salts are not available in Clickhouse\nand return an error instead."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "MatchSaltsResponse"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetching match salts failed"
+        }
+      }
+    }
+  },
+  "/v1/patches": {
+    "GET": {
+      "desc": "**Deprecated:** Use `/v2/patches` instead, which returns a unified feed combining the Forum changelog and the Steam news feed.\n\nReturns the parsed result of the RSS Feed from the official Forum.\n\nRSS-Feed: https://forums.playdeadlock.com/forums/changelog.10/index.rss\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[Patch]"
+        },
+        "500": {
+          "desc": "Fetching or parsing the RSS-Feed failed"
+        }
+      }
+    }
+  },
+  "/v1/patches/big-days": {
+    "GET": {
+      "desc": "Returns a list of dates where Deadlock's \"big\" patch days were, usually bi-weekly.\nThe exact date is the time when the announcement forum post was published.\n\nThis list is manually maintained, and so new patch dates may be delayed by a few hours.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[string]"
+        }
+      }
+    }
+  },
+  "/v1/players/hero-stats": {
+    "GET": {
+      "desc": "This endpoint returns statistics for each hero played by a given player account.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "account_ids": {
+          "type": "array[integer]",
+          "req": true,
+          "desc": "Comma separated list of account ids, Account IDs are in `SteamID3` format."
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "hero_ids": {
+          "type": "string | null",
+          "req": false,
+          "desc": "Filter matches based on the hero IDs. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "max_networth": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter players based on their final net worth."
+        },
+        "min_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "max_average_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on the average badge level (tier = first digits, subtier = last digit) of *both* teams involved. See more: <https://api.deadlock-api.com/v1/assets/ranks>"
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero Stats",
+          "type": "array[HeroStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero stats"
+        }
+      }
+    }
+  },
+  "/v1/players/mmr": {
+    "GET": {
+      "desc": "Batch Player MMR",
+      "params": {
+        "account_ids": {
+          "type": "array[integer]",
+          "req": true,
+          "desc": "Comma separated list of account ids, Account IDs are in `SteamID3` format."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "MMR",
+          "type": "array[MMRHistory]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch mmr"
+        }
+      }
+    }
+  },
+  "/v1/players/mmr/distribution": {
+    "GET": {
+      "desc": "Player MMR Distribution",
+      "params": {
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "is_high_skill_range_parties": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the high skill range."
+        },
+        "is_low_pri_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the low priority pool."
+        },
+        "is_new_player_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the new player pool."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "MMR",
+          "type": "array[DistributionEntry]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch mmr"
+        }
+      }
+    }
+  },
+  "/v1/players/mmr/distribution/{hero_id}": {
+    "GET": {
+      "desc": "Player Hero MMR Distribution",
+      "params": {
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp). **Default:** 30 days ago.",
+          "default": 1778716800
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "is_high_skill_range_parties": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the high skill range."
+        },
+        "is_low_pri_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the low priority pool."
+        },
+        "is_new_player_pool": {
+          "type": "boolean | null",
+          "req": false,
+          "desc": "Filter matches based on whether they are in the new player pool."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch the MMR history for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero MMR",
+          "type": "array[DistributionEntry]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero mmr"
+        }
+      }
+    }
+  },
+  "/v1/players/mmr/{hero_id}": {
+    "GET": {
+      "desc": "Batch Player Hero MMR",
+      "params": {
+        "account_ids": {
+          "type": "array[integer]",
+          "req": true,
+          "desc": "Comma separated list of account ids, Account IDs are in `SteamID3` format."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch the MMR history for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero MMR",
+          "type": "array[MMRHistory]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero mmr"
+        }
+      }
+    }
+  },
+  "/v1/players/rank-predict/image": {
+    "GET": {
+      "desc": "Returns the average predicted rank badge image (binary) for a comma-separated list of account IDs. Use `?format=webp` for WebP and `?size=small` for the small badge (defaults to large).",
+      "params": {
+        "account_ids": {
+          "type": "array[integer]",
+          "req": true,
+          "desc": "Comma-separated list of account IDs (max 12)."
+        },
+        "format": {
+          "type": "string (enum: png, webp)",
+          "req": false,
+          "desc": "Image format. Defaults to `png`. Supported: `png`, `webp`."
+        },
+        "size": {
+          "type": "string (enum: large, small)",
+          "req": false,
+          "desc": "Image size. Defaults to `large`. Supported: `large`, `small`."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Average predicted rank badge image",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Invalid or missing account IDs"
+        },
+        "403": {
+          "desc": "One of the users is protected"
+        },
+        "404": {
+          "desc": "No image available for the predicted rank"
+        },
+        "422": {
+          "desc": "Not enough recent ranked matches for one or more accounts"
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Prediction failed"
+        },
+        "503": {
+          "desc": "Rank prediction model not loaded"
+        }
+      }
+    }
+  },
+  "/v1/players/steam": {
+    "GET": {
+      "desc": "This endpoint returns Steam profiles of players.\n\nPass `refresh=true` to force a live refresh of the listed accounts from the\nSteam Web API (`GetPlayerSummaries` + `GetFriendList`) before returning. The\nrefreshed rows are persisted to the `steam_profiles` table and returned in the\nresponse with `last_updated` set to the current time. Refresh requests are\nrate limited and capped at 100 account ids per call to stay inside the\nshared Steam Web API key budget.\n\nSee: https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_(v0002)\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s (read path), 3req/min + 15req/h (refresh) |\n| Key | - (read path), 10req/min + 60req/h (refresh) |\n| Global | - (read path), 30req/min + 200req/h (refresh) |",
+      "params": {
+        "account_ids": {
+          "type": "array[integer]",
+          "req": true,
+          "desc": "Comma separated list of account ids, Account IDs are in `SteamID3` format."
+        },
+        "refresh": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Refresh the listed profiles from the Steam Web API before returning."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Steam Profiles",
+          "type": "array[SteamProfile]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "404": {
+          "desc": "No Steam profile found."
+        },
+        "429": {
+          "desc": "Rate limit exceeded (only enforced when refresh=true)."
+        },
+        "500": {
+          "desc": "Failed to fetch steam profiles."
+        },
+        "502": {
+          "desc": "Steam Web API call failed (only when refresh=true)."
+        }
+      }
+    }
+  },
+  "/v1/players/steam-search": {
+    "GET": {
+      "desc": "This endpoint lets you search for Steam profiles by account_id or personaname.\n\nSee: https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_(v0002)\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "search_query": {
+          "type": "string",
+          "req": true,
+          "desc": "Search query for Steam profiles."
+        },
+        "limit": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Maximum number of profiles to return.",
+          "default": "100"
+        },
+        "min_matches_played_last_30d": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Only return profiles that have played at least this many matches in the\nlast 30 days. Defaults to 5 to filter out inactive/empty profiles and\nkeep search responsive.",
+          "default": "5"
+        },
+        "min_last_team_avg_badge": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Only return profiles whose `last_team_avg_badge` is at least this\nvalue. Defaults to 0 (no filter). Profiles with no recorded badge are\nstored as 0 and are excluded when this is set above 0.",
+          "default": "0"
+        },
+        "matches_played_weight": {
+          "type": "number | null",
+          "req": false,
+          "desc": "Weight applied to `log1p(matches_played_last_30d)` when reranking\ncandidates. The final score per profile is\n`jaro_winkler(personaname_lc, query) + weight * log1p(matches_played)`.\nSet to 0 to rank purely by string similarity; raise it to bias toward\nactive/popular players.",
+          "default": "0.02"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Steam Profile Search",
+          "type": "array[SteamProfile]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "404": {
+          "desc": "No Steam profiles found."
+        },
+        "500": {
+          "desc": "Failed to fetch steam profiles."
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/account-stats": {
+    "GET": {
+      "desc": "This endpoint returns the player account stats for the given `account_id`.\n\n!THIS IS A PATREON ONLY ENDPOINT!\n\nYou have to be friend with one of the bots to use this endpoint.\nOn first use this endpoint will return an error with a list of invite links to add the bot as friend.\nFrom then on you can use this endpoint.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Messages:\n- CMsgClientToGcGetAccountStats\n- CMsgAccountStats\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 5req/min |\n| Key | 20req/min & 800req/h |\n| Global | 200req/min |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "PlayerAccountStats"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "403": {
+          "desc": "Account is not a Patreon subscriber or not prioritized."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetching account stats failed"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/card": {
+    "GET": {
+      "desc": "This endpoint returns the player card for the given `account_id`.\n\n!THIS IS A PATREON ONLY ENDPOINT!\n\nYou have to be friend with one of the bots to use this endpoint.\nOn first use this endpoint will return an error with a list of invite links to add the bot as friend.\nFrom then on you can use this endpoint.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Messages:\n- CMsgClientToGcGetProfileCard\n- CMsgCitadelProfileCard\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 5req/min |\n| Key | 20req/min & 800req/h |\n| Global | 200req/min |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "PlayerCard"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "403": {
+          "desc": "Account is not a Patreon subscriber or not prioritized."
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Fetching card failed"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/enemy-stats": {
+    "GET": {
+      "desc": "This endpoint returns the enemy stats.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_matches_played": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter based on the number of matches played."
+        },
+        "max_matches_played": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter based on the number of matches played."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Enemy Stats",
+          "type": "array[EnemyStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch enemy stats"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/match-history": {
+    "GET": {
+      "desc": "This endpoint returns the player match history for the given `account_id`.\n\nIf the account is friends with one of our bots, the match history is a combination of the data from **Steam** and **ClickHouse**, so you always get the most up-to-date data and full history.\nIf the account is not friends with a bot, only the stored match history from **ClickHouse** is returned.\n\nProtobuf definitions can be found here: [https://github.com/SteamDatabase/Protobufs](https://github.com/SteamDatabase/Protobufs)\n\nRelevant Protobuf Messages:\n- CMsgClientToGcGetMatchHistory\n- CMsgClientToGcGetMatchHistoryResponse\n\n### Rate Limits (only applies to bot friends):\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s<br>Bot-Friend: 10req/h<br>With `force_refetch=true`: 1req/h |\n| Key | -<br>Bot-Friend: 300req/h<br>With `force_refetch=true`: 5req/h |\n| Global | -<br>Bot-Friend: 1500req/h<br>With `force_refetch=true`: 10req/h |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "force_refetch": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Refetch the match history from Steam, even if it is already cached in `ClickHouse`.\nOnly use this if you are sure that the data in `ClickHouse` is outdated.\nEnabling this flag results in a strict rate limit."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[PlayerMatchHistoryEntry]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "429": {
+          "desc": "Rate limit exceeded. Returns stored match history from ClickHouse as a fallback. When `force_refetch=true`, returns an error instead.",
+          "type": "array[PlayerMatchHistoryEntry]"
+        },
+        "500": {
+          "desc": "Fetching player match history failed"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/mate-stats": {
+    "GET": {
+      "desc": "This endpoint returns the mate stats.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "game_mode": {
+          "type": "null | string (enum: normal, street_brawl, explore_n_y_c, internal)",
+          "req": false,
+          "desc": "Filter matches based on their game mode. Valid values: `normal`, `street_brawl`. **Default:** `normal`.",
+          "default": "normal"
+        },
+        "min_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "max_unix_timestamp": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their start time (Unix timestamp)."
+        },
+        "min_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "max_duration_s": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their duration in seconds (up to 7000s)."
+        },
+        "min_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "max_match_id": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter matches based on their ID."
+        },
+        "min_matches_played": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter based on the number of matches played."
+        },
+        "max_matches_played": {
+          "type": "integer | null",
+          "req": false,
+          "desc": "Filter based on the number of matches played."
+        },
+        "same_party": {
+          "type": "boolean",
+          "req": false,
+          "desc": "Filter based on whether the mates were on the same party.\nTwo players are considered to be in the same party if they were on the same team and are\nSteam friends as of the match start time (per the `steam_profiles` friends list).",
+          "default": false
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Mate Stats",
+          "type": "array[MateStats]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch mate stats"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/mmr-history": {
+    "GET": {
+      "desc": "Player MMR History",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "MMR History",
+          "type": "array[MMRHistory]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch mmr history"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/mmr-history/{hero_id}": {
+    "GET": {
+      "desc": "Player Hero MMR History",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "hero_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The hero ID to fetch the MMR history for. See more: <https://api.deadlock-api.com/v1/assets/heroes>"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Hero MMR History",
+          "type": "array[MMRHistory]"
+        },
+        "400": {
+          "desc": "Provided parameters are invalid."
+        },
+        "500": {
+          "desc": "Failed to fetch hero mmr history"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/rank-predict": {
+    "GET": {
+      "desc": "Predicts a player's current rank badge from their last 30 ranked/unranked matches.\nRequires at least 30 eligible matches (Ranked or Unranked, Normal game mode) with valid badge data.\n\n> **This is an ML prediction and may be inaccurate.** The model has no access to the player's\n> actual hidden MMR — it infers rank from match context signals only.\n\n### Model Accuracy (5-fold cross-validation)\n\n| Metric | Value |\n|--------|-------|\n| R²     | 0.949 |\n| MAE    | 1.08 sub-ranks |\n| RMSE   | 1.89 sub-ranks |\n| Within ±1 sub-rank | 77.6% |\n| Within ±3 sub-rank | 93.9% |\n| Within ±5 sub-rank | 97.7% |\n| Within ±6 sub-rank | 98.6% |\n| Within ±10 sub-rank | 99.6% |\n\nAccuracy by tier:\n\n| Tier range | n | MAE |\n|------------|---|-----|\n| Low (1-4)  | 404 | 3.68 sub-ranks |\n| Mid (5-7)  | 777 | 2.91 sub-ranks |\n| High (8-11)| 25,556 | 0.98 sub-ranks |\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "RankPredictResponse"
+        },
+        "400": {
+          "desc": "Invalid account ID"
+        },
+        "403": {
+          "desc": "User is protected or endpoint unavailable"
+        },
+        "422": {
+          "desc": "Not enough recent ranked matches (need 30)"
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Prediction failed"
+        },
+        "503": {
+          "desc": "Rank prediction model not loaded"
+        }
+      }
+    }
+  },
+  "/v1/players/{account_id}/rank-predict/image": {
+    "GET": {
+      "desc": "Returns the predicted rank badge image directly (binary), not a URL. Use `?format=webp` for WebP and `?size=small` for the small badge (defaults to large).",
+      "params": {
+        "account_id": {
+          "type": "integer",
+          "req": true,
+          "desc": "The players `SteamID3`"
+        },
+        "format": {
+          "type": "string (enum: png, webp)",
+          "req": false,
+          "desc": "Image format. Defaults to `png`. Supported: `png`, `webp`."
+        },
+        "size": {
+          "type": "string (enum: large, small)",
+          "req": false,
+          "desc": "Image size. Defaults to `large`. Supported: `large`, `small`."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "Predicted rank badge image",
+          "type": "array[integer]"
+        },
+        "400": {
+          "desc": "Invalid account ID"
+        },
+        "403": {
+          "desc": "User is protected or endpoint unavailable"
+        },
+        "404": {
+          "desc": "No image available for the predicted rank"
+        },
+        "422": {
+          "desc": "Not enough recent ranked matches (need 30)"
+        },
+        "429": {
+          "desc": "Rate limit exceeded"
+        },
+        "500": {
+          "desc": "Prediction failed"
+        },
+        "503": {
+          "desc": "Rank prediction model not loaded"
+        }
+      }
+    }
+  },
+  "/v1/servers": {
+    "GET": {
+      "desc": "Returns all currently active game servers.",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "ListServersResponse"
+        }
+      }
+    }
+  },
+  "/v1/servers/metrics": {
+    "POST": {
+      "desc": "Ingests a single metric event reported by a game server. The schema is intentionally\nflexible: `metric_value` carries the primary numeric measurement and `metadata` holds\narbitrary key/value context that varies per game mode or metric. Optional `map` and\n`game_mode_version` let callers segment leaderboards per map or per ruleset revision.\nRequires a valid game server secret as a Bearer token.",
+      "responses": {
+        "202": {
+          "desc": "Metric accepted for ingestion."
+        },
+        "400": {
+          "desc": "Invalid request body."
+        },
+        "401": {
+          "desc": "Invalid or missing game server secret."
+        }
+      }
+    }
+  },
+  "/v1/servers/status": {
+    "POST": {
+      "desc": "Reports the current status of a game server.\nGame servers must call this endpoint at least once every 30 seconds to remain active.\nRequires a valid game server secret as a Bearer token.",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "ServerStatusResponse"
+        },
+        "400": {
+          "desc": "Invalid request body."
+        },
+        "401": {
+          "desc": "Invalid or missing game server secret."
+        }
+      }
+    }
+  },
+  "/v1/servers/steam": {
+    "GET": {
+      "desc": "Returns the list of Deadlock game servers registered with the Steam master server\n(`IGameServersService/GetServerList`), filtered to Deadlock's appid.",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[SteamServer]"
+        },
+        "500": {
+          "desc": "Fetching the Steam server list failed."
+        }
+      }
+    }
+  },
+  "/v1/sql": {
+    "GET": {
+      "desc": "Executes a SQL query on the database.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 2req/min, 20req/hr |\n| Key | 10req/min |\n| Global | 30req/min |",
+      "params": {
+        "query": {
+          "type": "string",
+          "req": true,
+          "desc": "The SQL query to execute. It must follow the Clickhouse SQL syntax."
+        },
+        "format": {
+          "type": "string (enum: json, ndjson)",
+          "req": false,
+          "desc": "The response format. Valid values: `json` (a JSON array), `ndjson` (newline-delimited JSON objects).",
+          "default": "json"
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "string"
+        },
+        "500": {
+          "desc": "",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "/v1/sql/tables": {
+    "GET": {
+      "desc": "Lists all tables in the database.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/min |\n| Key | - |\n| Global | 60req/min |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[string]"
+        },
+        "500": {
+          "desc": "",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "/v1/sql/tables/{table}/schema": {
+    "GET": {
+      "desc": "Returns the schema of a table.\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 10req/min |\n| Key | - |\n| Global | 60req/min |",
+      "params": {
+        "table": {
+          "type": "string",
+          "req": true,
+          "desc": "The name of the table to fetch the schema for."
+        }
+      },
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "object"
+        },
+        "500": {
+          "desc": "",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "/v2/patches": {
+    "GET": {
+      "desc": "Returns a unified feed combining patch notes from the official Forum changelog and the Steam news feed.\n\nEach entry is tagged with a `source` field (`forum` or `steam`).\n\n- Forum RSS: https://forums.playdeadlock.com/forums/changelog.10/index.rss\n- Steam News RSS: https://store.steampowered.com/feeds/news/app/1422450/\n\n### Rate Limits:\n| Type | Limit |\n| ---- | ----- |\n| IP | 100req/s |\n| Key | - |\n| Global | - |",
+      "responses": {
+        "200": {
+          "desc": "",
+          "type": "array[FeedItem]"
+        },
+        "500": {
+          "desc": "Fetching or parsing one of the RSS feeds failed"
+        }
+      }
+    }
+  }
+}
