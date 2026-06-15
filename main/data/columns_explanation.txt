@@ -1,0 +1,142 @@
+СПИСОК ВСЕХ ДОСТУПНЫХ СТОЛБЦОВ В БАЗЕ ДАННЫХ И ИХ ЗНАЧЕНИЯ
+----------------------------------------------------------
+
+- match_id : Уникальный ID матча.
+- start_time : Время начала матча.
+- duration_s : Продолжительность матча в секундах.
+- match_mode : Режим матчмейкинга (Unranked, Ranked и т.д.).
+- game_mode : Игровой режим (Normal, Bot, Tutorial и т.д.).
+- average_badge_team0 : Средний рейтинг (MMR badge) команды 0.
+- average_badge_team1 : Средний рейтинг (MMR badge) команды 1.
+- winning_team : Победившая команда (Team0 или Team1).
+- match_outcome : Исход матча (TeamWin, Disconnect, etc).
+- bot_difficulty : Сложность ботов (если игра с ботами).
+- objectives_mask_team0 : Битовая маска уничтоженных строений команды 0.
+- objectives_mask_team1 : Битовая маска уничтоженных строений команды 1.
+- is_high_skill_range_parties : Был ли матч с большим разбросом скилла (High Skill Variance).
+- low_pri_pool : Был ли матч в скрытом пуле (Low Priority).
+- new_player_pool : Был ли матч в пуле новичков.
+- not_scored : Матч не засчитан (из-за ливеров или читеров).
+- game_mode_version : Версия игрового режима (патч).
+- objectives.destroyed_time_s : Время разрушения каждого строения.
+- objectives.creep_damage : Урон по строениям от крипов.
+- objectives.creep_damage_mitigated : Сниженный урон по строениям от крипов.
+- objectives.player_damage : Урон по строениям от игроков.
+- objectives.player_damage_mitigated : Сниженный урон по строениям от игроков.
+- objectives.first_damage_time_s : Время первого урона по строениям.
+- objectives.team_objective : Название строения (Тир 1 башня, База и т.д.).
+- objectives.team : Команда, которой принадлежит строение.
+- objectives.player_spirit_damage : Урон спиритом по строениям.
+- mid_boss.team_killed : Команда, убившая Мид Босса.
+- mid_boss.team_claimed : Команда, забравшая Реликвию Мид Босса.
+- mid_boss.destroyed_time_s : Время убийства Мид Босса.
+- street_brawl_rounds.round_duration_s : Длительность раундов в режиме Brawl.
+- street_brawl_rounds.winning_team : Побеждающая команда в раундах Brawl.
+- team_score : Очки команд (для кастомных режимов).
+- match_tracked_stats : Отслеживаемая глобальная статистика матча.
+- team0_tracked_stats : Отслеживаемая статистика команды 0.
+- team1_tracked_stats : Отслеживаемая статистика команды 1.
+- account_id : Уникальный ID игрока (Steam ID32).
+- player_slot : Слот игрока в лобби (0-11).
+- team : Команда, за которую играл этот игрок (Team0 или Team1).
+- kills : Итоговое количество убийств.
+- deaths : Итоговое количество смертей.
+- assists : Итоговое количество ассистов.
+- net_worth : Итоговый заработок душ (Нетворс).
+- hero_id : ID героя, на котором играл игрок.
+- last_hits : Итоговое количество добитых крипов (Last Hits).
+- denies : Итоговое количество заденаенных душ (Denies).
+- ability_points : Итоговое количество заработанных очков способностей.
+- party : ID пати (если игрок играл в группе).
+- assigned_lane : Линия, на которую система отправила игрока (1-4).
+- player_level : Итоговый уровень героя.
+- abandon_match_time_s : Время выхода из игры (ливер), 0 если не ливал.
+- ability_stats : Детальная статистика по каждому использованию способностей.
+- stats_type_stat : Массив нераспознанной статистики.
+- book_reward.book_id : Награды: ID книги.
+- book_reward.xp_amount : Награды: Полученный опыт.
+- book_reward.starting_xp : Награды: Стартовый опыт.
+- death_details.game_time_s : Хронология: время каждой смерти.
+- death_details.killer_player_slot : Хронология: кто убивал этого игрока.
+- death_details.death_pos : Хронология: координаты места смерти.
+- death_details.killer_pos : Хронология: координаты убийцы.
+- death_details.death_duration_s : Хронология: время проведенное в таверне.
+- items.game_time_s : Инвентарь: время каждой покупки.
+- items.item_id : Инвентарь: ID купленного предмета или способности.
+- items.upgrade_id : Инвентарь: ID апгрейда (уровня прокачки скилла).
+- items.sold_time_s : Инвентарь: время продажи предмета (если продан)
+- items.flags : Инвентарь: флаги предмета.
+- items.imbued_ability_id : Инвентарь: к какой способности привязан предмет (например, Imbued).
+- items.upgrade_info : Инвентарь: доп. инфа об апгрейдах.
+- stats.time_stamp_s : Динамика (каждые несколько минут): отсечка времени (секунды).
+- stats.net_worth : Динамика: нетворс на этой отсечке времени.
+- stats.gold_player : Динамика: души за убийства игроков.
+- stats.gold_player_orbs : Динамика: души собранные с орбов игроков.
+- stats.gold_lane_creep_orbs : Динамика: души собранные с орбов крипов.
+- stats.gold_neutral_creep_orbs : Динамика: души с нейтральных лесных крипов (орбы).
+- stats.gold_boss : Динамика: души за боссов.
+- stats.gold_boss_orb : Динамика: души с орбов боссов.
+- stats.gold_treasure : Динамика: души с ящиков/статуй.
+- stats.gold_denied : Динамика: потерянные души из-за денаев врагом.
+- stats.gold_death_loss : Динамика: потерянные души при смерти (если применимо).
+- stats.gold_lane_creep : Динамика: прямые души за добивание крипов.
+- stats.gold_neutral_creep : Динамика: прямые души за лесных крипов.
+- stats.kills : Динамика: убийства на этот момент матча.
+- stats.deaths : Динамика: смерти на этот момент.
+- stats.assists : Динамика: ассисты на этот момент.
+- stats.creep_kills : Динамика: убитые крипы.
+- stats.neutral_kills : Динамика: убитые лесные крипы.
+- stats.possible_creeps : Динамика: сколько крипов вообще вышло на линию игрока.
+- stats.creep_damage : Динамика: урон по крипам.
+- stats.player_damage : Динамика: урон по вражеским героям.
+- stats.neutral_damage : Динамика: урон по лесным.
+- stats.boss_damage : Динамика: урон по боссам.
+- stats.denies : Динамика: количество денаев.
+- stats.player_healing : Динамика: отхил (полученное исцеление).
+- stats.ability_points : Динамика: заработанные очки навыков.
+- stats.self_healing : Динамика: исцеление самого себя.
+- stats.player_barriering : Динамика: поглощенный урон щитами.
+- stats.teammate_healing : Динамика: лечение союзников.
+- stats.teammate_barriering : Динамика: щиты, данные союзникам.
+- stats.self_damage : Динамика: урон по себе.
+- stats.bullet_kills : Динамика: убийства с оружия.
+- stats.melee_kills : Динамика: убийства ближним боем (мили-атаки).
+- stats.ability_kills : Динамика: убийства скиллами.
+- stats.headshot_kills : Динамика: убийства в голову.
+- stats.player_damage_taken : Динамика: полученный урон от игроков.
+- stats.max_health : Динамика: максимальное ХП героя.
+- stats.weapon_power : Динамика: показатель урона от оружия (Weapon Power).
+- stats.tech_power : Динамика: показатель силы спирита (Spirit Power).
+- stats.shots_hit : Динамика: попадания из оружия.
+- stats.shots_missed : Динамика: промахи из оружия.
+- stats.damage_absorbed : Динамика: поглощенный урон.
+- stats.absorption_provided : Динамика: предоставленное поглощение урона.
+- stats.hero_bullets_hit : Динамика: пули, попавшие по героям.
+- stats.hero_bullets_hit_crit : Динамика: критические попадания (в голову).
+- stats.heal_prevented : Динамика: сколько лечения врагов было предотвращено (антихил).
+- stats.heal_lost : Динамика: потерянное исцеление.
+- stats.damage_mitigated : Динамика: сниженный броней урон.
+- stats.level : Динамика: уровень героя.
+- rewards_eligible : Мета: имеет ли игрок право на награды за матч.
+- earned_holiday_award_2025 : Мета: получена ли новогодняя награда 2025.
+- power_up_buffs.type : Баффы: тип поднятых баффов (ящики).
+- power_up_buffs.value : Баффы: значение баффа.
+- power_up_buffs.is_permanent : Баффы: перманентный ли бафф.
+- mvp_rank : Ранг MVP (1 - лучший игрок матча).
+- player_tracked_stats : Отслеживаемая статистика игрока.
+- accolades.accolade_id : Награды: ID бейджиков (ачивки после матча).
+- accolades.accolade_stat_value : Награды: значение статы для бейджа.
+- accolades.accolade_threshold_achieved : Награды: достигнут ли порог бейджа.
+- x_min : Координаты: X min.
+- y_min : Координаты: Y min.
+- x_max : Координаты: X max.
+- y_max : Координаты: Y max.
+- won : Победил ли игрок (Team == WinningTeam).
+- death_details.time_to_kill_s : Хронология: как долго убивали (TTK).
+- hero_xp : Заработанный опыт героя (вне матча).
+- hero_equips : Экипировка героя (косметика).
+- created_at : Время записи дампа.
+- banned_hero_ids : Забаненные герои (если режим с банами).
+- hero_build_id : ID внутриигровой сборки (если игрок использовал чей-то билд).
+- demo_processed : Обработана ли демка.
+- final_stats : Сводный JSON итоговой статистики игрока.

@@ -1,0 +1,956 @@
+{
+    "1": {
+        "1142270357": {
+            "name": "Concussive Combustion",
+            "type": "ultimate"
+        },
+        "3516947824": {
+            "name": "Flame Dash",
+            "type": "signature"
+        },
+        "491391007": {
+            "name": "Napalm",
+            "type": "signature"
+        },
+        "1593133799": {
+            "name": "Afterburn",
+            "type": "signature"
+        }
+    },
+    "2": {
+        "1065103387": {
+            "name": "Lightning Ball",
+            "type": "signature"
+        },
+        "1074714947": {
+            "name": "Static Charge",
+            "type": "signature"
+        },
+        "539192269": {
+            "name": "Power Surge",
+            "type": "signature"
+        },
+        "2061574352": {
+            "name": "Storm Cloud",
+            "type": "ultimate"
+        }
+    },
+    "3": {
+        "537527508": {
+            "name": "Stake",
+            "type": "signature"
+        },
+        "1796564033": {
+            "name": "Flight",
+            "type": "signature"
+        },
+        "2048438176": {
+            "name": "Crow Familiar",
+            "type": "signature"
+        },
+        "775377419": {
+            "name": "Assassinate",
+            "type": "ultimate"
+        }
+    },
+    "4": {
+        "715325746": {
+            "name": "Essence Bomb",
+            "type": "signature"
+        },
+        "3230530872": {
+            "name": "Malice",
+            "type": "signature"
+        },
+        "218284420": {
+            "name": "Life Drain",
+            "type": "signature"
+        },
+        "1307289689": {
+            "name": "Soul Exchange",
+            "type": "ultimate"
+        }
+    },
+    "6": {
+        "2824119765": {
+            "name": "Shoulder Charge",
+            "type": "signature"
+        },
+        "715762406": {
+            "name": "Infernal Resilience",
+            "type": "signature"
+        },
+        "509856396": {
+            "name": "Seismic Impact",
+            "type": "ultimate"
+        },
+        "4072270083": {
+            "name": "Siphon Life",
+            "type": "signature"
+        }
+    },
+    "7": {
+        "2981692841": {
+            "name": "Telekinesis",
+            "type": "ultimate"
+        },
+        "4147641675": {
+            "name": "Project Mind",
+            "type": "signature"
+        },
+        "1842576017": {
+            "name": "Full Auto",
+            "type": "signature"
+        },
+        "1999680326": {
+            "name": "Card Trick",
+            "type": "signature"
+        }
+    },
+    "8": {
+        "2142734020": {
+            "name": "Medicinal Specter",
+            "type": "signature"
+        },
+        "3133377790": {
+            "name": "Mini Turret",
+            "type": "signature"
+        },
+        "1725685134": {
+            "name": "Spectral Wall",
+            "type": "signature"
+        },
+        "3503044146": {
+            "name": "Heavy Barrage",
+            "type": "ultimate"
+        }
+    },
+    "10": {
+        "58655583": {
+            "name": "Pulse Grenade",
+            "type": "signature"
+        },
+        "1366719170": {
+            "name": "Time Wall",
+            "type": "signature"
+        },
+        "1128670012": {
+            "name": "Kinetic Carbine",
+            "type": "signature"
+        },
+        "2917891787": {
+            "name": "Paradoxical Swap",
+            "type": "ultimate"
+        }
+    },
+    "11": {
+        "3760705623": {
+            "name": "Kinetic Pulse",
+            "type": "signature"
+        },
+        "2031714424": {
+            "name": "Quantum Entanglement",
+            "type": "signature"
+        },
+        "492030745": {
+            "name": "Rejuvenating Aurora",
+            "type": "signature"
+        },
+        "249410288": {
+            "name": "Singularity",
+            "type": "ultimate"
+        }
+    },
+    "12": {
+        "2351041382": {
+            "name": "Arctic Beam",
+            "type": "signature"
+        },
+        "1963397252": {
+            "name": "Ice Path",
+            "type": "signature"
+        },
+        "18921423": {
+            "name": "Frost Grenade",
+            "type": "signature"
+        },
+        "3826390464": {
+            "name": "Frozen Shelter",
+            "type": "ultimate"
+        }
+    },
+    "13": {
+        "2948410412": {
+            "name": "Sleep Dagger",
+            "type": "signature"
+        },
+        "2414191464": {
+            "name": "Smoke Bomb",
+            "type": "signature"
+        },
+        "1080948381": {
+            "name": "Fixation",
+            "type": "signature"
+        },
+        "731943444": {
+            "name": "Bullet Dance",
+            "type": "ultimate"
+        }
+    },
+    "14": {
+        "1235098866": {
+            "name": "Powder Keg",
+            "type": "signature"
+        },
+        "2240607294": {
+            "name": "Bounce Pad",
+            "type": "signature"
+        },
+        "3190606822": {
+            "name": "Spirit Lasso",
+            "type": "ultimate"
+        },
+        "4179229681": {
+            "name": "Crackshot",
+            "type": "signature"
+        }
+    },
+    "15": {
+        "3089858203": {
+            "name": "Exploding Uppercut",
+            "type": "signature"
+        },
+        "2521902222": {
+            "name": "Sticky Bomb",
+            "type": "signature"
+        },
+        "3832675871": {
+            "name": "Hyper Beam",
+            "type": "ultimate"
+        },
+        "1928108461": {
+            "name": "Grapple Arm",
+            "type": "signature"
+        }
+    },
+    "16": {
+        "1009029159": {
+            "name": "Ava",
+            "type": "signature"
+        },
+        "4131517918": {
+            "name": "Gloom Bombs",
+            "type": "signature"
+        },
+        "2054144742": {
+            "name": "Return to Shadows",
+            "type": "ultimate"
+        },
+        "1426567660": {
+            "name": "Leaping Slash",
+            "type": "signature"
+        }
+    },
+    "17": {
+        "548943648": {
+            "name": "Charged Shot",
+            "type": "signature"
+        },
+        "3452399392": {
+            "name": "Rain of Arrows",
+            "type": "signature"
+        },
+        "512733154": {
+            "name": "Spirit Snare",
+            "type": "signature"
+        },
+        "3242902780": {
+            "name": "Guided Owl",
+            "type": "ultimate"
+        }
+    },
+    "18": {
+        "1454278799": {
+            "name": "Scorn",
+            "type": "signature"
+        },
+        "2406758797": {
+            "name": "Burrow",
+            "type": "signature"
+        },
+        "1914797280": {
+            "name": "Sand Blast",
+            "type": "signature"
+        },
+        "1917840730": {
+            "name": "Combo",
+            "type": "ultimate"
+        }
+    },
+    "19": {
+        "2460791803": {
+            "name": "Serrated Knives",
+            "type": "signature"
+        },
+        "1458044103": {
+            "name": "Slice and Dice",
+            "type": "signature"
+        },
+        "1537272748": {
+            "name": "Bloodletting",
+            "type": "signature"
+        },
+        "1835738020": {
+            "name": "Killing Blow",
+            "type": "ultimate"
+        }
+    },
+    "20": {
+        "1531378655": {
+            "name": "Kudzu Connection",
+            "type": "signature"
+        },
+        "4111222521": {
+            "name": "Entangling Thorns",
+            "type": "signature"
+        },
+        "3642273386": {
+            "name": "Stone Form",
+            "type": "signature"
+        },
+        "1247583368": {
+            "name": "Air Drop",
+            "type": "ultimate"
+        }
+    },
+    "21": {
+        "4260284622": {
+            "name": "citadel_ability_kali_spinning_blade",
+            "type": "signature"
+        },
+        "21628267": {
+            "name": "ability_kali_dust_storm",
+            "type": "signature"
+        },
+        "3219375905": {
+            "name": "citadel_ability_kali_disruptive_charge",
+            "type": "signature"
+        },
+        "488392205": {
+            "name": "ability_kali_trappers_bolo",
+            "type": "ultimate"
+        }
+    },
+    "25": {
+        "1656913918": {
+            "name": "Binding Word",
+            "type": "signature"
+        },
+        "2751689917": {
+            "name": "Willpower",
+            "type": "signature"
+        },
+        "2656490109": {
+            "name": "Alchemical Flask",
+            "type": "signature"
+        },
+        "2702908623": {
+            "name": "Last Stand",
+            "type": "ultimate"
+        }
+    },
+    "27": {
+        "3255651252": {
+            "name": "Power Slash",
+            "type": "signature"
+        },
+        "2566573207": {
+            "name": "Flying Slash",
+            "type": "signature"
+        },
+        "2366960452": {
+            "name": "Crimson Slash",
+            "type": "signature"
+        },
+        "3319782965": {
+            "name": "Shadow Transformation",
+            "type": "ultimate"
+        }
+    },
+    "31": {
+        "2670099061": {
+            "name": "Grapple",
+            "type": "signature"
+        },
+        "3561817145": {
+            "name": "Ground Strike",
+            "type": "signature"
+        },
+        "397010810": {
+            "name": "Death Slam",
+            "type": "ultimate"
+        },
+        "519124136": {
+            "name": "Flog",
+            "type": "signature"
+        }
+    },
+    "35": {
+        "3247040238": {
+            "name": "Splatter",
+            "type": "signature"
+        },
+        "3788152387": {
+            "name": "The Cube",
+            "type": "signature"
+        },
+        "4206531918": {
+            "name": "Goo Ball",
+            "type": "ultimate"
+        },
+        "1020817390": {
+            "name": "Puddle Punch",
+            "type": "signature"
+        }
+    },
+    "39": {
+        "2984400727": {
+            "name": "yakuza_kobun",
+            "type": "signature"
+        },
+        "3577477084": {
+            "name": "yakuza_shakedown_target",
+            "type": "signature"
+        },
+        "3908497730": {
+            "name": "yakuza_setting_sun",
+            "type": "ultimate"
+        },
+        "1584495732": {
+            "name": "yakuza_protection_racket",
+            "type": "signature"
+        }
+    },
+    "47": {
+        "1564303265": {
+            "name": "tokamak_hot_shot",
+            "type": "signature"
+        },
+        "1498385915": {
+            "name": "tokamak_radiance",
+            "type": "signature"
+        },
+        "4042747505": {
+            "name": "tokamak_dying_star",
+            "type": "signature"
+        },
+        "4264339460": {
+            "name": "tokamak_crimson_cannon",
+            "type": "ultimate"
+        }
+    },
+    "48": {
+        "208809857": {
+            "name": "Consume",
+            "type": "signature"
+        },
+        "3422822440": {
+            "name": "Bio Blast",
+            "type": "signature"
+        },
+        "3426178920": {
+            "name": "Overload",
+            "type": "ultimate"
+        },
+        "2153275594": {
+            "name": "Wrecking Ball",
+            "type": "signature"
+        }
+    },
+    "49": {
+        "4182904284": {
+            "name": "rutger_rocket",
+            "type": "signature"
+        },
+        "639385332": {
+            "name": "rutger_force_field",
+            "type": "signature"
+        },
+        "1613872264": {
+            "name": "rutger_cheat_death",
+            "type": "signature"
+        },
+        "363299194": {
+            "name": "rutger_pulse",
+            "type": "ultimate"
+        }
+    },
+    "50": {
+        "1976701714": {
+            "name": "Flying Cloak",
+            "type": "signature"
+        },
+        "3747867012": {
+            "name": "Enchanter's Satchel",
+            "type": "signature"
+        },
+        "938149308": {
+            "name": "Barrage",
+            "type": "signature"
+        },
+        "2954330093": {
+            "name": "Affliction",
+            "type": "ultimate"
+        }
+    },
+    "51": {
+        "348689004": {
+            "name": "thumper_ability_1",
+            "type": "signature"
+        },
+        "2086284285": {
+            "name": "thumper_ability_2",
+            "type": "signature"
+        },
+        "2489807574": {
+            "name": "thumper_ability_3",
+            "type": "signature"
+        },
+        "2563620507": {
+            "name": "thumper_ability_4",
+            "type": "ultimate"
+        }
+    },
+    "52": {
+        "1336069669": {
+            "name": "Dust Devil",
+            "type": "signature"
+        },
+        "2221949202": {
+            "name": "Djinn's Mark",
+            "type": "signature"
+        },
+        "3733594387": {
+            "name": "Fire Scarabs",
+            "type": "signature"
+        },
+        "2604653402": {
+            "name": "Traveler",
+            "type": "ultimate"
+        }
+    },
+    "54": {
+        "1157620447": {
+            "name": "cadence_ability_anthem",
+            "type": "signature"
+        },
+        "957095276": {
+            "name": "cadence_ability_lullaby",
+            "type": "signature"
+        },
+        "421275722": {
+            "name": "cadence_ability_silencecontraptions",
+            "type": "signature"
+        },
+        "599532073": {
+            "name": "cadence_ability_crescendo",
+            "type": "ultimate"
+        }
+    },
+    "56": {
+        "3338528319": {
+            "name": "ability_charged_bomb",
+            "type": "signature"
+        },
+        "3875361929": {
+            "name": "ability_bomber_ability02",
+            "type": "signature"
+        },
+        "4081662205": {
+            "name": "ability_bomber_ability03",
+            "type": "signature"
+        },
+        "3232290270": {
+            "name": "ability_bomber_ult",
+            "type": "ultimate"
+        }
+    },
+    "57": {
+        "2935955509": {
+            "name": "ability_shieldguy_ability01",
+            "type": "signature"
+        },
+        "2322200384": {
+            "name": "ability_shieldguy_ability02",
+            "type": "signature"
+        },
+        "1105433407": {
+            "name": "ability_shieldguy_ability03",
+            "type": "signature"
+        },
+        "2824729668": {
+            "name": "ability_shieldguy_ult",
+            "type": "ultimate"
+        }
+    },
+    "58": {
+        "1469918191": {
+            "name": "Slither",
+            "type": "signature"
+        },
+        "3428732129": {
+            "name": "Lethal Venom",
+            "type": "signature"
+        },
+        "645773760": {
+            "name": "Screwjab Dagger",
+            "type": "signature"
+        },
+        "1594727071": {
+            "name": "Petrifying Bola",
+            "type": "ultimate"
+        }
+    },
+    "59": {
+        "1288133032": {
+            "name": "citadel_ability_vandal_surge",
+            "type": "signature"
+        },
+        "2833514487": {
+            "name": "ability_vandal_pillar",
+            "type": "signature"
+        },
+        "371372145": {
+            "name": "ability_haunt",
+            "type": "signature"
+        },
+        "916959628": {
+            "name": "citadel_ability_vandal_overflow",
+            "type": "ultimate"
+        }
+    },
+    "60": {
+        "3156905386": {
+            "name": "Vexing Bolt",
+            "type": "signature"
+        },
+        "12456023": {
+            "name": "Spectral Assistant",
+            "type": "signature"
+        },
+        "191022746": {
+            "name": "Audience Participation",
+            "type": "ultimate"
+        },
+        "2142213586": {
+            "name": "Rabbit Hex",
+            "type": "signature"
+        }
+    },
+    "61": {
+        "2675680636": {
+            "name": "Bottled Phantasmicide",
+            "type": "signature"
+        },
+        "2876116869": {
+            "name": "Crawling Plague",
+            "type": "ultimate"
+        },
+        "3322902852": {
+            "name": "Pest Barrier",
+            "type": "signature"
+        },
+        "3360792911": {
+            "name": "Silktrap",
+            "type": "signature"
+        }
+    },
+    "63": {
+        "2398133749": {
+            "name": "Sanguine Retreat",
+            "type": "signature"
+        },
+        "1233782561": {
+            "name": "Love Bites",
+            "type": "signature"
+        },
+        "3379486147": {
+            "name": "Nox Nostra",
+            "type": "ultimate"
+        },
+        "193508101": {
+            "name": "Rake",
+            "type": "signature"
+        }
+    },
+    "64": {
+        "3120550633": {
+            "name": "Rend",
+            "type": "signature"
+        },
+        "1264175662": {
+            "name": "Stalker's Mark",
+            "type": "signature"
+        },
+        "1033019133": {
+            "name": "Bloodscent",
+            "type": "signature"
+        },
+        "1168182161": {
+            "name": "Eternal Night",
+            "type": "ultimate"
+        }
+    },
+    "65": {
+        "1764146857": {
+            "name": "Gutshot",
+            "type": "signature"
+        },
+        "2918874166": {
+            "name": "Ira Domini",
+            "type": "ultimate"
+        },
+        "911307831": {
+            "name": "Consecrating Grenade",
+            "type": "signature"
+        },
+        "11154161": {
+            "name": "Hex-Lined Snap Trap",
+            "type": "signature"
+        }
+    },
+    "66": {
+        "3727084744": {
+            "name": "Jumpstart",
+            "type": "signature"
+        },
+        "1472593493": {
+            "name": "Aura of Suffering",
+            "type": "signature"
+        },
+        "3493884851": {
+            "name": "Shocking Reanimation",
+            "type": "ultimate"
+        },
+        "2043074967": {
+            "name": "Pain Battery",
+            "type": "signature"
+        }
+    },
+    "67": {
+        "604448162": {
+            "name": "Bookwyrm",
+            "type": "signature"
+        },
+        "3054993162": {
+            "name": "Captivating Read",
+            "type": "signature"
+        },
+        "3553292912": {
+            "name": "Plot Armor",
+            "type": "signature"
+        },
+        "1841901343": {
+            "name": "Rallying Charge",
+            "type": "ultimate"
+        }
+    },
+    "68": {
+        "370209602": {
+            "name": "Intertwine",
+            "type": "signature"
+        },
+        "2000761890": {
+            "name": "Skipshot",
+            "type": "signature"
+        },
+        "3962304265": {
+            "name": "Swish",
+            "type": "signature"
+        },
+        "759370291": {
+            "name": "ability_boho_channeltether",
+            "type": "ultimate"
+        }
+    },
+    "69": {
+        "109766091": {
+            "name": "Doorway",
+            "type": "signature"
+        },
+        "1719512318": {
+            "name": "Luggage Cart",
+            "type": "signature"
+        },
+        "103496908": {
+            "name": "Call Bell",
+            "type": "signature"
+        },
+        "1703045691": {
+            "name": "Hotel Guest",
+            "type": "ultimate"
+        }
+    },
+    "71": {
+        "2619369142": {
+            "name": "ability_swan_featherboomerang",
+            "type": "signature"
+        },
+        "682591488": {
+            "name": "Jeté",
+            "type": "signature"
+        },
+        "1418303954": {
+            "name": "Acrobat",
+            "type": "signature"
+        },
+        "1048488396": {
+            "name": "ability_swan_ult",
+            "type": "ultimate"
+        }
+    },
+    "72": {
+        "3296031213": {
+            "name": "Blasted",
+            "type": "signature"
+        },
+        "3762861984": {
+            "name": "Chain Gang",
+            "type": "ultimate"
+        },
+        "1792773251": {
+            "name": "Rising Ram",
+            "type": "signature"
+        },
+        "1841661392": {
+            "name": "Bashdown",
+            "type": "signature"
+        }
+    },
+    "74": {
+        "2627122290": {
+            "name": "ability_graf_ability01",
+            "type": "signature"
+        },
+        "4197612718": {
+            "name": "ability_graf_ability02",
+            "type": "signature"
+        },
+        "2949458312": {
+            "name": "ability_graf_ability03",
+            "type": "signature"
+        },
+        "2561043068": {
+            "name": "ability_graf_ult",
+            "type": "ultimate"
+        }
+    },
+    "75": {
+        "309803113": {
+            "name": "ability_fortuna_ability01",
+            "type": "signature"
+        },
+        "3803152704": {
+            "name": "ability_fortuna_ability02",
+            "type": "signature"
+        },
+        "620778714": {
+            "name": "ability_fortuna_ability03",
+            "type": "signature"
+        },
+        "3632058121": {
+            "name": "ability_fortuna_ult",
+            "type": "ultimate"
+        }
+    },
+    "76": {
+        "2001589780": {
+            "name": "Grasping Hands",
+            "type": "signature"
+        },
+        "3214055642": {
+            "name": "Jar of Dead",
+            "type": "signature"
+        },
+        "4110547059": {
+            "name": "Borrowed Decree",
+            "type": "ultimate"
+        },
+        "629925354": {
+            "name": "Essence Theft",
+            "type": "signature"
+        }
+    },
+    "77": {
+        "725153709": {
+            "name": "Disengaging Sigil",
+            "type": "signature"
+        },
+        "2006773718": {
+            "name": "Riposte",
+            "type": "signature"
+        },
+        "147493976": {
+            "name": "Flawless Advance",
+            "type": "signature"
+        },
+        "494112189": {
+            "name": "Itani Lo Sahn",
+            "type": "ultimate"
+        }
+    },
+    "79": {
+        "3692321247": {
+            "name": "Pillow Toss",
+            "type": "signature"
+        },
+        "2396527575": {
+            "name": "Naptime",
+            "type": "ultimate"
+        },
+        "536278136": {
+            "name": "Lil Helpers",
+            "type": "signature"
+        },
+        "1568845221": {
+            "name": "Tag Along",
+            "type": "signature"
+        }
+    },
+    "80": {
+        "1385849824": {
+            "name": "Slam Fire",
+            "type": "signature"
+        },
+        "2717130900": {
+            "name": "Boot Kick",
+            "type": "signature"
+        },
+        "3983754897": {
+            "name": "Entangling Bola",
+            "type": "signature"
+        },
+        "515791019": {
+            "name": "Lycan Curse",
+            "type": "ultimate"
+        }
+    },
+    "81": {
+        "3443575800": {
+            "name": "Light Eater",
+            "type": "signature"
+        },
+        "1950738949": {
+            "name": "Dazzling Trick",
+            "type": "signature"
+        },
+        "2590796390": {
+            "name": "Shining Wonder",
+            "type": "ultimate"
+        },
+        "1011349580": {
+            "name": "Radiant Daggers",
+            "type": "signature"
+        }
+    }
+}
