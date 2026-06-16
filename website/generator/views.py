@@ -61,10 +61,10 @@ def api_generate_build(request):
                 for item_id in generator.inventory:
                     info = generator.shop_dict.get(str(item_id), {})
                     items.append({
-                        "id": item_id,
+                        "id": int(item_id),
                         "name": info.get("name", "Unknown"),
-                        "cost": info.get("cost", 0),
-                        "slot": info.get("slot_type", "weapon").capitalize()
+                        "cost": int(info.get("cost", 0)),
+                        "slot": str(info.get("slot_type", "weapon")).capitalize()
                     })
                     
                 # Map S1/S2/S3/Ult
@@ -89,19 +89,19 @@ def api_generate_build(request):
                     temp_levels[str_id] += 1
                     ab_info = generator.hero_abilities.get(str_id, {})
                     abilities.append({
-                        "id": ab_id,
+                        "id": int(ab_id),
                         "name": ab_info.get("name", "Unknown"),
-                        "short_name": ab_short_map.get(str_id, "S1"),
-                        "level_reached": temp_levels[str_id]
+                        "short_name": str(ab_short_map.get(str_id, "S1")),
+                        "level_reached": int(temp_levels[str_id])
                     })
 
                 return JsonResponse({
                     'success': True,
-                    'hero_id': hero_id,
+                    'hero_id': int(hero_id),
                     'archetype': f"Archetype {archetype}",
                     'items': items,
                     'abilities': abilities,
-                    'cost': sum(i['cost'] for i in items)
+                    'cost': int(sum(i['cost'] for i in items))
                 })
             except Exception as e:
                 return JsonResponse({'success': False, 'error': f"ML Model error: {str(e)}"})
