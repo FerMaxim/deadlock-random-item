@@ -5,7 +5,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Weapon Damage | +30% Max Ammo",
-    "image": "/static/randomizer/images/items/Weapon/Extended Magazine.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/basic_magazine.png",
     "isActive": false
   },
   {
@@ -14,7 +14,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +25% Weapon Damage vs. NPCs | +25% Bullet Resist vs. NPCs | +1 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Weapon/Monster Rounds.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/monster_rounds.png",
     "isActive": false
   },
   {
@@ -23,7 +23,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "7mm Cast Range | 270s Cooldown | -1.0s Charge Delay | 160s Duration | +10% Weapon Damage | +1 Bonus Ability Charges | +50 Bonus Health | +180% Bonus Souls | +30% Weapon Damage vs. NPCs | +30% Bullet Resist vs. NPCs | +2 Out of Combat Regen | +12% Radius | +12% Ability Range",
-    "image": "/static/randomizer/images/items/Weapon/Cultist Sacrifice.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/cultist_sacrifice.png",
     "isActive": true
   },
   {
@@ -32,7 +32,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 33 Damage on Jump | 4 Max Jumps | 8mm Jump Radius | 33 Shock Damage | 15% Proc Chance | 0.2s Max Frequency",
-    "image": "/static/randomizer/images/items/Weapon/Tesla Bullets.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/tesla_bullets.png",
     "isActive": false
   },
   {
@@ -41,7 +41,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "0.2s Cast Delay | 40s Cooldown | -1.0s Charge Delay | +5% Fire Rate | 43 Damage on Jump | 6 Max Jumps | 10mm Jump Radius | 100 Damage | 43 Shock Damage | -75% Max Move Speed | 20% Proc Chance | 0.2s Max Frequency | 3s Slow Duration",
-    "image": "/static/randomizer/images/items/Weapon/Capacitor.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/capacitor.png",
     "isActive": true
   },
   {
@@ -50,7 +50,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +35% Weapon Damage | +125 Bonus Health | +-9% Bullet Resist | 8s Debuff Duration | +4.5 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Weapon/Hollow Point.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/hollow_point.png",
     "isActive": false
   },
   {
@@ -59,7 +59,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Weapon Damage | +30% Weapon Damage | +60% Bullet Velocity | +4 Spirit Power",
-    "image": "/static/randomizer/images/items/Weapon/Opening Rounds.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/opening_rounds.png",
     "isActive": false
   },
   {
@@ -68,7 +68,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Weapon Damage | +60% Bullet Velocity",
-    "image": "/static/randomizer/images/items/Weapon/High-Velocity Rounds.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/high_velocity_rounds.png",
     "isActive": false
   },
   {
@@ -77,7 +77,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "8s Cooldown | -1.0s Charge Delay | +12% Melee Damage | 100 Heal on Melee Hit",
-    "image": "/static/randomizer/images/items/Vitality/Melee Lifesteal.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/melee_lifesteal.png",
     "isActive": false
   },
   {
@@ -86,7 +86,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +30% Bonus Damage | +75 Bonus Health | 6s Buff Duration | +18% Melee Resist | -1.75s Parry Cooldown | 100% Damage Parried as Heal",
-    "image": "/static/randomizer/images/items/Vitality/Rebuttal.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/rebuttal.png",
     "isActive": false
   },
   {
@@ -95,7 +95,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "23.0s Cooldown | -1.0s Charge Delay | +50 Bonus Health | +1.75m m Move Speed | 6s Buff Duration | 150 Healing | 0.8s Spell Parry Duration | +20 Spirit Power | +5 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Counterspell.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/counterspell.png",
     "isActive": false
   },
   {
@@ -104,7 +104,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +40% Weapon Damage | +-0.5m m Move Speed | 5s Buildup Decay Time | 0.7% Buildup Per Shot | -22% Dash Distance | 3.5s Slow Duration | -30% Move Speed | +-14% Stamina Recovery | +22% Debuff Resist",
-    "image": "/static/randomizer/images/items/Weapon/Weighted Shots.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/weighted_shots.png",
     "isActive": false
   },
   {
@@ -113,7 +113,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 15mm Close Range | +20% Weapon Damage | +20% Melee Resist",
-    "image": "/static/randomizer/images/items/Weapon/Close Quarters.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.png",
     "isActive": false
   },
   {
@@ -122,7 +122,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Weapon Fall-off Range | +0.75mm Sprint Speed | +40% Weapon Damage | 15mm Min. Distance",
-    "image": "/static/randomizer/images/items/Weapon/Long Range.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/long_range.png",
     "isActive": false
   },
   {
@@ -131,7 +131,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +15% Weapon Damage | 5s Buildup Decay Time | 0.7% Buildup Per Shot | -22% Dash Distance | 3.5s Slow Duration | -30% Move Speed",
-    "image": "/static/randomizer/images/items/Weapon/Slowing Bullets.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/slowing_bullets.png",
     "isActive": false
   },
   {
@@ -140,7 +140,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +10% Weapon Damage | +150 Bonus Health | 5s Buildup Decay Time | 0.77% Buildup Per Shot | 5s Debuff Duration | -40% Healing Reduction | -40% Healing Reduction | -30% Damage Penalty",
-    "image": "/static/randomizer/images/items/Vitality/Inhibitor.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/inhibitor.png",
     "isActive": false
   },
   {
@@ -149,7 +149,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +10% Spirit Lifesteal | 8s Debuff Duration | +-8% Spirit Resist",
-    "image": "/static/randomizer/images/items/Weapon/Spirit Shredder Bullets.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spirit_shredder_bullets.png",
     "isActive": false
   },
   {
@@ -158,7 +158,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "22.0s Cooldown | -1.0s Charge Delay | 7s Duration | +2.25mm Move Speed | 35mm Active Radius | +26% Fire Rate | +1.5mm Sprint Speed | +17% Bullet Resist | 35mm Radius",
-    "image": "/static/randomizer/images/items/Weapon/Heroic Aura.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/heroic_aura.png",
     "isActive": true
   },
   {
@@ -167,7 +167,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 40mm Cast Range | 42.0s Cooldown | -1.0s Charge Delay | 3s Silence Duration | +50 Bonus Health | 75 Damage",
-    "image": "/static/randomizer/images/items/Spirit/Silence Wave.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/silence_glyph.png",
     "isActive": true
   },
   {
@@ -176,7 +176,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 5s Buildup Decay Time | 1.04% Buildup Per Shot | 6s Debuff Duration | 10s Immunity Duration | 2.5s Silence Duration | -25% Spirit Damage Reduction | +12% Spirit Resist",
-    "image": "/static/randomizer/images/items/Weapon/Silencer.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/silencer.png",
     "isActive": false
   },
   {
@@ -185,7 +185,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Bullet Resist | 10s Duration | 120 Damage taken to Stack | 10.0 Max Stacks | +7% Weapon Damage per Stack",
-    "image": "/static/randomizer/images/items/Weapon/Berserker.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/berserker.png",
     "isActive": false
   },
   {
@@ -194,7 +194,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "16s Cooldown | -1.0s Charge Delay | 10s Duration | +15% Fire Rate | +160 Bonus Health | 40% Fire Rate | 4m m/s Move Speed | +40% Debuff Resist | 50% Health Threshold",
-    "image": "/static/randomizer/images/items/Weapon/Frenzy.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/frenzy.png",
     "isActive": false
   },
   {
@@ -203,7 +203,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +15% Weapon Damage | +10% Bullet Resist | 2.5% Max HP Steal | 9999 Max Stacks | 1.2s Max Frequency | 17s Steal Duration",
-    "image": "/static/randomizer/images/items/Vitality/Siphon Bullets.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/siphon_bullets.png",
     "isActive": false
   },
   {
@@ -212,7 +212,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "9.0s Cooldown | -1.0s Charge Delay | +30 Bonus Health | +45 Head Shot Bonus Damage | 100% Proc Chance",
-    "image": "/static/randomizer/images/items/Weapon/Headshot Booster.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/headshot_booster.png",
     "isActive": false
   },
   {
@@ -221,7 +221,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "0.0s Cooldown | -1.0s Charge Delay | +60 Bonus Health | -13% Bullet Resist | 12s Debuff Duration",
-    "image": "/static/randomizer/images/items/Weapon/Weakening Headshot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/weakening_headshot.png",
     "isActive": false
   },
   {
@@ -230,7 +230,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +10% Weapon Damage | +20% Weapon Fall-off Range | +60% Bullet Velocity | +-0.7m m Move Speed | +1.0mm Sprint Speed | +25% Weapon Zoom | +60% Weapon Damage | 15mm Min. Distance",
-    "image": "/static/randomizer/images/items/Weapon/Sharpshooter.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/sharp_shooter.png",
     "isActive": false
   },
   {
@@ -239,7 +239,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "8s Cooldown | -1.0s Charge Delay | +5% Weapon Damage | +50 Bonus Health | +1.75m m Move Speed | +75 Head Shot Bonus Damage | 4% Heal Per Headshot | 3s Move Speed Duration | 100% Proc Chance",
-    "image": "/static/randomizer/images/items/Weapon/Headhunter.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/headhunter.png",
     "isActive": false
   },
   {
@@ -248,7 +248,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +10% Spirit Lifesteal | +75 Bonus Health | 8s Debuff Duration | -7% Spirit Resist on Headshot | 4 Max Stacks | 2s Max Frequency | +-8% Spirit Resist",
-    "image": "/static/randomizer/images/items/Weapon/Spirit Rend.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spellslinger_headshots.png",
     "isActive": false
   },
   {
@@ -257,7 +257,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +125 Bonus Health | -16% Bullet Resist | 12s Debuff Duration | -35% Healing Reduction | -35% Healing Reduction | -16% Spirit Resist",
-    "image": "/static/randomizer/images/items/Weapon/Crippling Headshot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/crippling_headshot.png",
     "isActive": false
   },
   {
@@ -266,7 +266,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "8s Cooldown | -1.0s Charge Delay | +40 Spirit Damage | 100% Proc Chance | 1s Max Frequency | 1mm Radius | +7 Spirit Power",
-    "image": "/static/randomizer/images/items/Weapon/Mystic Shot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/mystic_shot.png",
     "isActive": false
   },
   {
@@ -275,7 +275,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +30% Max Ammo | +100% Bonus Weapon Damage | 25% Proc Chance | 1mm Radius",
-    "image": "/static/randomizer/images/items/Weapon/Lucky Shot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/lucky_shot.png",
     "isActive": false
   },
   {
@@ -284,7 +284,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +75 Bonus Health | 15mm Close Range | +50% Weapon Damage | +30% Melee Resist | 2s Slow Duration | -25% Move Speed",
-    "image": "/static/randomizer/images/items/Weapon/Point Blank.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/point_blank.png",
     "isActive": false
   },
   {
@@ -293,7 +293,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 5s Buildup Decay Time | 1.28% Buildup Per Shot | 4s Duration | 1.7%/sec Bleed Damage | -35% Healing Reduction | -35% Healing Reduction",
-    "image": "/static/randomizer/images/items/Weapon/Toxic Bullets.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/toxic_bullets.png",
     "isActive": false
   },
   {
@@ -302,7 +302,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +18% Fire Rate | 65% Ricochet Damage | 13mm Ricochet Range | 2 Ricochet Targets",
-    "image": "/static/randomizer/images/items/Weapon/Ricochet.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/ricochet.png",
     "isActive": false
   },
   {
@@ -311,7 +311,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +210 Bonus Health",
-    "image": "/static/randomizer/images/items/Vitality/Extra Health.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/extra_health.png",
     "isActive": false
   },
   {
@@ -320,7 +320,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +6% Weapon Damage | +90 Bonus Health | +13% Bullet Lifesteal",
-    "image": "/static/randomizer/images/items/Vitality/Bullet Lifesteal.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/bullet_lifesteal.png",
     "isActive": false
   },
   {
@@ -329,7 +329,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +90 Bonus Health | +25% Debuff Resist",
-    "image": "/static/randomizer/images/items/Vitality/Debuff Reducer.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/debuff_reducer.png",
     "isActive": false
   },
   {
@@ -338,7 +338,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "45.0s Cooldown | -1.0s Charge Delay | +2mm Move Speed | 3s Buff Duration | 250 HP Healed On Activate | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Dispel Magic.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/debuff_remover.png",
     "isActive": true
   },
   {
@@ -347,7 +347,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +3 Out of Combat Regen | +30% Spirit Resist | +15% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Spirit Resilience.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spirit_resilience.png",
     "isActive": false
   },
   {
@@ -356,7 +356,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +30% Bullet Resist | +15% Bullet Resist",
-    "image": "/static/randomizer/images/items/Vitality/Bullet Resilience.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/bullet_resilience.png",
     "isActive": false
   },
   {
@@ -365,7 +365,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "24.0s Cooldown | -1.0s Charge Delay | 5.0s Duration | -1.5mm Active Movespeed Penalty | +12% Bullet Resist | -20% Dash Distance",
-    "image": "/static/randomizer/images/items/Vitality/Metal Skin.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/metal_skin.png",
     "isActive": true
   },
   {
@@ -374,7 +374,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +3 Health Regen | +20% Healing Effectiveness | +1 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Healing Booster.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_booster.png",
     "isActive": false
   },
   {
@@ -383,7 +383,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +375 Bonus Health | +1.5m m Move Speed | +2 % Max Health Regen | +10 s Restore Delay",
-    "image": "/static/randomizer/images/items/Vitality/Fortitude.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/fortitude.png",
     "isActive": false
   },
   {
@@ -392,7 +392,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +25% Spirit Lifesteal | +12% Weapon Damage | +180 Bonus Health | +25% Bullet Lifesteal | +12 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Leech.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/leech.png",
     "isActive": false
   },
   {
@@ -401,7 +401,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +2.0mm Sprint Speed | +2 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Sprint Boots.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/sprint_boots.png",
     "isActive": false
   },
   {
@@ -410,7 +410,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +2.0mm Sprint Speed | 16 Max Stacks | +-15% Weapon Damage vs. NPCs | +2 Out of Combat Regen | +0.15mm Sprint Speed | 18 Souls per Minute | +0.75% Ability Range",
-    "image": "/static/randomizer/images/items/Vitality/Trophy Collector.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/trophy_collector.png",
     "isActive": false
   },
   {
@@ -419,7 +419,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +2.0m m Move Speed | +2 Out of Combat Regen | +25% Slow Resist",
-    "image": "/static/randomizer/images/items/Vitality/Enduring Speed.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/enduring_speed.png",
     "isActive": false
   },
   {
@@ -428,7 +428,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +23% Air Jump/Dash Distance | +2 Stamina | +18% Stamina Recovery",
-    "image": "/static/randomizer/images/items/Vitality/Stamina Mastery.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/stamina_mastery.png",
     "isActive": false
   },
   {
@@ -437,7 +437,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +9% Fire Rate",
-    "image": "/static/randomizer/images/items/Weapon/Rapid Rounds.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/rapid_rounds.png",
     "isActive": false
   },
   {
@@ -446,7 +446,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +1 Stamina | +12% Stamina Recovery",
-    "image": "/static/randomizer/images/items/Vitality/Extra Stamina.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/extra_stamina.png",
     "isActive": false
   },
   {
@@ -455,7 +455,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +100 Bonus Health | +0.75mm Sprint Speed | +-10% Bullet Resist | -15% Fire Rate | 15mm Radius",
-    "image": "/static/randomizer/images/items/Weapon/Hunter's Aura.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/hunters_aura.png",
     "isActive": false
   },
   {
@@ -464,7 +464,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "60s Cooldown | -1.0s Charge Delay | 4s Barrier Duration | 200 Barrier | +1.0 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Grit.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/grit.png",
     "isActive": true
   },
   {
@@ -473,7 +473,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "35s Cooldown | -1.0s Charge Delay | 8s Barrier Duration | +18% Bullet Resist | 300 Barrier | 250 Damage Threshold | 4.0s Time Frame | +2.5 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Weapon Shielding.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/weapon_shielding.png",
     "isActive": false
   },
   {
@@ -482,7 +482,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "45s Cooldown | -1.0s Charge Delay | 8s Barrier Duration | 300 Barrier | 225 Damage Threshold | 3.5s Time Frame | +2.5 Out of Combat Regen | +18% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Spirit Shielding.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spirit_shielding.png",
     "isActive": false
   },
   {
@@ -491,7 +491,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +18% Weapon Damage | +7% Fire Rate | +18% Bullet Resist | +3 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Battle Vest.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/battle_vest.png",
     "isActive": false
   },
   {
@@ -500,7 +500,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +5% Ability Cooldown Reduction | +2 Out of Combat Regen | +15 Spirit Power | +18% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Enchanter's Emblem.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/enchanters_emblem.png",
     "isActive": false
   },
   {
@@ -509,7 +509,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +10 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Extra Spirit.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/extra_spirit.png",
     "isActive": false
   },
   {
@@ -518,7 +518,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +50 Bonus Health | 4 HP/s Regeneration | 7s Regeneration Duration",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Regeneration.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_regen.png",
     "isActive": false
   },
   {
@@ -527,7 +527,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +75 Bonus Health | +1mm Sprint Speed | +1.5 Out of Combat Regen | +18 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Improved Spirit.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/improved_spirit.png",
     "isActive": false
   },
   {
@@ -536,7 +536,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 15s Duration | +13% Spirit Lifesteal | +15% Ability Duration | +32% Fire Rate | +90 Bonus Health | +40 Spirit Power | 5s Buildup Decay Time | 0.75% Buildup Per Shot | +6 Spirit Power",
-    "image": "/static/randomizer/images/items/Weapon/Spiritual Overflow.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spiritual_overflow.png",
     "isActive": false
   },
   {
@@ -545,7 +545,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "23.0s Cooldown | -1.0s Charge Delay | 6.5s Duration | 65% Bullet Damage Returned | +10% Bullet Resist | 25% Spirit Damage Returned",
-    "image": "/static/randomizer/images/items/Vitality/Return Fire.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/return_fire.png",
     "isActive": true
   },
   {
@@ -554,7 +554,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +30% Radius | +30% Ability Range | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Greater Expansion.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/greater_expansion.png",
     "isActive": false
   },
   {
@@ -563,7 +563,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +20% Radius | +20% Ability Range",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Expansion.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_reach.png",
     "isActive": false
   },
   {
@@ -572,7 +572,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +1 Bonus Ability Charges | +7 Bonus Spirit Power for Charged Abilities",
-    "image": "/static/randomizer/images/items/Spirit/Extra Charge.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/extra_charge.png",
     "isActive": false
   },
   {
@@ -581,7 +581,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +13% Spirit Lifesteal | +90 Bonus Health | +6 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Spirit Lifesteal.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spirit_lifesteal.png",
     "isActive": false
   },
   {
@@ -590,7 +590,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 8s Duration | +9% Weapon Damage | +-10% Bullet Resist | +9% Bullet Resist",
-    "image": "/static/randomizer/images/items/Spirit/Bullet Resist Shredder.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/bullet_resist_shredder.png",
     "isActive": false
   },
   {
@@ -599,7 +599,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "6.25s Cooldown | -1.0s Charge Delay | +8% Spirit Lifesteal | 3s Delay Duration | +22% Imbued Lifesteal | 10% Current Health Bonus Damage | -40% Move Speed | 16mm Radius | 50% Damage",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Reverb.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_reverb.png",
     "isActive": false
   },
   {
@@ -608,7 +608,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "14s Charge-Up Time | 14s Cooldown | -1.0s Charge Delay | 40 Bonus Damage",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Burst.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_burst.png",
     "isActive": false
   },
   {
@@ -617,7 +617,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "14s Charge-Up Time | 14s Cooldown | -1.0s Charge Delay | +50 Bonus Health | 8% Current Health Bonus Damage | 40 Damage",
-    "image": "/static/randomizer/images/items/Spirit/Tankbuster.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/tankbuster.png",
     "isActive": false
   },
   {
@@ -626,7 +626,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 7s Duration | +-8% Spirit Resist | +8% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Vulnerability.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_vulnerability.png",
     "isActive": false
   },
   {
@@ -635,7 +635,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | 8s Duration | -35% Healing Reduction | -35% Healing Reduction | 275 Heal On Hero Kill | +7 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Healbane.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healbane.png",
     "isActive": false
   },
   {
@@ -644,7 +644,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 2s Duration | +50 Bonus Health | +0.75mm Sprint Speed | -12% Dash Distance | -30% Move Speed",
-    "image": "/static/randomizer/images/items/Spirit/Mystic Slow.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mystic_slow.png",
     "isActive": false
   },
   {
@@ -653,7 +653,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 12s Duration | +4.5% Spirit Amp per Stack | 12 Max Stacks | 0.7s Max Frequency Per Target | -8% Spirit Resist On Spirit Damage | +17% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Escalating Exposure.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/escalating_exposure.png",
     "isActive": false
   },
   {
@@ -662,7 +662,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +2 Bonus Ability Charges | +14 Bonus Spirit Power for Charged Abilities | +30% Faster Time Between Charges | +14% Cooldown Reduction For Charged Abilities",
-    "image": "/static/randomizer/images/items/Spirit/Rapid Recharge.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/rapid_recharge.png",
     "isActive": false
   },
   {
@@ -671,7 +671,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +18% Ability Cooldown Reduction",
-    "image": "/static/randomizer/images/items/Spirit/Compress Cooldown.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/improved_cooldown.png",
     "isActive": false
   },
   {
@@ -680,7 +680,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +20% Ability Cooldown Reduction | +4 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Spirit/Superior Cooldown.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/superior_cooldown.png",
     "isActive": false
   },
   {
@@ -689,7 +689,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +25% Ability Cooldown Reduction | +25% Item Cooldown Reduction | +4 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Spirit/Transcendent Cooldown.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/transcendent_cooldown.png",
     "isActive": false
   },
   {
@@ -698,7 +698,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 25mm Cast Range | 27s Cooldown | -1.0s Charge Delay | 3.5s Duration | +0.5mm Sprint Speed | -30% Dash Distance | -20% Move Speed",
-    "image": "/static/randomizer/images/items/Spirit/Slowing Hex.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/slowing_hex.png",
     "isActive": true
   },
   {
@@ -707,7 +707,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 40mm Cast Range | 18s Cooldown | -1.0s Charge Delay | 12s Duration | +50 Bonus Health | -9% Spirit Resist | -30 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Spirit Sap.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_sap.png",
     "isActive": true
   },
   {
@@ -716,7 +716,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 20mm Cast Range | 45s Cooldown | -1.0s Charge Delay | 4.5s Duration | +10% Fire Rate | -9% Spirit Resist | 30% Damage On Expire | 12s Resist Reduction Duration | -30 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Focus Lens.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/focus_lens.png",
     "isActive": true
   },
   {
@@ -725,7 +725,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 32mm Cast Range | 16.0s Cooldown | -1.0s Charge Delay | 5s Duration | +60 Bonus Health | +0.5mm Sprint Speed | +-8% Bullet Resist | -32% Fire Rate",
-    "image": "/static/randomizer/images/items/Spirit/Rusted Barrel.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/rusted_barrel.png",
     "isActive": true
   },
   {
@@ -734,7 +734,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 32mm Cast Range | 16.0s Cooldown | -1.0s Charge Delay | 4.25s Duration | +75 Bonus Health | +0.75mm Sprint Speed | +-13% Bullet Resist",
-    "image": "/static/randomizer/images/items/Spirit/Disarming Hex.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/disarming_hex.png",
     "isActive": true
   },
   {
@@ -743,7 +743,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "35mm Cast Range | 2.5s Channel Duration | 60.0s Cooldown | -1.0s Charge Delay | +0m m Move Speed | +0.75mm Sprint Speed | 0.2s Heal Interval | 20% Heal Amount | +6% Radius | +6% Ability Range",
-    "image": "/static/randomizer/images/items/Vitality/Rescue Beam.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/rescue_beam.png",
     "isActive": true
   },
   {
@@ -752,7 +752,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 20mm Cast Range | 30.0s Cooldown | -1.0s Charge Delay | 10s Duration | +65 Bonus Health | 2.6%/sec Bleed Damage | -50% Healing Reduction | -50% Healing Reduction | +8 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Decay.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/decay.png",
     "isActive": true
   },
   {
@@ -761,7 +761,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.25s Cast Delay | 35mm Cast Range | 35.0s Cooldown | -1.0s Charge Delay | 10s Duration | 10mm Radius | +100 Bonus Health | 3.5% Max Health per second | +17% Debuff Resist | +40% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Scourge.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/scourge.png",
     "isActive": true
   },
   {
@@ -770,7 +770,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 45mm Cast Range | 35.0s Cooldown | -1.0s Charge Delay | +75 Bonus Health | 2s Stun Delay | 0.5s Stun Duration | +5% Radius | +5% Ability Range",
-    "image": "/static/randomizer/images/items/Spirit/Knockdown.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/knockdown.png",
     "isActive": true
   },
   {
@@ -779,7 +779,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "0.35s Cast Delay | 25mm Cast Range | 35.0s Cooldown | -1.0s Charge Delay | +15% Weapon Damage | 75 Impact Damage | 3s Debuff Duration | -50% Move Speed | +8 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Phantom Strike.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/phantom_strike.png",
     "isActive": true
   },
   {
@@ -788,7 +788,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "0.0s Cast Delay | 11mm Teleport Range | 16.0s Cooldown | -1.0s Charge Delay | +30% Bullet Resist | 6s Buff Duration",
-    "image": "/static/randomizer/images/items/Vitality/Warp Stone.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/warp_stone.png",
     "isActive": true
   },
   {
@@ -797,7 +797,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.2s Cast Delay | 30mm Cast Range | 42.0s Cooldown | -1.0s Charge Delay | 4.0s Duration | +0.75mm Sprint Speed | 12mm Capture Radius | -40% Dash Distance | -35% Move Speed | +8% Radius | +8% Ability Range | 0.5s Tether Duration",
-    "image": "/static/randomizer/images/items/Spirit/Vortex Web.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/vortex_web.png",
     "isActive": true
   },
   {
@@ -806,7 +806,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.6s Cast Delay | 300s Cooldown | -1.0s Charge Delay | +15% Bullet Resist | +14% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Refresher.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/refresher.png",
     "isActive": true
   },
   {
@@ -815,7 +815,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "35.0s Cooldown | -1.0s Charge Delay | +5% Fire Rate | +5% Bullet Resist | +5% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Echo Shard.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/echo_shard.png",
     "isActive": true
   },
   {
@@ -824,7 +824,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "1.4s Cooldown | -1.0s Charge Delay | +100 Bonus Health | 25 Pulse Damage | 9mm Pulse Radius | +18% Melee Resist",
-    "image": "/static/randomizer/images/items/Spirit/Torment Pulse.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/torment_pulse.png",
     "isActive": false
   },
   {
@@ -833,7 +833,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "90.0s Cooldown | -1.0s Charge Delay | +200 Bonus Health | +0m m Move Speed | +15% Bullet Resist | -60% Damage Reduction | 4.5s Death Immunity Duration | -60% Healing Reduction | -60% Healing Reduction",
-    "image": "/static/randomizer/images/items/Vitality/Cheat Death.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/cheat_death.png",
     "isActive": false
   },
   {
@@ -842,7 +842,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "45.0s Cooldown | -1.0s Charge Delay | 13s Stealth Duration | +25% Ambush Fire Rate | 25% Ambush Melee Damage | +25 Ambush Spirit Power | 5s Ambush Duration | +1.5mm Sprint Speed | 0.6s Fade Time | +5mm Invis Sprint Speed | +5 Out of Combat Regen | 20mm Spot Radius",
-    "image": "/static/randomizer/images/items/Weapon/Shadow Weave.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/shadow_weave.png",
     "isActive": true
   },
   {
@@ -851,7 +851,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "45s Cooldown | -1.0s Charge Delay | +100% Air Control | +50% Air Control | 8s Barrier Duration | 200 Barrier | 5s Interrupt Cooldown | 2.5s Slow Duration | -40% Move Speed",
-    "image": "/static/randomizer/images/items/Vitality/Majestic Leap.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/majestic_leap.png",
     "isActive": true
   },
   {
@@ -860,7 +860,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "0.25s Cast Delay | 60s Cooldown | -1.0s Charge Delay | 18mm Radius | 2s Regen Duration | +8 Spirit Power | +5% Radius | +5% Ability Range | 325 Total HP Regen",
-    "image": "/static/randomizer/images/items/Vitality/Healing Nova.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_nova.png",
     "isActive": true
   },
   {
@@ -869,7 +869,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "0.1s Cast Delay | 35mm Cast Range | 20.0s Cooldown | -1.0s Charge Delay | 16 Heal Per Stack | 25 Max Stacks | 3 Max Stamina Restore | 35mm Radius | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Restorative Locket.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/restorative_locket.png",
     "isActive": true
   },
   {
@@ -878,7 +878,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "0.2s Cast Delay | 30mm Cast Range | 70s Cooldown | -1.0s Charge Delay | +2mm Sprint Speed | 20s Regen Duration | 300 Total HP Regen",
-    "image": "/static/randomizer/images/items/Vitality/Healing Rite.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_rite.png",
     "isActive": true
   },
   {
@@ -887,7 +887,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "0.0s Cast Delay | 30.0s Cooldown | -1.0s Charge Delay | 7s Duration | +70% Spirit Lifesteal | +13% Spirit Lifesteal | +100 Bonus Health | +30 Spirit Power | +6 Spirit Power | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Infuser.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/infuser.png",
     "isActive": true
   },
   {
@@ -896,7 +896,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "0.2s Cast Delay | 40mm Cast Range | 60s Cooldown | -1.0s Charge Delay | +2.75m m Move Speed | 6s Buff Duration | 250 Barrier | +1.5 Out of Combat Regen | +8% Radius | +8% Ability Range",
-    "image": "/static/randomizer/images/items/Vitality/Guardian Ward.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/guardian_ward.png",
     "isActive": true
   },
   {
@@ -905,7 +905,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "0.2s Cast Delay | 40mm Cast Range | 45s Cooldown | -1.0s Charge Delay | +2.75m m Move Speed | 6s Buff Duration | 600 Barrier | +1.5 Out of Combat Regen | +10% Radius | +10% Ability Range",
-    "image": "/static/randomizer/images/items/Vitality/Divine Barrier.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/divine_barrier.png",
     "isActive": true
   },
   {
@@ -914,7 +914,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "0.2s Cast Delay | 30.0s Cooldown | -1.0s Charge Delay | 5s Duration | +-7% Bullet Resist | 45 Damage Per Second | 95 Max DPS | 10mm Radius | +10 Spirit Power",
-    "image": "/static/randomizer/images/items/Weapon/Alchemical Fire.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/alchemical_fire.png",
     "isActive": true
   },
   {
@@ -923,7 +923,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "0.0s Cast Delay | 0.0s Cooldown | -1.0s Charge Delay | +35% Fire Rate | +2.0m m Move Speed | 50/s Health Drain | +8% Debuff Resist | +4 Out of Combat Regen | +35% Debuff Resist | +8% Spirit Resist",
-    "image": "/static/randomizer/images/items/Weapon/Blood Tribute.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/blood_tribute.png",
     "isActive": true
   },
   {
@@ -932,7 +932,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "16.0s Cooldown | -1.0s Charge Delay | 5s Duration | +3.0mm Move Speed | +6% Weapon Damage | +6% Bullet Resist | +35% Slide Distance | +40% Slow Resist",
-    "image": "/static/randomizer/images/items/Weapon/Fleetfoot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/fleetfoot.png",
     "isActive": true
   },
   {
@@ -941,7 +941,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 7s Duration | +6 Temporary Ammo | +25% Fire Rate | +1 Stamina | +12% Stamina Recovery",
-    "image": "/static/randomizer/images/items/Weapon/Kinetic Dash.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/kinetic_dash.png",
     "isActive": false
   },
   {
@@ -950,7 +950,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 7s Cast Window | +15% Ability Duration | +20 Spirit Power | +1 Stamina | +12% Stamina Recovery | +12% Radius | +12% Ability Range",
-    "image": "/static/randomizer/images/items/Spirit/Arcane Surge.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/arcane_surge.png",
     "isActive": false
   },
   {
@@ -959,7 +959,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "60.0s Cooldown | -1.0s Charge Delay | 5.5s Duration | +125 Bonus Health | +25% Debuff Resist",
-    "image": "/static/randomizer/images/items/Vitality/Unstoppable.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/unstoppable.png",
     "isActive": true
   },
   {
@@ -968,7 +968,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "37.0s Cooldown | -1.0s Charge Delay | 7s Duration | +15% Weapon Damage | +25% Base Health | +30% Melee Damage | 35% Bullet Resist | 35% Spirit Resist | -25% Dash Distance | 20% Model Scale | 14mm Radius | -30% Move Speed",
-    "image": "/static/randomizer/images/items/Vitality/Colossus.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/colossus.png",
     "isActive": true
   },
   {
@@ -977,7 +977,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "25.0s Cooldown | -1.0s Charge Delay | 4s Duration | 95 Damage | 10mm End Radius | -60% Move Speed | +6% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Cold Front.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/cold_front.png",
     "isActive": true
   },
   {
@@ -986,7 +986,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "24.0s Cooldown | -1.0s Charge Delay | 175 Damage | 16mm End Radius | 1s Freeze Duration | 4s Slow Duration | -60% Move Speed | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Arctic Blast.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/arctic_blast.png",
     "isActive": true
   },
   {
@@ -995,7 +995,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "35.0s Cooldown | -1.0s Charge Delay | 4.0s Duration | +3m m Move Speed | +20 Spirit Power | 5s Buff Duration | 2.5m m Float Speed | +30% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Ethereal Shift.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/ethereal_shift.png",
     "isActive": true
   },
   {
@@ -1004,7 +1004,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.1s Cast Delay | 20mm Cast Range | 55.0s Cooldown | -1.0s Charge Delay | 3.25s Duration | -10% Damage Penalty",
-    "image": "/static/randomizer/images/items/Spirit/Cursed Relic.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/curse.png",
     "isActive": true
   },
   {
@@ -1013,7 +1013,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +22% Ability Duration",
-    "image": "/static/randomizer/images/items/Spirit/Duration Extender.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/duration_extender.png",
     "isActive": false
   },
   {
@@ -1022,7 +1022,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +28% Ability Duration | +8% Bullet Resist",
-    "image": "/static/randomizer/images/items/Spirit/Superior Duration.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/superior_duration.png",
     "isActive": false
   },
   {
@@ -1031,7 +1031,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +80% Weapon Damage | +2 Bonus Ammo Per Kill | 2s Buildup Decay Time | 1.2% Buildup Per Shot | +7% Fire Rate per Kill | -13% Max Health | 8 Max Stacks | 3s Slow Duration | +30% Bullet Slow Proc",
-    "image": "/static/randomizer/images/items/Weapon/Glass Cannon.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/glass_cannon.png",
     "isActive": false
   },
   {
@@ -1040,7 +1040,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "18.0s Cooldown | -1.0s Charge Delay | 6.5s Duration | 32% Fire Rate | +6% Weapon Damage | +100 Bonus Health | +14% Bullet Lifesteal | +40% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Fury Trance.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/fury_trance.png",
     "isActive": true
   },
   {
@@ -1049,7 +1049,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "30.0s Cooldown | -1.0s Charge Delay | 5s Duration | 34% Fire Rate | 70% Bullet Lifesteal | +75% Ammo | +6% Weapon Damage | +100 Bonus Health | +13% Bullet Lifesteal | +10% Bullet Resist",
-    "image": "/static/randomizer/images/items/Vitality/Vampiric Burst.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/vampiric_burst.png",
     "isActive": true
   },
   {
@@ -1058,7 +1058,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "4.0s Cooldown | -1.0s Charge Delay | +125 Bonus Health | +16% Melee Damage | 100 Heal on Melee Hit | 30% Melee Hit Heal | 2.5s Slow Duration | -60% Move Speed",
-    "image": "/static/randomizer/images/items/Vitality/Lifestrike.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/lifestrike.png",
     "isActive": false
   },
   {
@@ -1067,7 +1067,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "8.0s Cooldown | -1.0s Charge Delay | 6s Duration | 40 Spirit Damage | +-6% Spirit Resist",
-    "image": "/static/randomizer/images/items/Spirit/Spirit Strike.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_strike.png",
     "isActive": false
   },
   {
@@ -1076,7 +1076,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "6.0s Cooldown | -1.0s Charge Delay | 10s Duration | +75 Bonus Health | +7% Melee Damage | 50 Spirit Damage | +-12% Spirit Resist | 12% Spirit Resist Steal | 25 Spirit Power Steal | -25 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Spirit Snatch.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_snatch.png",
     "isActive": false
   },
   {
@@ -1085,7 +1085,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "5s Cooldown | -1.0s Charge Delay | +25% Bonus Heavy Damage | +10% Melee Damage | +6% Bullet Resist | +50% Heavy Melee Distance",
-    "image": "/static/randomizer/images/items/Weapon/Melee Charge.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/melee_charge.png",
     "isActive": false
   },
   {
@@ -1094,7 +1094,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "5s Cooldown | -1.0s Charge Delay | +25% Bonus Heavy Damage | +22% Melee Damage | +12% Bullet Resist | -4% Bullet Resist | 8s Debuff Duration | 2x Heavy Melee Bonus | +15% Ammo | 6 Max Stacks | +60% Heavy Melee Distance | 0.5s Stun Duration",
-    "image": "/static/randomizer/images/items/Weapon/Crushing Fists.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/crushing_fists.png",
     "isActive": false
   },
   {
@@ -1103,7 +1103,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "40.0s Cooldown | -1.0s Charge Delay | +15% Ability Duration | 20s Buff Duration | 1000 Barrier | +35 Spirit Power",
-    "image": "/static/randomizer/images/items/Vitality/Diviner's Kevlar.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/diviners_kevlar.png",
     "isActive": false
   },
   {
@@ -1112,7 +1112,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "6.0s Cooldown | -1.0s Charge Delay | 3s Duration | +90 Bonus Health | +1.75m m Move Speed | 70 Healing on Ability Cast | 4 HP/s Regeneration | 7s Regeneration Duration",
-    "image": "/static/randomizer/images/items/Spirit/Radiant Regeneration.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/radiant_regeneration.png",
     "isActive": false
   },
   {
@@ -1121,7 +1121,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | +75 Bonus Health | +4 Out of Combat Regen | +30 Spirit Power | +15% Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Boundless Spirit.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/boundless_spirit.png",
     "isActive": false
   },
   {
@@ -1130,7 +1130,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "9.0s Cooldown | -1.0s Charge Delay | 4.5s Duration | +32% Fire Rate | +10% Fire Rate | +1.25m m Move Speed | +50% Slide Distance",
-    "image": "/static/randomizer/images/items/Weapon/Burst Fire.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/burst_fire.png",
     "isActive": false
   },
   {
@@ -1139,7 +1139,7 @@
     "price": 800,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +2.5 Health Regen | +1.5 Out of Combat Regen",
-    "image": "/static/randomizer/images/items/Vitality/Extra Regen.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/extra_regen.png",
     "isActive": false
   },
   {
@@ -1148,7 +1148,7 @@
     "price": 3200,
     "category": "Spirit",
     "description": "14.0s Cooldown | -1.0s Charge Delay | +1.75m m Move Speed | 20% Fire Rate Bonus | +28 Imbued Ability Spirit Power | 8s Move Speed Duration",
-    "image": "/static/randomizer/images/items/Spirit/Surge of Power.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/surge_of_power.png",
     "isActive": false
   },
   {
@@ -1157,7 +1157,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 5s Duration | +8% Bullet Resist | -28% Fire Rate | +6 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Suppressor.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/suppressor.png",
     "isActive": false
   },
   {
@@ -1166,7 +1166,7 @@
     "price": 1600,
     "category": "Spirit",
     "description": "18s Charge-Up Time | 18s Cooldown | -1.0s Charge Delay | 100% Bullets Reloaded | +10% Fire Rate | 12s Buff Duration | 44 Damage",
-    "image": "/static/randomizer/images/items/Spirit/Quicksilver Reload.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/quicksilver_reload.png",
     "isActive": false
   },
   {
@@ -1175,7 +1175,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "14s Charge-Up Time | 15s Cooldown | -1.0s Charge Delay | 100% Bullets Reloaded | +20% Max Ammo | +22% Fire Rate | 12s Buff Duration | +25% Base Bullet Damage | 60 Damage | +7 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Mercurial Magnum.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/mercurial_magnum.png",
     "isActive": false
   },
   {
@@ -1184,7 +1184,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +% Weapon Damage | 45% Max Weapon Damage | +20% Max Ammo | 2.5s Time for Max Damage",
-    "image": "/static/randomizer/images/items/Weapon/Intensifying Magazine.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/intensifying_magazine.png",
     "isActive": false
   },
   {
@@ -1193,7 +1193,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +18% Weapon Damage | +35% Max Ammo | +75 Bonus Health | 24s Stack Duration | 2% Bullet Resist per Stack | 30% Max Bullet Resist",
-    "image": "/static/randomizer/images/items/Weapon/Escalating Resilience.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/escalating_resilience.png",
     "isActive": false
   },
   {
@@ -1202,7 +1202,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +20% Fire Rate | +0.75mm Sprint Speed",
-    "image": "/static/randomizer/images/items/Weapon/Swift Striker.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/swift_striker.png",
     "isActive": false
   },
   {
@@ -1211,7 +1211,7 @@
     "price": 3200,
     "category": "Vitality",
     "description": "15.0s Cooldown | -1.0s Charge Delay | 16s Duration | +125 Bonus Health | 3.5mm Invis Move Speed | +2.0mm Sprint Speed | 85 Heal | 8s Invisibility Duration | 0.25s Fade Time | +2 Out of Combat Regen | +10 Spirit Power | 20mm Spot Radius",
-    "image": "/static/randomizer/images/items/Vitality/Veil Walker.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/veil_walker.png",
     "isActive": false
   },
   {
@@ -1220,7 +1220,7 @@
     "price": 1600,
     "category": "Vitality",
     "description": "55s Cooldown | -1.0s Charge Delay | 10s Duration | +1.0 Out of Combat Regen | 325 Barrier",
-    "image": "/static/randomizer/images/items/Vitality/Reactive Barrier.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/reactive_barrier.png",
     "isActive": false
   },
   {
@@ -1229,7 +1229,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "55s Cooldown | -1.0s Charge Delay | 10s Duration | +10% Bullet Resist | +20s Cooldown Reduction | +2.0 Out of Combat Regen | +10% Spirit Resist | 325 Barrier",
-    "image": "/static/randomizer/images/items/Vitality/Indomitable.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/indomitable.png",
     "isActive": false
   },
   {
@@ -1238,7 +1238,7 @@
     "price": 800,
     "category": "Weapon",
     "description": "6s Cooldown | -1.0s Charge Delay | +6% Weapon Damage | 50 Healing From Heroes | 20 Healing From NPCs / Orbs | 100% Proc Chance | 1mm Radius",
-    "image": "/static/randomizer/images/items/Weapon/Restorative Shot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/restorative_shot.png",
     "isActive": false
   },
   {
@@ -1247,7 +1247,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +14% Weapon Damage | +100% Max Ammo",
-    "image": "/static/randomizer/images/items/Weapon/Titanic Magazine.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/titanic_magazine.png",
     "isActive": false
   },
   {
@@ -1256,7 +1256,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "27s Cooldown | -1.0s Charge Delay | 5s Buff Duration | 5 Weapon Multishot | 5 Max Stacks | 12s Stack Duration | +8% Weapon Damage per Stack",
-    "image": "/static/randomizer/images/items/Weapon/Split Shot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/split_shot.png",
     "isActive": true
   },
   {
@@ -1265,7 +1265,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "12s Cooldown | -1.0s Charge Delay | 7s Duration | +20% Max Ammo | +25% Fire Rate | +0.75m m Move Speed | +16% Bullet Lifesteal",
-    "image": "/static/randomizer/images/items/Weapon/Active Reload.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/active_reload.png",
     "isActive": false
   },
   {
@@ -1274,7 +1274,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "0.2s Cast Delay | 32.0s Cooldown | -1.0s Charge Delay | 12s Duration | +25% Air Control | +15% Ability Duration | +125 Bonus Health | +7mm Bonus Fly Speed | -15% Gravity Scale | 1.3s Summon Duration | +14 Spirit Power",
-    "image": "/static/randomizer/images/items/Spirit/Magic Carpet.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/magic_carpet.png",
     "isActive": true
   },
   {
@@ -1283,7 +1283,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "20s Cooldown | -1.0s Charge Delay | 24 Damage Per Second | 500 Damage Threshold | 8s Debuff Duration | 110 Explosion Damage | 12mm Explosion Radius | -70% Healing Reduction | -70% Healing Reduction | +6% Radius | +6% Ability Range",
-    "image": "/static/randomizer/images/items/Spirit/Spirit Burn.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/spirit_burn.png",
     "isActive": false
   },
   {
@@ -1292,7 +1292,7 @@
     "price": 6400,
     "category": "Spirit",
     "description": "-1.0s Charge Delay | 2s Duration | +50 Bonus Health | +0.75mm Sprint Speed | 150 Damage | 3s Delay Before Effect | -12% Dash Distance | -30% Move Speed on Spirit Damage | -80% Move Speed | 0.75s Stun Duration",
-    "image": "/static/randomizer/images/items/Spirit/Lightning Scroll.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/lightning_scroll.png",
     "isActive": false
   },
   {
@@ -1301,7 +1301,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "1s Cooldown | -1.0s Charge Delay | +7% Ability Cooldown Reduction | 4s Cooldown Reduction per Hit | 75 Damage Threshold | +14 Spirit Power | +22% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Witchmail.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/witchmail.png",
     "isActive": false
   },
   {
@@ -1310,7 +1310,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "1s Cooldown | -1.0s Charge Delay | +35% Fire Rate | +6 Health Regen | +1.25m m Move Speed | 7s Buff Duration | +25% Healing Effectiveness | +4 Out of Combat Regen | +10% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Healing Tempo.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/healing_tempo.png",
     "isActive": false
   },
   {
@@ -1319,7 +1319,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +8% Weapon Damage | +60% Bullet Velocity | 55% Proc Chance",
-    "image": "/static/randomizer/images/items/Weapon/Armor Piercing Rounds.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/armor_piercing_rounds.png",
     "isActive": false
   },
   {
@@ -1328,7 +1328,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "1s Cooldown | -1.0s Charge Delay | +130 Bonus Health | 50% On-Hit Prevention Percent | 30% Deflection Percent",
-    "image": "/static/randomizer/images/items/Vitality/Plated Armor.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/plated_armor.png",
     "isActive": false
   },
   {
@@ -1337,7 +1337,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "9s Cooldown | -1.0s Charge Delay | +90 Bonus Health | 175 Damage Threshold | 65% Spirit Damage Reduction | +25% Debuff Resist | +18% Spirit Resist",
-    "image": "/static/randomizer/images/items/Vitality/Spellbreaker.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/spellbreaker.png",
     "isActive": false
   },
   {
@@ -1346,7 +1346,7 @@
     "price": 6400,
     "category": "Vitality",
     "description": "-1.0s Charge Delay | +8 Health Regen | +2.5m m Move Speed | -40% Fire Rate | 4s Duration | +25% Melee Resist | +50% Slow Resist",
-    "image": "/static/randomizer/images/items/Vitality/Juggernaut.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/juggernaut.png",
     "isActive": false
   },
   {
@@ -1355,7 +1355,7 @@
     "price": 6400,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | +11% Fire Rate | 18s Buff Duration | +5% Ability Cooldown Reduction | 6 Max Stacks | +-10% Reload Time",
-    "image": "/static/randomizer/images/items/Weapon/Spellslinger.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spell_slinger.png",
     "isActive": false
   },
   {
@@ -1364,7 +1364,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "6s Cooldown | -1.0s Charge Delay | 5s Duration | +50 Bonus Health | +1.5m m Move Speed | -6% Bullet Resist | 17 Damage Per Second | 5s Debuff Duration | 25mm Bonus Radius | 8mm Close Range | -50% Footstep Sound Distance",
-    "image": "/static/randomizer/images/items/Weapon/Stalker.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/backstabber.png",
     "isActive": false
   },
   {
@@ -1373,7 +1373,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "8s Cooldown | -1.0s Charge Delay | +8% Weapon Damage | +60% Bullet Velocity | 2 Extra Ammo Consumed | +125% Weapon Damage | +40% Secondary Fire Weapon Damage | +100% Bullet Velocity",
-    "image": "/static/randomizer/images/items/Weapon/Express Shot.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/express_shot.png",
     "isActive": false
   },
   {
@@ -1382,7 +1382,7 @@
     "price": 3200,
     "category": "Weapon",
     "description": "-1.0s Charge Delay | 14s Duration | 8 Non-Hero Stack Limit | +22% Radius | +22% Ability Range | +20% Weapon Damage per Stack | +5% Non-Hero Weapon Damage",
-    "image": "/static/randomizer/images/items/Weapon/Ballistic Enchantment.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/alchemical_seal.png",
     "isActive": false
   },
   {
@@ -1391,7 +1391,7 @@
     "price": 1600,
     "category": "Weapon",
     "description": "25s Cooldown | -1.0s Charge Delay | +10% Weapon Damage | +20% Max Ammo | 200 Damage Threshold | 3.5s Time Frame",
-    "image": "/static/randomizer/images/items/Weapon/Recharging Rush.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/recharging_rounds.png",
     "isActive": false
   },
   {
@@ -1400,7 +1400,7 @@
     "price": 800,
     "category": "Spirit",
     "description": "2s Channel Duration | -1.0s Charge Delay | 90 Soul Value per Minute | +1mm Sprint Speed | +1 Out of Combat Regen | -10% Damage Penalty",
-    "image": "/static/randomizer/images/items/Spirit/Golden Goose Egg.png",
+    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/spirit/goose_egg.png",
     "isActive": true
   }
 ]

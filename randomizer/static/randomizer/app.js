@@ -32,15 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '69':'The Doorman', '72':'Billy', '76':'Graves', '77':'Apollo',
         '79':'Rem', '81':'Celeste'
     };
-    const TEMP_CONFIG = [
-        null,
-        { label: 'META',   cls: 'temp-meta'   },
-        { label: 'STABLE', cls: 'temp-normal'  },
-        { label: 'MIXED',  cls: 'temp-mixed'   },
-        { label: 'WILD',   cls: 'temp-wild'    },
-        { label: 'CHAOS',  cls: 'temp-chaos'   },
-    ];
-
     // Player States
     let playersState = {};
     let localPlayerNickname = 'Me';
@@ -86,25 +77,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Mode Toggle ──
+    let currentMode = 'random';
+    const modeSwitch = document.getElementById('modeSwitch');
+    const smartRow = document.querySelector('.smart-row');
+    const filtersContainer = document.querySelector('.filters-container');
+    const randomButtonsContainer = document.getElementById('randomButtonsContainer');
+    const smartButtonsContainer = document.getElementById('smartButtonsContainer');
+    const randomAbilityButtonWrap = document.getElementById('randomAbilityButtonWrap');
+    
+    const modeLabelRandom = document.querySelector('.mode-label:not(.smart)');
+    const modeLabelSmart = document.querySelector('.mode-label.smart');
+
+    if (modeSwitch) {
+        modeSwitch.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                currentMode = 'smart';
+                smartRow.style.display = 'flex';
+                filtersContainer.style.display = 'none';
+                randomButtonsContainer.style.display = 'none';
+                smartButtonsContainer.style.display = 'flex';
+                randomAbilityButtonWrap.style.display = 'none';
+                
+                modeLabelSmart.style.color = 'var(--color-spirit)';
+                modeLabelSmart.style.opacity = '1';
+                modeLabelRandom.style.color = '#888';
+                modeLabelRandom.style.opacity = '0.5';
+            } else {
+                currentMode = 'random';
+                smartRow.style.display = 'none';
+                filtersContainer.style.display = 'flex';
+                randomButtonsContainer.style.display = 'flex';
+                smartButtonsContainer.style.display = 'none';
+                randomAbilityButtonWrap.style.display = 'block';
+                
+                modeLabelRandom.style.color = 'white';
+                modeLabelRandom.style.opacity = '1';
+                modeLabelSmart.style.color = 'var(--color-spirit)';
+                modeLabelSmart.style.opacity = '0.5';
+            }
+        });
+        // Initial setup
+        modeLabelRandom.style.color = 'white';
+        modeLabelRandom.style.opacity = '1';
+    }
+
     // ── Temperature slider ──
     function updateTemp(val) {
-        currentTemperature = val;
-        const cfg = TEMP_CONFIG[val];
+        currentTemperature = parseFloat(val);
+        let cfg = { label: 'META', cls: 'temp-meta' };
+        if (currentTemperature > 10.0) cfg = { label: 'CHAOS', cls: 'temp-chaos' };
+        else if (currentTemperature > 5.0) cfg = { label: 'WILD', cls: 'temp-wild' };
+        else if (currentTemperature > 2.0) cfg = { label: 'MIXED', cls: 'temp-mixed' };
+        else if (currentTemperature > 0.5) cfg = { label: 'STABLE', cls: 'temp-normal' };
+
         if (tempLabel) {
-            tempLabel.textContent = cfg.label;
+            tempLabel.textContent = cfg.label + ' (' + currentTemperature.toFixed(1) + ')';
             tempLabel.className = 'temp-badge ' + cfg.cls;
         }
         pips.forEach(p => {
-            p.classList.toggle('active', parseInt(p.dataset.t) <= val);
+            p.classList.toggle('active', parseFloat(p.dataset.t) <= currentTemperature);
         });
     }
     if (tempSlider) {
-        tempSlider.addEventListener('input', () => updateTemp(parseInt(tempSlider.value)));
-        updateTemp(2);
+        tempSlider.addEventListener('input', () => updateTemp(tempSlider.value));
+        updateTemp(2.0);
     }
-
-    // temperature → diversity (0.1 META … 1.0 CHAOS)
-    function tempToDiversity(t) { return 0.1 + (t - 1) * 0.225; }
 
     // 2. Category Selection (Price)
     priceButtons.forEach(btn => {
@@ -178,9 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isRolling || itemsDatabase.length === 0) return;
             
             let currentItemsCount = playersState[localPlayerNickname].items.length;
-            let itemsNeeded = 15 - currentItemsCount;
-            if (itemsNeeded <= 0) return;
-
+            
+            // Clear if already has items
+            if (currentItemsCount > 0) {
+                playersState[localPlayerNickname].items = [];
+                exhaustedItems = [];
+            }
+            
+            let itemsNeeded = 15;
             let pickedItems = [];
 
             for (let i = 0; i < itemsNeeded; i++) {
@@ -316,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const generateGridHtml = (itemsArr, isMe, nick) => {
             let html = `<div class="inventory-grid">`;
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 24; i++) {
                 if (i < itemsArr.length) {
                     const item = itemsArr[i];
                     const delBtn = isMe
@@ -383,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Rebuild history
                         if (historyList) {
                             historyList.innerHTML = '';
-                            playersState[nick].items.slice(-10).reverse().forEach(it => addToHistory(it));
+                            playersState[nick].items.slice().reverse().forEach(it => addToHistory(it));
                         }
                     }
                     updatePlayerCard(nick, true, playersState[nick]);
@@ -405,10 +448,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         historyList.prepend(historyItem);
-        
-        if(historyList.children.length > 10) {
-            historyList.removeChild(historyList.lastChild);
-        }
     }
 
     // 4. Ability Randomizer Logic
@@ -423,28 +462,77 @@ document.addEventListener('DOMContentLoaded', () => {
         generateBuildBtn.style.pointerEvents = 'none';
         generateBuildBtn.style.opacity = '0.5';
 
-        // Try meta_rules first
-        const heroId = heroSelect ? heroSelect.value : '';
-        const diversity = tempToDiversity(currentTemperature);
-        let path = tryGenerateFromMeta(heroId, diversity);
+        // --- Pure Random Build Generation ---
+        
+        // 1. Generate Items
+        let pickedItems = [];
+        let tempExhausted = [];
+        
+        for (let i = 0; i < 15; i++) {
+            let activeCount = itemsDatabase.filter(it => tempExhausted.includes(it.id) && it.isActive).length;
+            const maxActiveReached = activeCount >= 4;
+            
+            let currentPool = itemsDatabase.filter(item => {
+                const matchPrice = currentCategoryPrice === 'all' || item.price == currentCategoryPrice;
+                const matchType = currentCategoryType === 'all' || item.category === currentCategoryType;
+                const notExhausted = !tempExhausted.includes(item.id);
+                const activeLimitOk = !maxActiveReached || !item.isActive;
+                return matchPrice && matchType && notExhausted && activeLimitOk;
+            });
+            
+            if (currentPool.length === 0) break;
+            
+            const winner = currentPool[Math.floor(Math.random() * currentPool.length)];
+            tempExhausted.push(winner.id);
+            pickedItems.push(winner);
+        }
 
-        if (!path) {
-            // Fallback: pure random ability order
-            let abilities = [
-                { name: 'S1', stage: 0 }, { name: 'S2', stage: 0 },
-                { name: 'S3', stage: 0 }, { name: 'Ult', stage: 0 }
-            ];
-            path = [];
-            const labelMap = { 1:'UNL', 2:'T1', 3:'T2', 4:'T3' };
-            const classMap = { 1:'t-unlock', 2:'t-tier1', 3:'t-tier2', 4:'t-tier3' };
-            for (let i = 0; i < 16; i++) {
-                let available = abilities.filter(a => a.stage < 4);
-                let pick = available[Math.floor(Math.random() * available.length)];
-                pick.stage++;
-                path.push({ name: pick.name, label: labelMap[pick.stage], cssClass: classMap[pick.stage] });
-            }
+        exhaustedItems = tempExhausted;
+        playersState[localPlayerNickname].items = pickedItems;
+        
+        if (historyList) {
+            historyList.innerHTML = '';
+            pickedItems.slice(-10).reverse().forEach(it => addToHistory(it));
+        }
+
+        // 2. Generate Abilities
+        let abilities = [
+            { name: 'S1', stage: 0 }, { name: 'S2', stage: 0 },
+            { name: 'S3', stage: 0 }, { name: 'Ult', stage: 0 }
+        ];
+        let path = [];
+        const labelMap = { 1:'UNL', 2:'T1', 3:'T2', 4:'T3' };
+        const classMap = { 1:'t-unlock', 2:'t-tier1', 3:'t-tier2', 4:'t-tier3' };
+        
+        for (let i = 0; i < 16; i++) {
+            let available = abilities.filter(a => a.stage < 4);
+            let pick = available[Math.floor(Math.random() * available.length)];
+            pick.stage++;
+            path.push({ name: pick.name, label: labelMap[pick.stage], cssClass: classMap[pick.stage] });
         }
         
+        playersState[localPlayerNickname].hasBuild = true;
+        playersState[localPlayerNickname].buildPath = path;
+
+        applyAbilityPath(path);
+        updatePlayerCard(localPlayerNickname, true, playersState[localPlayerNickname]);
+        
+        setTimeout(() => {
+            generateBuildBtn.style.pointerEvents = 'auto';
+            generateBuildBtn.style.opacity = '1';
+            
+            // Broadcast
+            if (typeof partySocket !== 'undefined' && partySocket && partySocket.readyState === WebSocket.OPEN) {
+                partySocket.send(JSON.stringify({
+                    type: 'sync',
+                    nickname: myNickname,
+                    state: playersState[localPlayerNickname]
+                }));
+            }
+        }, 1000);
+    }
+
+    function applyAbilityPath(path) {
         if (abilityPathContainer) {
             abilityPathContainer.innerHTML = '';
             path.forEach((step, index) => {
@@ -461,24 +549,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 abilityPathContainer.appendChild(stepDiv);
             });
         }
-        
         playersState[localPlayerNickname].hasBuild = true;
         playersState[localPlayerNickname].buildPath = path;
         updatePlayerCard(localPlayerNickname, true, playersState[localPlayerNickname]);
-        
-        setTimeout(() => {
-            generateBuildBtn.style.pointerEvents = 'auto';
-            generateBuildBtn.style.opacity = '1';
-            
-            // Broadcast
-            if (typeof partySocket !== 'undefined' && partySocket && partySocket.readyState === WebSocket.OPEN) {
-                partySocket.send(JSON.stringify({
-                    type: 'ability_build',
-                    nickname: myNickname,
-                    path: path
-                }));
-            }
-        }, 1000);
     }
 
     // 5. Party / Multiplayer Logic
