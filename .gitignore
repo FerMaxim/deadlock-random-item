@@ -12,3 +12,4 @@ website/staticfiles/
 *.parquet
 *.csv
 main/ml/models/
+website/db.sqlite3

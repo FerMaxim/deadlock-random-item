@@ -1,66 +1,64 @@
-# Deadlock Build Predictor & Generator ML
+# Deadlock Build Generator & Multiplayer Randomizer
 
-Проект машинного обучения для предсказания и генерации оптимальных билдов (прокачки способностей и покупки предметов) для героев в игре Deadlock.
+A full-stack web application that uses Machine Learning (XGBoost) to predict and generate optimized 24-slot item builds and 36-point skill progressions for all 38 characters in the game Deadlock. Includes a real-time multiplayer WebSocket system for generating builds with friends in shared lobbies.
 
-## Происхождение данных
-Все исходные данные (история матчей и билдов игроков) берутся из открытых Parquet-дампов матчей Deadlock.
-Данные об объектах игры (герои, способности, предметы магазина) парсятся напрямую из неофициального [Deadlock API](https://api.deadlock-api.com/docs).
+## 🚀 Architecture
 
-⚠️ **Важно**: Большие Parquet-файлы с матчами, а также временные CSV и сгенерированные датасеты игнорируются в `.gitignore`, так как их вес может превышать несколько гигабайт. Вам потребуется скачать их локально. Файлы располагаются в `main/data/` и `main/training/`.
+* **Backend:** Django 4.2 + Daphne (ASGI)
+* **Real-time Engine:** Django Channels + Redis (WebSocket synchronization)
+* **Machine Learning:** XGBoost (Autoregressive predictive modeling)
+* **Frontend:** Vanilla JavaScript + Vanilla CSS (Glassmorphism UI)
+* **Containerization:** Docker + Docker Compose
 
-## Структура проекта (`main/utils/`)
+---
 
-В папке утилит собраны скрипты для полного цикла обработки данных (Data Pipeline):
+## 📂 Project Structure
 
-1. **`build_dicts.py`**
-   - Скачивает акутальные данные с Deadlock API (о героях и предметах).
-   - Формирует 3 чистых словаря (`heroes_dict.json`, `abilities_dict.json`, `shop_items_dict.json`), отсекая тестовый мусор и собирая зависимости для крафта предметов.
+* **`website/`** - The main Django web application. Contains frontend templates, static assets, and WebSocket routing.
+* **`main/simulator/`** - The core ML generation engine (`generate_build.py`).
+* **`main/data/dictionary/`** - JSON configuration files for heroes, items, and abilities (parsed from Deadlock API).
+* **`main/ml/models/`** - **[NOT IN GIT]** Contains the 2.2 GB of compiled XGBoost JSON models required for the simulator. You must supply these models manually!
 
-2. **`parquet_reader.py` / `parquet_merger.py` / `data_cleaner.py`**
-   - Скрипты для интерактивного чтения, очистки от лишних столбцов и объединения массивных `.parquet` файлов в единый датасет с использованием DuckDB.
+---
 
-3. **`badge_transformer.py` / `badge_statistics.py` / `filter_high_mmr.py`**
-   - Обработка системы рангов (Badges). Объединяет ранги команд, выводит статистику распределения игроков по тирам (Obscurus -> Eternus) и позволяет отсечь матчи ниже определенного рейтинга (например, оставить только High MMR).
+## ⚠️ Important Note Regarding ML Models
 
-4. **`split_items_column.py`**
-   - Проходится по очищенному датасету и разделяет общую хронологическую колонку `items.item_id` на две: `ability_build` (история прокачки скиллов) и `item_build` (история покупок в магазине).
+Because GitHub has a strict file size limit and the XGBoost models weigh over **2.2 GB**, the `main/ml/models/` directory is intentionally ignored in Git (`.gitignore`).
 
-## Интеграция (API & Frontend)
+To run this application, you **must** manually place the generated `xgb_items_hero_*.json` and `xgb_abilities_hero_*.json` files into the `main/ml/models/` folder. Without them, the build generator will crash.
 
-В проекте предусмотрен тестовый сервер-обертка (`test_website/server.py`) для генератора, позволяющий по API отдавать билды на фронтенд-сайт.
-Для обеспечения скорости генерации (около 100 мс) используется In-Memory кэширование XGBoost моделей.
-Подробности и рекомендации по production-деплою читайте в [документации по кэшированию](docs/api_caching.md).
+---
 
-## Как интегрировать модель в свой проект
+## 💻 Local Development Setup (Without Docker)
 
-Если вы хотите встроить генератор билдов в свой сайт, Discord-бота или любое другое Python-приложение, вам **не нужна вся кодовая база**. Достаточно перенести только самое необходимое.
+1. Ensure you have Python 3.10+ installed.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run Django's development server (Redis is not strictly required for local testing, it will fallback to In-Memory Channel Layer):
+   ```bash
+   cd website
+   python manage.py runserver
+   ```
+4. Access the site at `http://127.0.0.1:8000/`.
 
-### 📦 Что нужно скопировать в ваш проект:
-1. **Сам движок генератора:** Файл `main/simulator/generate_build.py` (это ядро логики).
-2. **Обученные веса (Модели):** Папку `main/ml/models/` (в ней лежат готовые `.json` деревья XGBoost для каждого героя).
-3. **Словари:** Папку `main/data/dictionary/` (нужны файлы `heroes_dict.json`, `abilities_dict.json`, `shop_items_dict.json` для получения имен, цен и логики слотов).
-4. **Зависимости:** Убедитесь, что в вашем проекте установлены `xgboost`, `pandas` и `numpy`.
+---
 
-### 🗑 Что можно удалить (Не требуется для Production):
-Вам **НЕ НУЖНЫ** скрипты для сбора данных и обучения:
-- `main/utils/` (Парсинг логов матчей).
-- `main/ml/*.py` (Все файлы типа `1_cluster...`, `5_train...` — они использовались только для создания моделей).
-- `main/training/` (Огромные датасеты и CSV).
-- `test_website/` (Локальный тестовый HTML и сервер).
+## 🐳 Production Deployment (With Docker Compose)
 
-### 🚀 Пример использования в стороннем коде:
-```python
-from generate_build import DeadlockBuildGenerator
+This project is fully containerized and production-ready.
 
-# 1. Инициализация (может занимать до 6 секунд, так как модель читается с диска)
-generator = DeadlockBuildGenerator(hero_id=15, archetype=0)
+**Prerequisites:**
+* Docker and Docker Compose installed.
+* The `main/ml/models/` folder fully populated with your `.json` models (Transfer them via FTP if deploying to a VPS).
 
-# 2. Мгновенная генерация
-# temperature: 0.1 (киберспортивная мета) до 15.0 (полный хаос)
-generator.generate_full_build(max_items=24, strict_rules=False, temperature=2.0)
+**Deployment Steps:**
+1. Clone this repository to your server.
+2. Ensure your `.env` or configurations are correct (Redis is automatically orchestrated).
+3. Build and start the containers:
+   ```bash
+   docker compose up -d --build
+   ```
 
-# 3. Вывод результатов
-print("Купленные предметы:", generator.inventory)
-print("Прокачка способностей:", generator.ability_history)
-```
-*(Для оптимизации постоянной работы в API обязательно ознакомьтесь с [кэшированием моделей](docs/api_caching.md)).*
+*Note on disk space:* The `.dockerignore` file prevents the heavy 2.2 GB ML models from being copied directly into the Docker Image during the build process, saving massive amounts of build context memory and disk space. Instead, Docker Compose mounts the directory at runtime via Volumes.
