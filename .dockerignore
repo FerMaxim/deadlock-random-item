@@ -12,3 +12,7 @@ db.sqlite3
 .dockerignore
 *.log
 website/staticfiles/
+django_ml_module/
+main/ml/models/
+main/data/*.parquet
+main/data/*.csv
