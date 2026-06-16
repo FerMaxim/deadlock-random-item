@@ -11,3 +11,4 @@ website/staticfiles/
 .DS_Store
 *.parquet
 *.csv
+main/ml/models/
