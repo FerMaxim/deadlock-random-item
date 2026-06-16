@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         activeHeroes.forEach(id => {
             const div = document.createElement("div");
             div.className = "hero-avatar";
-            div.textContent = id;
+            div.innerHTML = `<img src="/static/images/heroes/${id}.png" alt="Hero ${id}" onerror="this.style.display='none'">`;
             div.onclick = () => {
                 document.querySelectorAll(".hero-avatar").forEach(el => el.classList.remove("selected"));
                 div.classList.add("selected");
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         div.innerHTML = `
             <div class="player-header">
-                <div class="player-avatar">${state.hero || '?'}</div>
+                <div class="player-avatar">${state.hero ? `<img src="/static/images/heroes/${state.hero}.png" alt="Hero ${state.hero}" onerror="this.style.display='none'">` : '?'}</div>
                 <div>
                     <div class="player-nick">${displayNick} <div class="status-dot"></div></div>
                     <span class="player-cost">Total: ⚡${state.cost} <span style="margin-left:10px; color:#888;">| ${state.archetype || ''}</span></span>
