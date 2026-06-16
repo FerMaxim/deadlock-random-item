@@ -1,200 +1,274 @@
 {
     "1548066885": {
         "name": "Extended Magazine",
+        "class_name": "upgrade_clip_size",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1009965641": {
         "name": "Monster Rounds",
+        "class_name": "upgrade_non_player_bonus",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "709540378": {
         "name": "Cultist Sacrifice",
+        "class_name": "upgrade_non_player_bonus_sacrifice",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": true,
         "components": [
             "upgrade_non_player_bonus"
         ]
     },
     "1248737459": {
         "name": "Ammo Scavenger",
+        "class_name": "upgrade_ammo_scavenger",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3535785353": {
         "name": "upgrade_clip_size_fixed",
+        "class_name": "upgrade_clip_size_fixed",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2861048274": {
         "name": "upgrade_clip_size_fixed_t3",
+        "class_name": "upgrade_clip_size_fixed_t3",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "811521119": {
         "name": "Tesla Bullets",
+        "class_name": "upgrade_chain_lightning",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "710436191": {
         "name": "Capacitor",
+        "class_name": "upgrade_capacitor",
         "cost": 6400,
         "slot_type": "weapon",
+        "is_active": true,
         "components": [
             "upgrade_chain_lightning"
         ]
     },
     "3316018900": {
         "name": "upgrade_galvanic_storm",
+        "class_name": "upgrade_galvanic_storm",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2678489038": {
         "name": "Hollow Point",
+        "class_name": "upgrade_hollow_point_rounds",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2064029594": {
         "name": "Opening Rounds",
+        "class_name": "upgrade_pristine_emblem",
         "cost": 1600,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_high_velocity_mag"
         ]
     },
     "1544322593": {
         "name": "upgrade_stabilizer",
+        "class_name": "upgrade_stabilizer",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3077079169": {
         "name": "High-Velocity Rounds",
+        "class_name": "upgrade_high_velocity_mag",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1437614329": {
         "name": "Melee Lifesteal",
+        "class_name": "upgrade_lifestrike_gauntlets",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "4204808176": {
         "name": "Rebuttal",
+        "class_name": "upgrade_melee_rebuttal",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1414025773": {
         "name": "Counterspell",
+        "class_name": "upgrade_counterspell",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3791587546": {
         "name": "Weighted Shots",
+        "class_name": "upgrade_weighted_shots",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_slowing_bullets"
         ]
     },
     "1342610602": {
         "name": "Close Quarters",
+        "class_name": "upgrade_close_range",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3331811235": {
         "name": "Long Range",
+        "class_name": "upgrade_long_range",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "393974127": {
         "name": "Slowing Bullets",
+        "class_name": "upgrade_slowing_bullets",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2037039379": {
         "name": "Inhibitor",
+        "class_name": "upgrade_inhibitor",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1889400890": {
         "name": "upgrade_small_attack_speed",
+        "class_name": "upgrade_small_attack_speed",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1144549437": {
         "name": "Spirit Shredder Bullets",
+        "class_name": "upgrade_tech_defense_shredders",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1109351073": {
         "name": "upgrade_attack_speed_1",
+        "class_name": "upgrade_attack_speed_1",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1100809516": {
         "name": "upgrade_nearby_enemy_boost",
+        "class_name": "upgrade_nearby_enemy_boost",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2108215830": {
         "name": "Heroic Aura",
+        "class_name": "upgrade_dps_aura",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "775925321": {
         "name": "upgrade_weapon_detention_ammo",
+        "class_name": "upgrade_weapon_detention_ammo",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "619484391": {
         "name": "Silence Wave",
+        "class_name": "upgrade_targeted_silence",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1113837674": {
         "name": "Silencer",
+        "class_name": "upgrade_proc_silence",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3133167885": {
         "name": "Silencer",
+        "class_name": "upgrade_silencer",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "1503218332": {
         "name": "upgrade_proc_disarm",
+        "class_name": "upgrade_proc_disarm",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1414319208": {
         "name": "Berserker",
+        "class_name": "upgrade_berserker",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "339443430": {
         "name": "Frenzy",
+        "class_name": "upgrade_fervor",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1282141666": {
         "name": "Siphon Bullets",
+        "class_name": "upgrade_siphon_bullets",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2010028405": {
         "name": "Headshot Booster",
+        "class_name": "upgrade_headshot_booster",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1770441818": {
         "name": "Weakening Headshot",
+        "class_name": "upgrade_headshot_booster2",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2152872419": {
         "name": "Sharpshooter",
+        "class_name": "upgrade_sharpshooter",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_long_range",
             "upgrade_high_velocity_mag"
@@ -202,191 +276,259 @@
     },
     "4053935515": {
         "name": "Headhunter",
+        "class_name": "upgrade_headhunter",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_headshot_booster"
         ]
     },
     "4075861416": {
         "name": "Spirit Rend",
+        "class_name": "upgrade_spellslinger_headshots",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_tech_defense_shredders"
         ]
     },
     "3884003354": {
         "name": "Crippling Headshot",
+        "class_name": "upgrade_banshee_slugs",
         "cost": 6400,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_headshot_booster2"
         ]
     },
     "184951197": {
         "name": "upgrade_proc_tech_damage",
+        "class_name": "upgrade_proc_tech_damage",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "395867183": {
         "name": "Mystic Shot",
+        "class_name": "upgrade_crackshot",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1396247347": {
         "name": "Lucky Shot",
+        "class_name": "upgrade_critshot",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2095565695": {
         "name": "Point Blank",
+        "class_name": "upgrade_close_quarter_combat",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_close_range"
         ]
     },
     "4284855775": {
         "name": "upgrade_clip_size_2",
+        "class_name": "upgrade_clip_size_2",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3449296332": {
         "name": "upgrade_clip_size_3",
+        "class_name": "upgrade_clip_size_3",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3696726732": {
         "name": "Toxic Bullets",
+        "class_name": "upgrade_toxic_bullets",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3791295884": {
         "name": "upgrade_attack_speed_2",
+        "class_name": "upgrade_attack_speed_2",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "4190165534": {
         "name": "upgrade_drum_magazine",
+        "class_name": "upgrade_drum_magazine",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2480592370": {
         "name": "Ricochet",
+        "class_name": "upgrade_ricochet",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3633614685": {
         "name": "Extra Health",
+        "class_name": "upgrade_health",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2858617477": {
         "name": "Toughness",
+        "class_name": "upgrade_health_2",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1448361452": {
         "name": "upgrade_toughness_3",
+        "class_name": "upgrade_toughness_3",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3713423303": {
         "name": "Bullet Armor",
+        "class_name": "upgrade_bullet_armor",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "223594321": {
         "name": "Spirit Armor",
+        "class_name": "upgrade_tech_armor",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1575167590": {
         "name": "upgrade_health_regen_1",
+        "class_name": "upgrade_health_regen_1",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "499683006": {
         "name": "Bullet Lifesteal",
+        "class_name": "upgrade_vampire",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "790496977": {
         "name": "upgrade_double_jump",
+        "class_name": "upgrade_double_jump",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3321728133": {
         "name": "upgrade_health_regen_aura",
+        "class_name": "upgrade_health_regen_aura",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1047818222": {
         "name": "Debuff Reducer",
+        "class_name": "upgrade_debuff_reducer",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3731635960": {
         "name": "Dispel Magic",
+        "class_name": "upgrade_reduce_debuff_duration",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1825391146": {
         "name": "upgrade_high_impact_armor",
+        "class_name": "upgrade_high_impact_armor",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1711193274": {
         "name": "upgrade_slow_immunity",
+        "class_name": "upgrade_slow_immunity",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "471704443": {
         "name": "upgrade_weapon_power_and_health_drain",
+        "class_name": "upgrade_weapon_power_and_health_drain",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1319649491": {
         "name": "upgrade_active_bullet_shield",
+        "class_name": "upgrade_active_bullet_shield",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "2163598980": {
         "name": "Spirit Resilience",
+        "class_name": "upgrade_tech_purge",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3140772621": {
         "name": "Bullet Resilience",
+        "class_name": "upgrade_improved_bullet_armor",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1378931225": {
         "name": "Metal Skin",
+        "class_name": "upgrade_metal_skin",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "2566692615": {
         "name": "Healing Booster",
+        "class_name": "upgrade_healing_booster",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_endurance"
         ]
     },
     "3585132399": {
         "name": "Fortitude",
+        "class_name": "upgrade_chonky",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_health"
         ]
     },
     "865846625": {
         "name": "Leech",
+        "class_name": "upgrade_damage_recycler",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_vampire",
             "upgrade_health_stealing_magic"
@@ -394,937 +536,1251 @@
     },
     "1298427343": {
         "name": "upgrade_bullet_damage_reduction_aura",
+        "class_name": "upgrade_bullet_damage_reduction_aura",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3399065363": {
         "name": "Sprint Boots",
+        "class_name": "upgrade_sprint_booster",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3074274290": {
         "name": "Trophy Collector",
+        "class_name": "upgrade_trophy_collector",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_sprint_booster"
         ]
     },
     "2447176615": {
         "name": "Enduring Speed",
+        "class_name": "upgrade_cardio_calibrator",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_sprint_booster"
         ]
     },
     "334300056": {
         "name": "Stamina Mastery",
+        "class_name": "upgrade_superior_stamina",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_improved_stamina"
         ]
     },
     "668299740": {
         "name": "Rapid Rounds",
+        "class_name": "upgrade_rapid_rounds",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "4139877411": {
         "name": "Extra Stamina",
+        "class_name": "upgrade_improved_stamina",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2481177645": {
         "name": "Hunter's Aura",
+        "class_name": "upgrade_bullet_armor_reduction_aura",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1962740586": {
         "name": "upgrade_camouflage",
+        "class_name": "upgrade_camouflage",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "3038950099": {
         "name": "upgrade_regenerative_armor",
+        "class_name": "upgrade_regenerative_armor",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1672893796": {
         "name": "Grit",
+        "class_name": "upgrade_grit",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "805079544": {
         "name": "Weapon Shielding",
+        "class_name": "upgrade_weapon_shielding",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_grit"
         ]
     },
     "112198670": {
         "name": "Spirit Shielding",
+        "class_name": "upgrade_spirit_bubble",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_grit"
         ]
     },
     "1235347618": {
         "name": "Battle Vest",
+        "class_name": "upgrade_regenerating_bullet_shield",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3970837787": {
         "name": "Enchanter's Emblem",
+        "class_name": "upgrade_magic_shield",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "968099481": {
         "name": "Extra Spirit",
+        "class_name": "upgrade_improved_spirit",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1439347412": {
         "name": "Mystic Regeneration",
+        "class_name": "upgrade_mystic_regeneration",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "7409189": {
         "name": "Improved Spirit",
+        "class_name": "upgrade_soaring_spirit",
         "cost": 1600,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_improved_spirit"
         ]
     },
     "2226497419": {
         "name": "Spiritual Overflow",
+        "class_name": "upgrade_tech_overflow",
         "cost": 6400,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_health_stealing_magic"
         ]
     },
     "3361075077": {
         "name": "Return Fire",
+        "class_name": "upgrade_return_fire",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1193964439": {
         "name": "Greater Expansion",
+        "class_name": "upgrade_tech_range",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_magic_reach"
         ]
     },
     "754480263": {
         "name": "Mystic Expansion",
+        "class_name": "upgrade_magic_reach",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3776945997": {
         "name": "Extra Charge",
+        "class_name": "upgrade_extra_charge",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "876563814": {
         "name": "Spirit Lifesteal",
+        "class_name": "upgrade_health_stealing_magic",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2645639421": {
         "name": "upgrade_disarm",
+        "class_name": "upgrade_disarm",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2971868509": {
         "name": "Bullet Resist Shredder",
+        "class_name": "upgrade_bullet_resist_shredder",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3577481646": {
         "name": "Mystic Reverb",
+        "class_name": "upgrade_mystic_reverb",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1998374645": {
         "name": "Mystic Burst",
+        "class_name": "upgrade_magic_burst",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "2121044373": {
         "name": "Tankbuster",
+        "class_name": "upgrade_magic_shock",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_magic_burst"
         ]
     },
     "1052584266": {
         "name": "upgrade_arcane_medallion",
+        "class_name": "upgrade_arcane_medallion",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "2081037738": {
         "name": "Mystic Vulnerability",
+        "class_name": "upgrade_magic_vulnerability",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "2603935618": {
         "name": "Healbane",
+        "class_name": "upgrade_healbane",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1102081447": {
         "name": "Mystic Slow",
+        "class_name": "upgrade_magic_slow",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3005970438": {
         "name": "Escalating Exposure",
+        "class_name": "upgrade_escalating_exposure",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_magic_vulnerability"
         ]
     },
     "787198704": {
         "name": "Rapid Recharge",
+        "class_name": "upgrade_rapid_recharge",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_extra_charge"
         ]
     },
     "380806748": {
         "name": "Compress Cooldown",
+        "class_name": "upgrade_magic_tempo",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3261353684": {
         "name": "Superior Cooldown",
+        "class_name": "upgrade_cooldown_reduction",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_magic_tempo"
         ]
     },
     "915014646": {
         "name": "Transcendent Cooldown",
+        "class_name": "upgrade_transcendent_cooldown",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_cooldown_reduction"
         ]
     },
     "3789823638": {
         "name": "upgrade_duration_extender",
+        "class_name": "upgrade_duration_extender",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3013879715": {
         "name": "upgrade_slowing_tech",
+        "class_name": "upgrade_slowing_tech",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1813726886": {
         "name": "Slowing Hex",
+        "class_name": "upgrade_containment",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1219329868": {
         "name": "Spirit Sap",
+        "class_name": "upgrade_spirit_sap",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2142980412": {
         "name": "Focus Lens",
+        "class_name": "upgrade_focus_lens",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": true,
         "components": [
             "upgrade_spirit_sap"
         ]
     },
     "2922054143": {
         "name": "Rusted Barrel",
+        "class_name": "upgrade_withering_whip",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2061878743": {
         "name": "Disarming Hex",
+        "class_name": "upgrade_greater_withering_whip",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": true,
         "components": [
             "upgrade_withering_whip"
         ]
     },
     "1804594021": {
         "name": "Rescue Beam",
+        "class_name": "upgrade_rescue_beam",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_health_stimpak"
         ]
     },
     "2329546537": {
         "name": "Rebirth",
+        "class_name": "upgrade_personal_rejuvenator",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "4003032160": {
         "name": "Soul Rebirth",
+        "class_name": "upgrade_rebirth",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1993213427": {
         "name": "upgrade_long_range_slowing_tech",
+        "class_name": "upgrade_long_range_slowing_tech",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3064545951": {
         "name": "upgrade_full_spectrum",
+        "class_name": "upgrade_full_spectrum",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "4249800570": {
         "name": "upgrade_tech_cleave",
+        "class_name": "upgrade_tech_cleave",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1288322878": {
         "name": "upgrade_bonus_ability_charge_3",
+        "class_name": "upgrade_bonus_ability_charge_3",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "4245766497": {
         "name": "upgrade_charge_mastery",
+        "class_name": "upgrade_charge_mastery",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3144988365": {
         "name": "Decay",
+        "class_name": "upgrade_rupture",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2417568017": {
         "name": "Scourge",
+        "class_name": "upgrade_discord",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "776145721": {
         "name": "upgrade_aoe_tech_shield",
+        "class_name": "upgrade_aoe_tech_shield",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1254091416": {
         "name": "Knockdown",
+        "class_name": "upgrade_target_stun",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1371725689": {
         "name": "Phantom Strike",
+        "class_name": "upgrade_phantom_strike",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "3270001687": {
         "name": "Warp Stone",
+        "class_name": "upgrade_warp_stone",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1152158042": {
         "name": "Vortex Web",
+        "class_name": "upgrade_aoe_root",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": true,
         "components": [
             "upgrade_containment"
         ]
     },
     "677738769": {
         "name": "Refresher",
+        "class_name": "upgrade_ability_refresher",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "630839635": {
         "name": "Echo Shard",
+        "class_name": "upgrade_ability_power_shard",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "395944548": {
         "name": "Torment Pulse",
+        "class_name": "upgrade_tech_damage_pulse",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3361811174": {
         "name": "Cheat Death",
+        "class_name": "upgrade_cheat_death",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "3276909180": {
         "name": "upgrade_reload_speed",
+        "class_name": "upgrade_reload_speed",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2560018361": {
         "name": "upgrade_cloaking_device",
+        "class_name": "upgrade_cloaking_device",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1798666702": {
         "name": "Shadow Weave",
+        "class_name": "upgrade_cloaking_device_active",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "3662153307": {
         "name": "upgrade_fire_rate_aura",
+        "class_name": "upgrade_fire_rate_aura",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "607292868": {
         "name": "upgrade_weapon_overdrive_clip",
+        "class_name": "upgrade_weapon_overdrive_clip",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "3830846077": {
         "name": "Majestic Leap - Disabled",
+        "class_name": "upgrade_rocket_boots",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "600033864": {
         "name": "Majestic Leap",
+        "class_name": "upgrade_rocket_booster",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "271801138": {
         "name": "upgrade_aerial_assault",
+        "class_name": "upgrade_aerial_assault",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "2956256701": {
         "name": "Healing Nova",
+        "class_name": "upgrade_health_nova",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_health_stimpak"
         ]
     },
     "2059712766": {
         "name": "Restorative Locket",
+        "class_name": "upgrade_restorative_locket",
         "cost": 1600,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1710079648": {
         "name": "Healing Rite",
+        "class_name": "upgrade_health_stimpak",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1797283378": {
         "name": "Infuser",
+        "class_name": "upgrade_infuser",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_health_stealing_magic"
         ]
     },
     "857669956": {
         "name": "Guardian Ward",
+        "class_name": "upgrade_guardian_ward",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_grit"
         ]
     },
     "1662311306": {
         "name": "Divine Barrier",
+        "class_name": "upgrade_divine_barrier",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_guardian_ward"
         ]
     },
     "937242723": {
         "name": "upgrade_aoe_smoke_bomb",
+        "class_name": "upgrade_aoe_smoke_bomb",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1932939246": {
         "name": "Alchemical Fire",
+        "class_name": "upgrade_thermal_detonator",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "989206714": {
         "name": "Blood Tribute",
+        "class_name": "upgrade_blood_tribute",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "3403085434": {
         "name": "Fleetfoot",
+        "class_name": "upgrade_fleetfoot_boots",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "3977876567": {
         "name": "Kinetic Dash",
+        "class_name": "upgrade_kinetic_sash",
         "cost": 1600,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_improved_stamina"
         ]
     },
     "1150006784": {
         "name": "Arcane Surge",
+        "class_name": "upgrade_arcane_surge",
         "cost": 1600,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_improved_stamina"
         ]
     },
     "389243496": {
         "name": "upgrade_weapon_eater",
+        "class_name": "upgrade_weapon_eater",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "315518818": {
         "name": "upgrade_weapon_instant_reload",
+        "class_name": "upgrade_weapon_instant_reload",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "3357231760": {
         "name": "Unstoppable",
+        "class_name": "upgrade_unstoppable",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_debuff_reducer"
         ]
     },
     "2407781327": {
         "name": "Colossus",
+        "class_name": "upgrade_colossus",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_health"
         ]
     },
     "1976391348": {
         "name": "Cold Front",
+        "class_name": "upgrade_cold_front",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "3812615317": {
         "name": "Arctic Blast",
+        "class_name": "upgrade_arctic_blast",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": true,
         "components": [
             "upgrade_cold_front"
         ]
     },
     "486220748": {
         "name": "upgrade_aoe_silence",
+        "class_name": "upgrade_aoe_silence",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2533252781": {
         "name": "Ethereal Shift",
+        "class_name": "upgrade_self_bubble",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "385745034": {
         "name": "upgrade_stasis_bomb",
+        "class_name": "upgrade_stasis_bomb",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": true
     },
     "1641353616": {
         "name": "upgrade_quarantine",
+        "class_name": "upgrade_quarantine",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2617435668": {
         "name": "Cursed Relic",
+        "class_name": "upgrade_glitch",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1959600032": {
         "name": "upgrade_imbued_ability",
+        "class_name": "upgrade_imbued_ability",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "2951612397": {
         "name": "Duration Extender",
+        "class_name": "upgrade_arcane_extension",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "2717651715": {
         "name": "Superior Duration",
+        "class_name": "upgrade_imbued_duration_extender",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_arcane_extension"
         ]
     },
     "365620721": {
         "name": "Glass Cannon",
+        "class_name": "upgrade_glass_cannon",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1409190604": {
         "name": "Fury Trance",
+        "class_name": "upgrade_fury_trance",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_vampire"
         ]
     },
     "1055679805": {
         "name": "Vampiric Burst",
+        "class_name": "upgrade_surging_power",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": true,
         "components": [
             "upgrade_vampire"
         ]
     },
     "481022061": {
         "name": "upgrade_mod_disruptor",
+        "class_name": "upgrade_mod_disruptor",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "2039312305": {
         "name": "upgrade_frenzy",
+        "class_name": "upgrade_frenzy",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "253917113": {
         "name": "upgrade_burst_fire_actuator",
+        "class_name": "upgrade_burst_fire_actuator",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "1252627263": {
         "name": "Lifestrike",
+        "class_name": "upgrade_boxing_glove",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_lifestrike_gauntlets"
         ]
     },
     "465043967": {
         "name": "Spirit Strike",
+        "class_name": "upgrade_acolytes_glove",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3190916303": {
         "name": "Spirit Snatch",
+        "class_name": "upgrade_spirit_snatch",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_acolytes_glove"
         ]
     },
     "26002154": {
         "name": "Melee Charge",
+        "class_name": "upgrade_melee_charge",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "800008313": {
         "name": "Crushing Fists",
+        "class_name": "upgrade_crushing_fists",
         "cost": 6400,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_melee_charge"
         ]
     },
     "3572021243": {
         "name": "upgrade_charmed_wraps",
+        "class_name": "upgrade_charmed_wraps",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1326137213": {
         "name": "upgrade_belt_fed_magazine",
+        "class_name": "upgrade_belt_fed_magazine",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2820116164": {
         "name": "Diviner's Kevlar",
+        "class_name": "upgrade_diviners_kevlar",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2672389724": {
         "name": "upgrade_stabilizing_tripod",
+        "class_name": "upgrade_stabilizing_tripod",
         "cost": 3200,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "2947183272": {
         "name": "Radiant Regeneration",
+        "class_name": "upgrade_resonant_healing",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_mystic_regeneration"
         ]
     },
     "2519598785": {
         "name": "Boundless Spirit",
+        "class_name": "upgrade_boundless_spirit",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_soaring_spirit"
         ]
     },
     "2739107182": {
         "name": "Burst Fire",
+        "class_name": "upgrade_burst_fire",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_rapid_rounds"
         ]
     },
     "558396679": {
         "name": "Enduring Spirit",
+        "class_name": "upgrade_resilience",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2829638276": {
         "name": "Extra Regen",
+        "class_name": "upgrade_endurance",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2985482185": {
         "name": "upgrade_magic_clarity",
+        "class_name": "upgrade_magic_clarity",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "1292979587": {
         "name": "Surge of Power",
+        "class_name": "upgrade_magic_storm",
         "cost": 3200,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_improved_spirit"
         ]
     },
     "1925087134": {
         "name": "Suppressor",
+        "class_name": "upgrade_suppressor",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "84321454": {
         "name": "Quicksilver Reload",
+        "class_name": "upgrade_quick_silver",
         "cost": 1600,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3919289022": {
         "name": "Mercurial Magnum",
+        "class_name": "upgrade_ethereal_bullets",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_quick_silver"
         ]
     },
     "2717142638": {
         "name": "upgrade_arcane_eater",
+        "class_name": "upgrade_arcane_eater",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2574520834": {
         "name": "upgrade_predator_precision",
+        "class_name": "upgrade_predator_precision",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2407033488": {
         "name": "Intensifying Magazine",
+        "class_name": "upgrade_intensifying_clip",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2463960640": {
         "name": "Escalating Resilience",
+        "class_name": "upgrade_reinforcing_casings",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_clip_size"
         ]
     },
     "4104549924": {
         "name": "Swift Striker",
+        "class_name": "upgrade_blitz_bullets",
         "cost": 1600,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_rapid_rounds"
         ]
     },
     "865958998": {
         "name": "Veil Walker",
+        "class_name": "upgrade_veil_walker",
         "cost": 3200,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_sprint_booster"
         ]
     },
     "1644605047": {
         "name": "Reactive Barrier",
+        "class_name": "upgrade_vex_barrier",
         "cost": 1600,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_grit"
         ]
     },
     "951866250": {
         "name": "Indomitable",
+        "class_name": "upgrade_auto_cleanse",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_vex_barrier"
         ]
     },
     "3862866912": {
         "name": "Restorative Shot",
+        "class_name": "upgrade_medic_bullets",
         "cost": 800,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2356412290": {
         "name": "Titanic Magazine",
+        "class_name": "upgrade_titan_round",
         "cost": 1600,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_clip_size"
         ]
     },
     "3647584222": {
         "name": "Split Shot",
+        "class_name": "upgrade_split_shot",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "381961617": {
         "name": "Active Reload",
+        "class_name": "upgrade_active_reload",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2800629741": {
         "name": "Magic Carpet",
+        "class_name": "upgrade_magic_carpet",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     },
     "1200177229": {
         "name": "Hexafoil Ward",
+        "class_name": "upgrade_spellshield",
         "cost": 3200,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "2331566268": {
         "name": "Hex-Sealed Knuckles",
+        "class_name": "upgrade_superacolytes_glove",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "194116661": {
         "name": "Conjure Missiles",
+        "class_name": "upgrade_magic_missile",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "138320648": {
         "name": "Patron's Healing",
+        "class_name": "upgrade_heal_on_level",
         "cost": 800,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "343572757": {
         "name": "Spirit Burn",
+        "class_name": "upgrade_spirit_burn",
         "cost": 6400,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "493591231": {
         "name": "Lightning Scroll",
+        "class_name": "upgrade_ultimate_burst",
         "cost": 6400,
         "slot_type": "spirit",
+        "is_active": false,
         "components": [
             "upgrade_magic_slow"
         ]
     },
     "3913864662": {
         "name": "Soul Explosion",
+        "class_name": "upgrade_corpse_explosion",
         "cost": 3200,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": false
     },
     "3028234315": {
         "name": "Witchmail",
+        "class_name": "upgrade_absorbing_armor",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1427630806": {
         "name": "Healing Tempo",
+        "class_name": "upgrade_healbuff",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_healing_booster"
         ]
     },
     "3346798998": {
         "name": "Endless Magazine",
+        "class_name": "upgrade_infinitemagazine",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": true
     },
     "1497973293": {
         "name": "Glass Cannon v2",
+        "class_name": "upgrade_glass_cannon2",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "673001892": {
         "name": "Armor Piercing Rounds",
+        "class_name": "upgrade_aprounds",
         "cost": 6400,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_high_velocity_mag"
         ]
     },
     "3491236900": {
         "name": "Plated Armor",
+        "class_name": "upgrade_deflecting_armor",
         "cost": 6400,
-        "slot_type": "vitality"
+        "slot_type": "vitality",
+        "is_active": false
     },
     "1955841979": {
         "name": "Spellbreaker",
+        "class_name": "upgrade_spellbreaker",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_debuff_reducer"
         ]
     },
     "1250307611": {
         "name": "Juggernaut",
+        "class_name": "upgrade_juggernaut",
         "cost": 6400,
         "slot_type": "vitality",
+        "is_active": false,
         "components": [
             "upgrade_cardio_calibrator"
         ]
     },
     "2221211450": {
         "name": "Spellslinger",
+        "class_name": "upgrade_enchanted_holsters",
         "cost": 6400,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "98582110": {
         "name": "Stalker",
+        "class_name": "upgrade_weapon_backstabber",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "690458959": {
         "name": "Express Shot",
+        "class_name": "upgrade_express_shot",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_high_velocity_mag"
         ]
     },
     "3294954488": {
         "name": "Ballistic Enchantment",
+        "class_name": "upgrade_bulletshredimbue",
         "cost": 3200,
         "slot_type": "weapon",
+        "is_active": false,
         "components": [
             "upgrade_magic_reach"
         ]
     },
     "1763073141": {
         "name": "Recharging Rush",
+        "class_name": "upgrade_rechargingbullets",
         "cost": 1600,
-        "slot_type": "weapon"
+        "slot_type": "weapon",
+        "is_active": false
     },
     "2462046703": {
         "name": "Golden Goose Egg",
+        "class_name": "upgrade_goose_egg",
         "cost": 800,
-        "slot_type": "spirit"
+        "slot_type": "spirit",
+        "is_active": true
     }
 }

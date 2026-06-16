@@ -17,3 +17,6 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# ML Models (Too large for Git)
+main/ml/models/*.json

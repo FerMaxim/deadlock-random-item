@@ -1,0 +1,34 @@
+{
+    "presets": {
+        "level_1": {
+            "name": "Мета",
+            "description": "Киберспортивный билд без случайностей.",
+            "temperature": 0.1,
+            "chaos": false
+        },
+        "level_2": {
+            "name": "Разнообразие",
+            "description": "Рабочий билд с небольшими вариациями из топ-предметов.",
+            "temperature": 1.0,
+            "chaos": false
+        },
+        "level_3": {
+            "name": "Адекватный рандом",
+            "description": "Полноценное разнообразие, нестандартные прокачки.",
+            "temperature": 2.0,
+            "chaos": false
+        },
+        "level_4": {
+            "name": "Фановый хаос",
+            "description": "Случайные эксперименты (например, Мили-Бибоп).",
+            "temperature": 5.0,
+            "chaos": true
+        },
+        "level_5": {
+            "name": "Полное безумие",
+            "description": "100% рандом из всего магазина. Законы логики больше не работают.",
+            "temperature": 15.0,
+            "chaos": true
+        }
+    }
+}

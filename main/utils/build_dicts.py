@@ -69,8 +69,10 @@ def process_data():
                 item_id = str(item.get("id"))
                 shop_items_dict[item_id] = {
                     "name": item.get("name"),
+                    "class_name": item.get("class_name", ""),
                     "cost": cost,
-                    "slot_type": str(item.get("item_slot_type", "Unknown")).lower()
+                    "slot_type": str(item.get("item_slot_type", "Unknown")).lower(),
+                    "is_active": item.get("is_active_item", False)
                 }
                 
                 # Компоненты, если они есть
