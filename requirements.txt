@@ -1,0 +1,8 @@
+Django==4.2.30
+channels==4.0.0
+daphne==4.0.0
+channels-redis==4.1.0
+xgboost
+pandas
+numpy
+scikit-learn

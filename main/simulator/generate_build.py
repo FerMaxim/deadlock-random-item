@@ -168,15 +168,24 @@ class DeadlockBuildGenerator:
             valid_candidates.append(idx)
             
         if not valid_candidates:
-            return False
+            # Fallback: pick any item not in inventory
+            available = []
+            for item_id_str, info in self.shop_dict.items():
+                iid = int(item_id_str)
+                if iid not in self.inventory:
+                    available.append(iid)
+            if not available:
+                return False
+            candidate_item_id = np.random.choice(available)
+        else:
+            # Заново считаем вероятности только для валидных кандидатов
+            valid_probs = [probs[idx] for idx in valid_candidates]
+            valid_probs = valid_probs / np.sum(valid_probs)
             
-        # Заново считаем вероятности только для валидных кандидатов
-        valid_probs = [probs[idx] for idx in valid_candidates]
-        valid_probs = valid_probs / np.sum(valid_probs)
-        
-        # ВЫБОР С УЧЕТОМ ТЕМПЕРАТУРЫ (Сэмплирование)
-        chosen_idx = np.random.choice(valid_candidates, p=valid_probs)
-        candidate_item_id = self.item_mapping[chosen_idx]
+            # ВЫБОР С УЧЕТОМ ТЕМПЕРАТУРЫ (Сэмплирование)
+            chosen_idx = np.random.choice(valid_candidates, p=valid_probs)
+            candidate_item_id = self.item_mapping[chosen_idx]
+            
         candidate_info = self.shop_dict.get(str(candidate_item_id), {})
         
         if not strict_rules:
@@ -252,26 +261,29 @@ class DeadlockBuildGenerator:
         for idx in top_indices:
             candidate_ability_id = self.ability_mapping[idx]
             str_id = str(candidate_ability_id)
-            
-            # Проверка: Существует ли абилка у героя?
             if str_id not in self.hero_abilities:
                 continue
-                
-            # Проверка: Не вкачана ли абилка на максимум (4 очка: анлок + 3 тира)?
             if self.ability_levels.get(str_id, 0) >= 4:
                 continue
-                
             valid_candidates.append(idx)
             
         if not valid_candidates:
-            return False
+            # Fallback: pick any available ability for this hero
+            available = []
+            for ab_id in self.hero_abilities:
+                if self.ability_levels.get(str(ab_id), 0) < 4:
+                    available.append(int(ab_id))
+            if not available:
+                return False
+            candidate_ability_id = np.random.choice(available)
+            str_id = str(candidate_ability_id)
+        else:
+            valid_probs = [probs[idx] for idx in valid_candidates]
+            valid_probs = valid_probs / np.sum(valid_probs)
             
-        valid_probs = [probs[idx] for idx in valid_candidates]
-        valid_probs = valid_probs / np.sum(valid_probs)
-        
-        chosen_idx = np.random.choice(valid_candidates, p=valid_probs)
-        candidate_ability_id = self.ability_mapping[chosen_idx]
-        str_id = str(candidate_ability_id)
+            chosen_idx = np.random.choice(valid_candidates, p=valid_probs)
+            candidate_ability_id = self.ability_mapping[chosen_idx]
+            str_id = str(candidate_ability_id)
         
         # Все проверки пройдены!
         self.ability_levels[str_id] += 1

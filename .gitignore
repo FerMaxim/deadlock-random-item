@@ -1,22 +1,13 @@
-# Parquet and large datasets
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.env
+db.sqlite3
+*.log
+website/staticfiles/
+.DS_Store
 *.parquet
 *.csv
-main/data/*.parquet
-main/training/*.parquet
-main/training/temp/
-
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
-
-# IDE files
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# ML Models (Too large for Git)
-main/ml/models/*.json

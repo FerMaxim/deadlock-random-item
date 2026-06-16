@@ -1,0 +1,4609 @@
+{
+    "2976789773": {
+        "id": "2976789773",
+        "name": "citadel_weapon_bosstier2_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3317486525": {
+        "id": "3317486525",
+        "name": "citadel_weapon_bosstier3_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2470199706": {
+        "id": "2470199706",
+        "name": "citadel_weapon_rutger_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1115497205": {
+        "id": "1115497205",
+        "name": "citadel_weapon_kali_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2790538565": {
+        "id": "2790538565",
+        "name": "citadel_weapon_gunslinger_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2772141905": {
+        "id": "2772141905",
+        "name": "citadel_weapon_yakuza_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3033433915": {
+        "id": "3033433915",
+        "name": "citadel_weapon_architect_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2914777625": {
+        "id": "2914777625",
+        "name": "citadel_weapon_thumper_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1889173382": {
+        "id": "1889173382",
+        "name": "ability_medic_trooper_heal",
+        "type": "ability",
+        "cost": 0
+    },
+    "2521299219": {
+        "id": "2521299219",
+        "name": "Soul Urn",
+        "type": "ability",
+        "cost": 0
+    },
+    "2641680935": {
+        "id": "2641680935",
+        "name": "ability_item_pickup_effects",
+        "type": "ability",
+        "cost": 0
+    },
+    "2573821048": {
+        "id": "2573821048",
+        "name": "Hyperline",
+        "type": "ability",
+        "cost": 0
+    },
+    "875395762": {
+        "id": "875395762",
+        "name": "citadel_ability_zipline_boost",
+        "type": "ability",
+        "cost": 0
+    },
+    "1751980904": {
+        "id": "1751980904",
+        "name": "citadel_ability_trooper_zip_line",
+        "type": "ability",
+        "cost": 0
+    },
+    "4109126631": {
+        "id": "4109126631",
+        "name": "citadel_ability_mantle",
+        "type": "ability",
+        "cost": 0
+    },
+    "4261702459": {
+        "id": "4261702459",
+        "name": "citadel_ability_climb_rope",
+        "type": "ability",
+        "cost": 0
+    },
+    "1466127517": {
+        "id": "1466127517",
+        "name": "Jump",
+        "type": "ability",
+        "cost": 0
+    },
+    "1443159618": {
+        "id": "1443159618",
+        "name": "",
+        "type": "ability",
+        "cost": 0
+    },
+    "2207638101": {
+        "id": "2207638101",
+        "name": "Dash",
+        "type": "ability",
+        "cost": 0
+    },
+    "2335418656": {
+        "id": "2335418656",
+        "name": "citadel_ability_slide",
+        "type": "ability",
+        "cost": 0
+    },
+    "677666973": {
+        "id": "677666973",
+        "name": "ability_melee_butcher",
+        "type": "ability",
+        "cost": 0
+    },
+    "2950623773": {
+        "id": "2950623773",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "755819616": {
+        "id": "755819616",
+        "name": "citadel_ability_melee_butcher",
+        "type": "ability",
+        "cost": 0
+    },
+    "3299584775": {
+        "id": "3299584775",
+        "name": "citadel_ability_melee_gunslinger",
+        "type": "ability",
+        "cost": 0
+    },
+    "3571834135": {
+        "id": "3571834135",
+        "name": "citadel_ability_melee_yakuza",
+        "type": "ability",
+        "cost": 0
+    },
+    "1208692244": {
+        "id": "1208692244",
+        "name": "citadel_ability_melee_thumper",
+        "type": "ability",
+        "cost": 0
+    },
+    "3123925900": {
+        "id": "3123925900",
+        "name": "citadel_ability_melee_architect",
+        "type": "ability",
+        "cost": 0
+    },
+    "664285540": {
+        "id": "664285540",
+        "name": "Parry",
+        "type": "ability",
+        "cost": 0
+    },
+    "1792983333": {
+        "id": "1792983333",
+        "name": "Rocket Barrage",
+        "type": "ability",
+        "cost": 0
+    },
+    "4101890370": {
+        "id": "4101890370",
+        "name": "Laser",
+        "type": "ability",
+        "cost": 0
+    },
+    "1233550373": {
+        "id": "1233550373",
+        "name": "Stomp",
+        "type": "ability",
+        "cost": 0
+    },
+    "1083734528": {
+        "id": "1083734528",
+        "name": "citadel_ability_tier2boss_aoe_wave",
+        "type": "ability",
+        "cost": 0
+    },
+    "337723920": {
+        "id": "337723920",
+        "name": "Patron Laser",
+        "type": "ability",
+        "cost": 0
+    },
+    "1440185561": {
+        "id": "1440185561",
+        "name": "Patron",
+        "type": "ability",
+        "cost": 0
+    },
+    "10116178": {
+        "id": "10116178",
+        "name": "Patron",
+        "type": "ability",
+        "cost": 0
+    },
+    "1681330920": {
+        "id": "1681330920",
+        "name": "Patron",
+        "type": "ability",
+        "cost": 0
+    },
+    "4182904284": {
+        "id": "4182904284",
+        "name": "rutger_rocket",
+        "type": "ability",
+        "cost": 0
+    },
+    "639385332": {
+        "id": "639385332",
+        "name": "rutger_force_field",
+        "type": "ability",
+        "cost": 0
+    },
+    "1613872264": {
+        "id": "1613872264",
+        "name": "rutger_cheat_death",
+        "type": "ability",
+        "cost": 0
+    },
+    "363299194": {
+        "id": "363299194",
+        "name": "rutger_pulse",
+        "type": "ability",
+        "cost": 0
+    },
+    "4260284622": {
+        "id": "4260284622",
+        "name": "citadel_ability_kali_spinning_blade",
+        "type": "ability",
+        "cost": 0
+    },
+    "21628267": {
+        "id": "21628267",
+        "name": "ability_kali_dust_storm",
+        "type": "ability",
+        "cost": 0
+    },
+    "3219375905": {
+        "id": "3219375905",
+        "name": "citadel_ability_kali_disruptive_charge",
+        "type": "ability",
+        "cost": 0
+    },
+    "488392205": {
+        "id": "488392205",
+        "name": "ability_kali_trappers_bolo",
+        "type": "ability",
+        "cost": 0
+    },
+    "2219528978": {
+        "id": "2219528978",
+        "name": "gunslinger_rapid_fire",
+        "type": "ability",
+        "cost": 0
+    },
+    "809682515": {
+        "id": "809682515",
+        "name": "gunslinger_rocket_launcher",
+        "type": "ability",
+        "cost": 0
+    },
+    "3359246481": {
+        "id": "3359246481",
+        "name": "gunslinger_tenacity",
+        "type": "ability",
+        "cost": 0
+    },
+    "948328221": {
+        "id": "948328221",
+        "name": "gunslinger_sleep_bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "2984400727": {
+        "id": "2984400727",
+        "name": "yakuza_kobun",
+        "type": "ability",
+        "cost": 0
+    },
+    "3577477084": {
+        "id": "3577477084",
+        "name": "yakuza_shakedown_target",
+        "type": "ability",
+        "cost": 0
+    },
+    "3108273022": {
+        "id": "3108273022",
+        "name": "yakuza_shakedown",
+        "type": "ability",
+        "cost": 0
+    },
+    "3908497730": {
+        "id": "3908497730",
+        "name": "yakuza_setting_sun",
+        "type": "ability",
+        "cost": 0
+    },
+    "2250508707": {
+        "id": "2250508707",
+        "name": "yakuza_gang_activity",
+        "type": "ability",
+        "cost": 0
+    },
+    "1685078091": {
+        "id": "1685078091",
+        "name": "yakuza_gang_activity_cancel",
+        "type": "ability",
+        "cost": 0
+    },
+    "523691429": {
+        "id": "523691429",
+        "name": "yakuza_summon_gangster",
+        "type": "ability",
+        "cost": 0
+    },
+    "2340315673": {
+        "id": "2340315673",
+        "name": "yakuza_teleport_to_gangster",
+        "type": "ability",
+        "cost": 0
+    },
+    "3176860010": {
+        "id": "3176860010",
+        "name": "yakuza_fealty",
+        "type": "ability",
+        "cost": 0
+    },
+    "1584495732": {
+        "id": "1584495732",
+        "name": "yakuza_protection_racket",
+        "type": "ability",
+        "cost": 0
+    },
+    "348689004": {
+        "id": "348689004",
+        "name": "thumper_ability_1",
+        "type": "ability",
+        "cost": 0
+    },
+    "2086284285": {
+        "id": "2086284285",
+        "name": "thumper_ability_2",
+        "type": "ability",
+        "cost": 0
+    },
+    "2489807574": {
+        "id": "2489807574",
+        "name": "thumper_ability_3",
+        "type": "ability",
+        "cost": 0
+    },
+    "2563620507": {
+        "id": "2563620507",
+        "name": "thumper_ability_4",
+        "type": "ability",
+        "cost": 0
+    },
+    "239553513": {
+        "id": "239553513",
+        "name": "vanguard_aoe_buff",
+        "type": "ability",
+        "cost": 0
+    },
+    "2073346996": {
+        "id": "2073346996",
+        "name": "ability_npc_shield",
+        "type": "ability",
+        "cost": 0
+    },
+    "384715776": {
+        "id": "384715776",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2826225210": {
+        "id": "2826225210",
+        "name": "weapon_alternative_rmb_activate",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1983361803": {
+        "id": "1983361803",
+        "name": "weapon_alternative_rmb+lmb_activate",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2082220949": {
+        "id": "2082220949",
+        "name": "Doc's Orders",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1398703271": {
+        "id": "1398703271",
+        "name": "citadel_weapon_astro_set_shotgun",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4161463520": {
+        "id": "4161463520",
+        "name": "citadel_weapon_astro_set_shotgun_backwards",
+        "type": "weapon",
+        "cost": 0
+    },
+    "519260576": {
+        "id": "519260576",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1235098866": {
+        "id": "1235098866",
+        "name": "Powder Keg",
+        "type": "ability",
+        "cost": 0
+    },
+    "2240607294": {
+        "id": "2240607294",
+        "name": "Bounce Pad",
+        "type": "ability",
+        "cost": 0
+    },
+    "943923461": {
+        "id": "943923461",
+        "name": "ability_target_practice",
+        "type": "ability",
+        "cost": 0
+    },
+    "3190606822": {
+        "id": "3190606822",
+        "name": "Spirit Lasso",
+        "type": "ability",
+        "cost": 0
+    },
+    "2395530931": {
+        "id": "2395530931",
+        "name": "ability_astro_shotgun_toggle",
+        "type": "ability",
+        "cost": 0
+    },
+    "3000276336": {
+        "id": "3000276336",
+        "name": "ability_astro_rifle",
+        "type": "ability",
+        "cost": 0
+    },
+    "3913047754": {
+        "id": "3913047754",
+        "name": "Hat Trick",
+        "type": "ability",
+        "cost": 0
+    },
+    "669936916": {
+        "id": "669936916",
+        "name": "citadel_weapon_astro_hand_cannon",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4179229681": {
+        "id": "4179229681",
+        "name": "Crackshot",
+        "type": "ability",
+        "cost": 0
+    },
+    "3609948706": {
+        "id": "3609948706",
+        "name": "citadel_weapon_bull_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3415298717": {
+        "id": "3415298717",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2824119765": {
+        "id": "2824119765",
+        "name": "Shoulder Charge",
+        "type": "ability",
+        "cost": 0
+    },
+    "715762406": {
+        "id": "715762406",
+        "name": "Infernal Resilience",
+        "type": "ability",
+        "cost": 0
+    },
+    "509856396": {
+        "id": "509856396",
+        "name": "Seismic Impact",
+        "type": "ability",
+        "cost": 0
+    },
+    "4072270083": {
+        "id": "4072270083",
+        "name": "Siphon Life",
+        "type": "ability",
+        "cost": 0
+    },
+    "3764085067": {
+        "id": "3764085067",
+        "name": "Humble Pie",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2373292985": {
+        "id": "2373292985",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3089858203": {
+        "id": "3089858203",
+        "name": "Exploding Uppercut",
+        "type": "ability",
+        "cost": 0
+    },
+    "2521902222": {
+        "id": "2521902222",
+        "name": "Sticky Bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "3832675871": {
+        "id": "3832675871",
+        "name": "Hyper Beam",
+        "type": "ability",
+        "cost": 0
+    },
+    "1928108461": {
+        "id": "1928108461",
+        "name": "Grapple Arm",
+        "type": "ability",
+        "cost": 0
+    },
+    "3303049331": {
+        "id": "3303049331",
+        "name": "Sticky Bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "2605652378": {
+        "id": "2605652378",
+        "name": "citadel_weapon_bomber_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1759542823": {
+        "id": "1759542823",
+        "name": "ability_melee_bomber",
+        "type": "ability",
+        "cost": 0
+    },
+    "3338528319": {
+        "id": "3338528319",
+        "name": "ability_charged_bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "511336372": {
+        "id": "511336372",
+        "name": "ability_charged_bomb_throw",
+        "type": "ability",
+        "cost": 0
+    },
+    "3875361929": {
+        "id": "3875361929",
+        "name": "ability_bomber_ability02",
+        "type": "ability",
+        "cost": 0
+    },
+    "4081662205": {
+        "id": "4081662205",
+        "name": "ability_bomber_ability03",
+        "type": "ability",
+        "cost": 0
+    },
+    "3232290270": {
+        "id": "3232290270",
+        "name": "ability_bomber_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "3155417712": {
+        "id": "3155417712",
+        "name": "citadel_weapon_cadence_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "852374872": {
+        "id": "852374872",
+        "name": "citadel_ability_melee_cadence",
+        "type": "ability",
+        "cost": 0
+    },
+    "1157620447": {
+        "id": "1157620447",
+        "name": "cadence_ability_anthem",
+        "type": "ability",
+        "cost": 0
+    },
+    "957095276": {
+        "id": "957095276",
+        "name": "cadence_ability_lullaby",
+        "type": "ability",
+        "cost": 0
+    },
+    "421275722": {
+        "id": "421275722",
+        "name": "cadence_ability_silencecontraptions",
+        "type": "ability",
+        "cost": 0
+    },
+    "3356256357": {
+        "id": "3356256357",
+        "name": "cadence_ability_grandfinale",
+        "type": "ability",
+        "cost": 0
+    },
+    "599532073": {
+        "id": "599532073",
+        "name": "cadence_ability_crescendo",
+        "type": "ability",
+        "cost": 0
+    },
+    "2390964381": {
+        "id": "2390964381",
+        "name": "Trade Secret",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3672737523": {
+        "id": "3672737523",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "58655583": {
+        "id": "58655583",
+        "name": "Pulse Grenade",
+        "type": "ability",
+        "cost": 0
+    },
+    "1366719170": {
+        "id": "1366719170",
+        "name": "Time Wall",
+        "type": "ability",
+        "cost": 0
+    },
+    "1128670012": {
+        "id": "1128670012",
+        "name": "Kinetic Carbine",
+        "type": "ability",
+        "cost": 0
+    },
+    "2917891787": {
+        "id": "2917891787",
+        "name": "Paradoxical Swap",
+        "type": "ability",
+        "cost": 0
+    },
+    "602440127": {
+        "id": "602440127",
+        "name": "citadel_weapon_sumo_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "855695370": {
+        "id": "855695370",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3760705623": {
+        "id": "3760705623",
+        "name": "Kinetic Pulse",
+        "type": "ability",
+        "cost": 0
+    },
+    "2031714424": {
+        "id": "2031714424",
+        "name": "Quantum Entanglement",
+        "type": "ability",
+        "cost": 0
+    },
+    "3954890388": {
+        "id": "3954890388",
+        "name": "citadel_ability_charged_tackle",
+        "type": "ability",
+        "cost": 0
+    },
+    "492030745": {
+        "id": "492030745",
+        "name": "Rejuvenating Aurora",
+        "type": "ability",
+        "cost": 0
+    },
+    "249410288": {
+        "id": "249410288",
+        "name": "Singularity",
+        "type": "ability",
+        "cost": 0
+    },
+    "1975078202": {
+        "id": "1975078202",
+        "name": "citadel_weapon_engineer_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2660222379": {
+        "id": "2660222379",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2142734020": {
+        "id": "2142734020",
+        "name": "Medicinal Specter",
+        "type": "ability",
+        "cost": 0
+    },
+    "3133377790": {
+        "id": "3133377790",
+        "name": "Mini Turret",
+        "type": "ability",
+        "cost": 0
+    },
+    "1725685134": {
+        "id": "1725685134",
+        "name": "Spectral Wall",
+        "type": "ability",
+        "cost": 0
+    },
+    "318567870": {
+        "id": "318567870",
+        "name": "citadel_ability_fissure_wall_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "1690335039": {
+        "id": "1690335039",
+        "name": "citadel_ability_fissure_wall_cancel",
+        "type": "ability",
+        "cost": 0
+    },
+    "3503044146": {
+        "id": "3503044146",
+        "name": "Heavy Barrage",
+        "type": "ability",
+        "cost": 0
+    },
+    "1150061901": {
+        "id": "1150061901",
+        "name": "citadel_weapon_genericperson_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1558668879": {
+        "id": "1558668879",
+        "name": "Johann's Gift",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2500675101": {
+        "id": "2500675101",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "715325746": {
+        "id": "715325746",
+        "name": "Essence Bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "3230530872": {
+        "id": "3230530872",
+        "name": "Malice",
+        "type": "ability",
+        "cost": 0
+    },
+    "218284420": {
+        "id": "218284420",
+        "name": "Life Drain",
+        "type": "ability",
+        "cost": 0
+    },
+    "2364803451": {
+        "id": "2364803451",
+        "name": "ability_death_tax",
+        "type": "ability",
+        "cost": 0
+    },
+    "1307289689": {
+        "id": "1307289689",
+        "name": "Soul Exchange",
+        "type": "ability",
+        "cost": 0
+    },
+    "2695625322": {
+        "id": "2695625322",
+        "name": "Cold Calculus",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2372182196": {
+        "id": "2372182196",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1065103387": {
+        "id": "1065103387",
+        "name": "Lightning Ball",
+        "type": "ability",
+        "cost": 0
+    },
+    "1074714947": {
+        "id": "1074714947",
+        "name": "Static Charge",
+        "type": "ability",
+        "cost": 0
+    },
+    "1939833676": {
+        "id": "1939833676",
+        "name": "Static Charge",
+        "type": "ability",
+        "cost": 0
+    },
+    "3534969709": {
+        "id": "3534969709",
+        "name": "citadel_ability_chain_lightning",
+        "type": "ability",
+        "cost": 0
+    },
+    "539192269": {
+        "id": "539192269",
+        "name": "Power Surge",
+        "type": "ability",
+        "cost": 0
+    },
+    "2061574352": {
+        "id": "2061574352",
+        "name": "Storm Cloud",
+        "type": "ability",
+        "cost": 0
+    },
+    "2679155647": {
+        "id": "2679155647",
+        "name": "Censure & Penance",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3104292528": {
+        "id": "3104292528",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2948410412": {
+        "id": "2948410412",
+        "name": "Sleep Dagger",
+        "type": "ability",
+        "cost": 0
+    },
+    "2414191464": {
+        "id": "2414191464",
+        "name": "Smoke Bomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "1080948381": {
+        "id": "1080948381",
+        "name": "Fixation",
+        "type": "ability",
+        "cost": 0
+    },
+    "731943444": {
+        "id": "731943444",
+        "name": "Bullet Dance",
+        "type": "ability",
+        "cost": 0
+    },
+    "3510968490": {
+        "id": "3510968490",
+        "name": "Wallflower's Revenge",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1619999260": {
+        "id": "1619999260",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "537527508": {
+        "id": "537527508",
+        "name": "Stake",
+        "type": "ability",
+        "cost": 0
+    },
+    "1796564033": {
+        "id": "1796564033",
+        "name": "Flight",
+        "type": "ability",
+        "cost": 0
+    },
+    "2048438176": {
+        "id": "2048438176",
+        "name": "Crow Familiar",
+        "type": "ability",
+        "cost": 0
+    },
+    "775377419": {
+        "id": "775377419",
+        "name": "Assassinate",
+        "type": "ability",
+        "cost": 0
+    },
+    "556186193": {
+        "id": "556186193",
+        "name": "Incendiary Remarks",
+        "type": "weapon",
+        "cost": 0
+    },
+    "750371308": {
+        "id": "750371308",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1142270357": {
+        "id": "1142270357",
+        "name": "Concussive Combustion",
+        "type": "ability",
+        "cost": 0
+    },
+    "3516947824": {
+        "id": "3516947824",
+        "name": "Flame Dash",
+        "type": "ability",
+        "cost": 0
+    },
+    "491391007": {
+        "id": "491391007",
+        "name": "Napalm",
+        "type": "ability",
+        "cost": 0
+    },
+    "1593133799": {
+        "id": "1593133799",
+        "name": "Afterburn",
+        "type": "ability",
+        "cost": 0
+    },
+    "3576988085": {
+        "id": "3576988085",
+        "name": "Expedition's End",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3403409980": {
+        "id": "3403409980",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2351041382": {
+        "id": "2351041382",
+        "name": "Arctic Beam",
+        "type": "ability",
+        "cost": 0
+    },
+    "1963397252": {
+        "id": "1963397252",
+        "name": "Ice Path",
+        "type": "ability",
+        "cost": 0
+    },
+    "18921423": {
+        "id": "18921423",
+        "name": "Frost Grenade",
+        "type": "ability",
+        "cost": 0
+    },
+    "3826390464": {
+        "id": "3826390464",
+        "name": "Frozen Shelter",
+        "type": "ability",
+        "cost": 0
+    },
+    "2896288811": {
+        "id": "2896288811",
+        "name": "Tale of The Tape",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3283820257": {
+        "id": "3283820257",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2670099061": {
+        "id": "2670099061",
+        "name": "Grapple",
+        "type": "ability",
+        "cost": 0
+    },
+    "3561817145": {
+        "id": "3561817145",
+        "name": "Ground Strike",
+        "type": "ability",
+        "cost": 0
+    },
+    "397010810": {
+        "id": "397010810",
+        "name": "Death Slam",
+        "type": "ability",
+        "cost": 0
+    },
+    "519124136": {
+        "id": "519124136",
+        "name": "Flog",
+        "type": "ability",
+        "cost": 0
+    },
+    "2942562744": {
+        "id": "2942562744",
+        "name": "Promises Kept",
+        "type": "weapon",
+        "cost": 0
+    },
+    "511524160": {
+        "id": "511524160",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1336069669": {
+        "id": "1336069669",
+        "name": "Dust Devil",
+        "type": "ability",
+        "cost": 0
+    },
+    "2221949202": {
+        "id": "2221949202",
+        "name": "Djinn's Mark",
+        "type": "ability",
+        "cost": 0
+    },
+    "3733594387": {
+        "id": "3733594387",
+        "name": "Fire Scarabs",
+        "type": "ability",
+        "cost": 0
+    },
+    "2604653402": {
+        "id": "2604653402",
+        "name": "Traveler",
+        "type": "ability",
+        "cost": 0
+    },
+    "1895060499": {
+        "id": "1895060499",
+        "name": "citadel_weapon_digger_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1400683724": {
+        "id": "1400683724",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1454278799": {
+        "id": "1454278799",
+        "name": "Scorn",
+        "type": "ability",
+        "cost": 0
+    },
+    "2406758797": {
+        "id": "2406758797",
+        "name": "Burrow",
+        "type": "ability",
+        "cost": 0
+    },
+    "1914797280": {
+        "id": "1914797280",
+        "name": "Sand Blast",
+        "type": "ability",
+        "cost": 0
+    },
+    "1917840730": {
+        "id": "1917840730",
+        "name": "Combo",
+        "type": "ability",
+        "cost": 0
+    },
+    "1273162367": {
+        "id": "1273162367",
+        "name": "citadel_weapon_digger_set2",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3108987282": {
+        "id": "3108987282",
+        "name": "Sweetest Lie",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3386449071": {
+        "id": "3386449071",
+        "name": "Sweetest Lie",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3861289372": {
+        "id": "3861289372",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3377867107": {
+        "id": "3377867107",
+        "name": "Sekhmet's Spirit",
+        "type": "ability",
+        "cost": 0
+    },
+    "3380228790": {
+        "id": "3380228790",
+        "name": "ability_perched_predator_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "1565699451": {
+        "id": "1565699451",
+        "name": "ability_rolling_fireball",
+        "type": "ability",
+        "cost": 0
+    },
+    "3467292895": {
+        "id": "3467292895",
+        "name": "Pounce",
+        "type": "ability",
+        "cost": 0
+    },
+    "1430464147": {
+        "id": "1430464147",
+        "name": "ability_nano_pounce_instant",
+        "type": "ability",
+        "cost": 0
+    },
+    "755723302": {
+        "id": "755723302",
+        "name": "Nekomata Ward",
+        "type": "ability",
+        "cost": 0
+    },
+    "4081368554": {
+        "id": "4081368554",
+        "name": "Queen of Shadows",
+        "type": "ability",
+        "cost": 0
+    },
+    "1009029159": {
+        "id": "1009029159",
+        "name": "Ava",
+        "type": "ability",
+        "cost": 0
+    },
+    "847436099": {
+        "id": "847436099",
+        "name": "ability_nano_catform_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "3975527743": {
+        "id": "3975527743",
+        "name": "ability_nano_catform_pounce",
+        "type": "ability",
+        "cost": 0
+    },
+    "4131517918": {
+        "id": "4131517918",
+        "name": "Gloom Bombs",
+        "type": "ability",
+        "cost": 0
+    },
+    "2054144742": {
+        "id": "2054144742",
+        "name": "Return to Shadows",
+        "type": "ability",
+        "cost": 0
+    },
+    "1426567660": {
+        "id": "1426567660",
+        "name": "Leaping Slash",
+        "type": "ability",
+        "cost": 0
+    },
+    "2402901451": {
+        "id": "2402901451",
+        "name": "citadel_weapon_archer_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4220996204": {
+        "id": "4220996204",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "548943648": {
+        "id": "548943648",
+        "name": "Charged Shot",
+        "type": "ability",
+        "cost": 0
+    },
+    "3452399392": {
+        "id": "3452399392",
+        "name": "Rain of Arrows",
+        "type": "ability",
+        "cost": 0
+    },
+    "512733154": {
+        "id": "512733154",
+        "name": "Spirit Snare",
+        "type": "ability",
+        "cost": 0
+    },
+    "3242902780": {
+        "id": "3242902780",
+        "name": "Guided Owl",
+        "type": "ability",
+        "cost": 0
+    },
+    "3121968594": {
+        "id": "3121968594",
+        "name": "Busted Flush",
+        "type": "weapon",
+        "cost": 0
+    },
+    "225271804": {
+        "id": "225271804",
+        "name": "Busted Flush",
+        "type": "weapon",
+        "cost": 0
+    },
+    "11664367": {
+        "id": "11664367",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2460791803": {
+        "id": "2460791803",
+        "name": "Serrated Knives",
+        "type": "ability",
+        "cost": 0
+    },
+    "1458044103": {
+        "id": "1458044103",
+        "name": "Slice and Dice",
+        "type": "ability",
+        "cost": 0
+    },
+    "1537272748": {
+        "id": "1537272748",
+        "name": "Bloodletting",
+        "type": "ability",
+        "cost": 0
+    },
+    "1835738020": {
+        "id": "1835738020",
+        "name": "Killing Blow",
+        "type": "ability",
+        "cost": 0
+    },
+    "215719738": {
+        "id": "215719738",
+        "name": "citadel_weapon_shieldguy_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "17949280": {
+        "id": "17949280",
+        "name": "ability_melee_shieldguy",
+        "type": "ability",
+        "cost": 0
+    },
+    "2935955509": {
+        "id": "2935955509",
+        "name": "ability_shieldguy_ability01",
+        "type": "ability",
+        "cost": 0
+    },
+    "2322200384": {
+        "id": "2322200384",
+        "name": "ability_shieldguy_ability02",
+        "type": "ability",
+        "cost": 0
+    },
+    "1105433407": {
+        "id": "1105433407",
+        "name": "ability_shieldguy_ability03",
+        "type": "ability",
+        "cost": 0
+    },
+    "2824729668": {
+        "id": "2824729668",
+        "name": "ability_shieldguy_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "2080724972": {
+        "id": "2080724972",
+        "name": "Riptide",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3383556212": {
+        "id": "3383556212",
+        "name": "The Black Sheep",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1976701714": {
+        "id": "1976701714",
+        "name": "Flying Cloak",
+        "type": "ability",
+        "cost": 0
+    },
+    "15584241": {
+        "id": "15584241",
+        "name": "synth_plasma_flux_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "3747867012": {
+        "id": "3747867012",
+        "name": "Enchanter's Satchel",
+        "type": "ability",
+        "cost": 0
+    },
+    "938149308": {
+        "id": "938149308",
+        "name": "Barrage",
+        "type": "ability",
+        "cost": 0
+    },
+    "2954330093": {
+        "id": "2954330093",
+        "name": "Affliction",
+        "type": "ability",
+        "cost": 0
+    },
+    "1961353863": {
+        "id": "1961353863",
+        "name": "Protector's Hand",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2840115251": {
+        "id": "2840115251",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1531378655": {
+        "id": "1531378655",
+        "name": "Kudzu Connection",
+        "type": "ability",
+        "cost": 0
+    },
+    "3491113888": {
+        "id": "3491113888",
+        "name": "citadel_ability_tangotether_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "4111222521": {
+        "id": "4111222521",
+        "name": "Entangling Thorns",
+        "type": "ability",
+        "cost": 0
+    },
+    "3642273386": {
+        "id": "3642273386",
+        "name": "Stone Form",
+        "type": "ability",
+        "cost": 0
+    },
+    "1247583368": {
+        "id": "1247583368",
+        "name": "Air Drop",
+        "type": "ability",
+        "cost": 0
+    },
+    "2053287272": {
+        "id": "2053287272",
+        "name": "citadel_weapon_tokamak_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3208168586": {
+        "id": "3208168586",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1564303265": {
+        "id": "1564303265",
+        "name": "tokamak_hot_shot",
+        "type": "ability",
+        "cost": 0
+    },
+    "2785646790": {
+        "id": "2785646790",
+        "name": "tokamak_breach",
+        "type": "ability",
+        "cost": 0
+    },
+    "1498385915": {
+        "id": "1498385915",
+        "name": "tokamak_radiance",
+        "type": "ability",
+        "cost": 0
+    },
+    "6698938": {
+        "id": "6698938",
+        "name": "tokamak_heat_sinks",
+        "type": "ability",
+        "cost": 0
+    },
+    "26435936": {
+        "id": "26435936",
+        "name": "tokamak_heat_sinks_inherent",
+        "type": "ability",
+        "cost": 0
+    },
+    "4042747505": {
+        "id": "4042747505",
+        "name": "tokamak_dying_star",
+        "type": "ability",
+        "cost": 0
+    },
+    "4264339460": {
+        "id": "4264339460",
+        "name": "tokamak_crimson_cannon",
+        "type": "ability",
+        "cost": 0
+    },
+    "3413773852": {
+        "id": "3413773852",
+        "name": "Deep Sea Interpreter",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3819944797": {
+        "id": "3819944797",
+        "name": "citadel_weapon_viscous_set_2",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3914911135": {
+        "id": "3914911135",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3247040238": {
+        "id": "3247040238",
+        "name": "Splatter",
+        "type": "ability",
+        "cost": 0
+    },
+    "3788152387": {
+        "id": "3788152387",
+        "name": "The Cube",
+        "type": "ability",
+        "cost": 0
+    },
+    "4206531918": {
+        "id": "4206531918",
+        "name": "Goo Ball",
+        "type": "ability",
+        "cost": 0
+    },
+    "1020817390": {
+        "id": "1020817390",
+        "name": "Puddle Punch",
+        "type": "ability",
+        "cost": 0
+    },
+    "816395058": {
+        "id": "816395058",
+        "name": "Freedom's Cost",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3433765565": {
+        "id": "3433765565",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1656913918": {
+        "id": "1656913918",
+        "name": "Binding Word",
+        "type": "ability",
+        "cost": 0
+    },
+    "2751689917": {
+        "id": "2751689917",
+        "name": "Willpower",
+        "type": "ability",
+        "cost": 0
+    },
+    "2656490109": {
+        "id": "2656490109",
+        "name": "Alchemical Flask",
+        "type": "ability",
+        "cost": 0
+    },
+    "2702908623": {
+        "id": "2702908623",
+        "name": "Last Stand",
+        "type": "ability",
+        "cost": 0
+    },
+    "1427059555": {
+        "id": "1427059555",
+        "name": "The Rake",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1192327851": {
+        "id": "1192327851",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2981692841": {
+        "id": "2981692841",
+        "name": "Telekinesis",
+        "type": "ability",
+        "cost": 0
+    },
+    "4147641675": {
+        "id": "4147641675",
+        "name": "Project Mind",
+        "type": "ability",
+        "cost": 0
+    },
+    "1842576017": {
+        "id": "1842576017",
+        "name": "Full Auto",
+        "type": "ability",
+        "cost": 0
+    },
+    "1999680326": {
+        "id": "1999680326",
+        "name": "Card Trick",
+        "type": "ability",
+        "cost": 0
+    },
+    "495487721": {
+        "id": "495487721",
+        "name": "The Butcher's Hand",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2697859853": {
+        "id": "2697859853",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "4062064977": {
+        "id": "4062064977",
+        "name": "Wrecking Ball",
+        "type": "ability",
+        "cost": 0
+    },
+    "4016285240": {
+        "id": "4016285240",
+        "name": "ability_wrecking_ball_throw",
+        "type": "ability",
+        "cost": 0
+    },
+    "208809857": {
+        "id": "208809857",
+        "name": "Consume",
+        "type": "ability",
+        "cost": 0
+    },
+    "3422822440": {
+        "id": "3422822440",
+        "name": "Bio Blast",
+        "type": "ability",
+        "cost": 0
+    },
+    "100068731": {
+        "id": "100068731",
+        "name": "Magnetic Flux",
+        "type": "ability",
+        "cost": 0
+    },
+    "2493171901": {
+        "id": "2493171901",
+        "name": "Astral Walk",
+        "type": "ability",
+        "cost": 0
+    },
+    "3426178920": {
+        "id": "3426178920",
+        "name": "Overload",
+        "type": "ability",
+        "cost": 0
+    },
+    "2153275594": {
+        "id": "2153275594",
+        "name": "Wrecking Ball",
+        "type": "ability",
+        "cost": 0
+    },
+    "440716503": {
+        "id": "440716503",
+        "name": "Sister's Lament",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2725537392": {
+        "id": "2725537392",
+        "name": "Sister's Lament",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3334760137": {
+        "id": "3334760137",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3255651252": {
+        "id": "3255651252",
+        "name": "Power Slash",
+        "type": "ability",
+        "cost": 0
+    },
+    "2566573207": {
+        "id": "2566573207",
+        "name": "Flying Slash",
+        "type": "ability",
+        "cost": 0
+    },
+    "2366960452": {
+        "id": "2366960452",
+        "name": "Crimson Slash",
+        "type": "ability",
+        "cost": 0
+    },
+    "3319782965": {
+        "id": "3319782965",
+        "name": "Shadow Transformation",
+        "type": "ability",
+        "cost": 0
+    },
+    "988091080": {
+        "id": "988091080",
+        "name": "The Rattler",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1015591692": {
+        "id": "1015591692",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1322882622": {
+        "id": "1322882622",
+        "name": "Hook Blade",
+        "type": "ability",
+        "cost": 0
+    },
+    "1469918191": {
+        "id": "1469918191",
+        "name": "Slither",
+        "type": "ability",
+        "cost": 0
+    },
+    "3428732129": {
+        "id": "3428732129",
+        "name": "Lethal Venom",
+        "type": "ability",
+        "cost": 0
+    },
+    "2052252881": {
+        "id": "2052252881",
+        "name": "Petrify",
+        "type": "ability",
+        "cost": 0
+    },
+    "726306979": {
+        "id": "726306979",
+        "name": "ability_viper_slide",
+        "type": "ability",
+        "cost": 0
+    },
+    "645773760": {
+        "id": "645773760",
+        "name": "Screwjab Dagger",
+        "type": "ability",
+        "cost": 0
+    },
+    "1594727071": {
+        "id": "1594727071",
+        "name": "Petrifying Bola",
+        "type": "ability",
+        "cost": 0
+    },
+    "2207852489": {
+        "id": "2207852489",
+        "name": "citadel_weapon_vandal_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2067539397": {
+        "id": "2067539397",
+        "name": "ability_melee_vandal",
+        "type": "ability",
+        "cost": 0
+    },
+    "1288133032": {
+        "id": "1288133032",
+        "name": "citadel_ability_vandal_surge",
+        "type": "ability",
+        "cost": 0
+    },
+    "2833514487": {
+        "id": "2833514487",
+        "name": "ability_vandal_pillar",
+        "type": "ability",
+        "cost": 0
+    },
+    "371372145": {
+        "id": "371372145",
+        "name": "ability_haunt",
+        "type": "ability",
+        "cost": 0
+    },
+    "916959628": {
+        "id": "916959628",
+        "name": "citadel_ability_vandal_overflow",
+        "type": "ability",
+        "cost": 0
+    },
+    "2014234803": {
+        "id": "2014234803",
+        "name": "The Prestige",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3610020756": {
+        "id": "3610020756",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3156905386": {
+        "id": "3156905386",
+        "name": "Vexing Bolt",
+        "type": "ability",
+        "cost": 0
+    },
+    "3706135393": {
+        "id": "3706135393",
+        "name": "Misdirection",
+        "type": "ability",
+        "cost": 0
+    },
+    "994831172": {
+        "id": "994831172",
+        "name": "Rabbit Hex",
+        "type": "ability",
+        "cost": 0
+    },
+    "2524015798": {
+        "id": "2524015798",
+        "name": "The Great Homonculus!",
+        "type": "ability",
+        "cost": 0
+    },
+    "28521455": {
+        "id": "28521455",
+        "name": "ability_magician_magicbolt_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "12456023": {
+        "id": "12456023",
+        "name": "Spectral Assistant",
+        "type": "ability",
+        "cost": 0
+    },
+    "653642027": {
+        "id": "653642027",
+        "name": "Spectral Assistant",
+        "type": "ability",
+        "cost": 0
+    },
+    "1410779535": {
+        "id": "1410779535",
+        "name": "Captive Audience",
+        "type": "ability",
+        "cost": 0
+    },
+    "3113315799": {
+        "id": "3113315799",
+        "name": "Grand Finale!",
+        "type": "ability",
+        "cost": 0
+    },
+    "895140205": {
+        "id": "895140205",
+        "name": "Escape Artist",
+        "type": "ability",
+        "cost": 0
+    },
+    "191022746": {
+        "id": "191022746",
+        "name": "Audience Participation",
+        "type": "ability",
+        "cost": 0
+    },
+    "2142213586": {
+        "id": "2142213586",
+        "name": "Rabbit Hex",
+        "type": "ability",
+        "cost": 0
+    },
+    "2390247986": {
+        "id": "2390247986",
+        "name": "Civil Servant",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4050229048": {
+        "id": "4050229048",
+        "name": "ability_melee_trapper",
+        "type": "ability",
+        "cost": 0
+    },
+    "2675680636": {
+        "id": "2675680636",
+        "name": "Bottled Phantasmicide",
+        "type": "ability",
+        "cost": 0
+    },
+    "2876116869": {
+        "id": "2876116869",
+        "name": "Crawling Plague",
+        "type": "ability",
+        "cost": 0
+    },
+    "3322902852": {
+        "id": "3322902852",
+        "name": "Pest Barrier",
+        "type": "ability",
+        "cost": 0
+    },
+    "1289909147": {
+        "id": "1289909147",
+        "name": "Spectral Silk",
+        "type": "ability",
+        "cost": 0
+    },
+    "3360792911": {
+        "id": "3360792911",
+        "name": "Silktrap",
+        "type": "ability",
+        "cost": 0
+    },
+    "1502050181": {
+        "id": "1502050181",
+        "name": "ability_trapper_fear1",
+        "type": "ability",
+        "cost": 0
+    },
+    "3294175151": {
+        "id": "3294175151",
+        "name": "Umbrella Gun",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4210991587": {
+        "id": "4210991587",
+        "name": "Umbrella Maneuver",
+        "type": "ability",
+        "cost": 0
+    },
+    "1773588524": {
+        "id": "1773588524",
+        "name": "Blindside",
+        "type": "ability",
+        "cost": 0
+    },
+    "1101238302": {
+        "id": "1101238302",
+        "name": "Revelation",
+        "type": "ability",
+        "cost": 0
+    },
+    "3318975115": {
+        "id": "3318975115",
+        "name": "citadel_weapon_gunslinger2_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2995140627": {
+        "id": "2995140627",
+        "name": "Flame Imp",
+        "type": "ability",
+        "cost": 0
+    },
+    "2610344982": {
+        "id": "2610344982",
+        "name": "Sleight of Hand",
+        "type": "ability",
+        "cost": 0
+    },
+    "1224888294": {
+        "id": "1224888294",
+        "name": "Hellfire Salvo",
+        "type": "ability",
+        "cost": 0
+    },
+    "3248109871": {
+        "id": "3248109871",
+        "name": "Demontrigger Blitz",
+        "type": "ability",
+        "cost": 0
+    },
+    "2839987102": {
+        "id": "2839987102",
+        "name": "Infernal Brand",
+        "type": "ability",
+        "cost": 0
+    },
+    "289749826": {
+        "id": "289749826",
+        "name": "gunslinger_knockbackblast",
+        "type": "ability",
+        "cost": 0
+    },
+    "2502155040": {
+        "id": "2502155040",
+        "name": "New Money",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1372322902": {
+        "id": "1372322902",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2398133749": {
+        "id": "2398133749",
+        "name": "Sanguine Retreat",
+        "type": "ability",
+        "cost": 0
+    },
+    "1233782561": {
+        "id": "1233782561",
+        "name": "Love Bites",
+        "type": "ability",
+        "cost": 0
+    },
+    "3379486147": {
+        "id": "3379486147",
+        "name": "Nox Nostra",
+        "type": "ability",
+        "cost": 0
+    },
+    "2173193859": {
+        "id": "2173193859",
+        "name": "ability_vampirebat_batblink_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "760825750": {
+        "id": "760825750",
+        "name": "ability_vampirebat_batcloud",
+        "type": "ability",
+        "cost": 0
+    },
+    "193508101": {
+        "id": "193508101",
+        "name": "Rake",
+        "type": "ability",
+        "cost": 0
+    },
+    "57866690": {
+        "id": "57866690",
+        "name": "New Money",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1590129566": {
+        "id": "1590129566",
+        "name": "citadel_weapon_boho_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1318429798": {
+        "id": "1318429798",
+        "name": "ability_melee_boho",
+        "type": "ability",
+        "cost": 0
+    },
+    "483227074": {
+        "id": "483227074",
+        "name": "ability_boho_ability01",
+        "type": "ability",
+        "cost": 0
+    },
+    "3793541808": {
+        "id": "3793541808",
+        "name": "ability_boho_ability02",
+        "type": "ability",
+        "cost": 0
+    },
+    "370209602": {
+        "id": "370209602",
+        "name": "Intertwine",
+        "type": "ability",
+        "cost": 0
+    },
+    "2000761890": {
+        "id": "2000761890",
+        "name": "Skipshot",
+        "type": "ability",
+        "cost": 0
+    },
+    "3962304265": {
+        "id": "3962304265",
+        "name": "Swish",
+        "type": "ability",
+        "cost": 0
+    },
+    "759370291": {
+        "id": "759370291",
+        "name": "ability_boho_channeltether",
+        "type": "ability",
+        "cost": 0
+    },
+    "1761919638": {
+        "id": "1761919638",
+        "name": "citadel_weapon_swan_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2605250528": {
+        "id": "2605250528",
+        "name": "ability_melee_swan",
+        "type": "ability",
+        "cost": 0
+    },
+    "2619369142": {
+        "id": "2619369142",
+        "name": "ability_swan_featherboomerang",
+        "type": "ability",
+        "cost": 0
+    },
+    "682591488": {
+        "id": "682591488",
+        "name": "Jeté",
+        "type": "ability",
+        "cost": 0
+    },
+    "1418303954": {
+        "id": "1418303954",
+        "name": "Acrobat",
+        "type": "ability",
+        "cost": 0
+    },
+    "1048488396": {
+        "id": "1048488396",
+        "name": "ability_swan_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "3977811669": {
+        "id": "3977811669",
+        "name": "citadel_weapon_skyrunner_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1274698030": {
+        "id": "1274698030",
+        "name": "ability_melee_skyrunner",
+        "type": "ability",
+        "cost": 0
+    },
+    "228680142": {
+        "id": "228680142",
+        "name": "Flakshot",
+        "type": "ability",
+        "cost": 0
+    },
+    "3449758496": {
+        "id": "3449758496",
+        "name": "ability_skyrunner_magic_beam",
+        "type": "ability",
+        "cost": 0
+    },
+    "201562678": {
+        "id": "201562678",
+        "name": "Lifethread",
+        "type": "ability",
+        "cost": 0
+    },
+    "425769687": {
+        "id": "425769687",
+        "name": "ability_skyrunner_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "2330506722": {
+        "id": "2330506722",
+        "name": "citadel_weapon_skyrunner_alt",
+        "type": "weapon",
+        "cost": 0
+    },
+    "581038282": {
+        "id": "581038282",
+        "name": "citadel_weapon_graf_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2614530871": {
+        "id": "2614530871",
+        "name": "ability_melee_graf",
+        "type": "ability",
+        "cost": 0
+    },
+    "2627122290": {
+        "id": "2627122290",
+        "name": "ability_graf_ability01",
+        "type": "ability",
+        "cost": 0
+    },
+    "4197612718": {
+        "id": "4197612718",
+        "name": "ability_graf_ability02",
+        "type": "ability",
+        "cost": 0
+    },
+    "2949458312": {
+        "id": "2949458312",
+        "name": "ability_graf_ability03",
+        "type": "ability",
+        "cost": 0
+    },
+    "2561043068": {
+        "id": "2561043068",
+        "name": "ability_graf_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "3877402249": {
+        "id": "3877402249",
+        "name": "citadel_weapon_fortuna_set",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1388731643": {
+        "id": "1388731643",
+        "name": "ability_melee_fortuna",
+        "type": "ability",
+        "cost": 0
+    },
+    "309803113": {
+        "id": "309803113",
+        "name": "ability_fortuna_ability01",
+        "type": "ability",
+        "cost": 0
+    },
+    "3803152704": {
+        "id": "3803152704",
+        "name": "ability_fortuna_ability02",
+        "type": "ability",
+        "cost": 0
+    },
+    "620778714": {
+        "id": "620778714",
+        "name": "ability_fortuna_ability03",
+        "type": "ability",
+        "cost": 0
+    },
+    "3632058121": {
+        "id": "3632058121",
+        "name": "ability_fortuna_ult",
+        "type": "ability",
+        "cost": 0
+    },
+    "2079380905": {
+        "id": "2079380905",
+        "name": "Memento Mori",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3745177128": {
+        "id": "3745177128",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3727084744": {
+        "id": "3727084744",
+        "name": "Jumpstart",
+        "type": "ability",
+        "cost": 0
+    },
+    "1472593493": {
+        "id": "1472593493",
+        "name": "Aura of Suffering",
+        "type": "ability",
+        "cost": 0
+    },
+    "3493884851": {
+        "id": "3493884851",
+        "name": "Shocking Reanimation",
+        "type": "ability",
+        "cost": 0
+    },
+    "2043074967": {
+        "id": "2043074967",
+        "name": "Pain Battery",
+        "type": "ability",
+        "cost": 0
+    },
+    "353851685": {
+        "id": "353851685",
+        "name": "Chapter's End",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3850113264": {
+        "id": "3850113264",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "604448162": {
+        "id": "604448162",
+        "name": "Bookwyrm",
+        "type": "ability",
+        "cost": 0
+    },
+    "3054993162": {
+        "id": "3054993162",
+        "name": "Captivating Read",
+        "type": "ability",
+        "cost": 0
+    },
+    "3553292912": {
+        "id": "3553292912",
+        "name": "Plot Armor",
+        "type": "ability",
+        "cost": 0
+    },
+    "1841901343": {
+        "id": "1841901343",
+        "name": "Rallying Charge",
+        "type": "ability",
+        "cost": 0
+    },
+    "4260448939": {
+        "id": "4260448939",
+        "name": "Chapter's End",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3409956698": {
+        "id": "3409956698",
+        "name": "Service With A Smile",
+        "type": "weapon",
+        "cost": 0
+    },
+    "4144812912": {
+        "id": "4144812912",
+        "name": "Service With A Smile",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2903891855": {
+        "id": "2903891855",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "109766091": {
+        "id": "109766091",
+        "name": "Doorway",
+        "type": "ability",
+        "cost": 0
+    },
+    "3720109443": {
+        "id": "3720109443",
+        "name": "Close Doors",
+        "type": "ability",
+        "cost": 0
+    },
+    "1719512318": {
+        "id": "1719512318",
+        "name": "Luggage Cart",
+        "type": "ability",
+        "cost": 0
+    },
+    "103496908": {
+        "id": "103496908",
+        "name": "Call Bell",
+        "type": "ability",
+        "cost": 0
+    },
+    "1703045691": {
+        "id": "1703045691",
+        "name": "Hotel Guest",
+        "type": "ability",
+        "cost": 0
+    },
+    "3395613043": {
+        "id": "3395613043",
+        "name": "Biquette",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3152475531": {
+        "id": "3152475531",
+        "name": "ability_punkgoat_slide",
+        "type": "ability",
+        "cost": 0
+    },
+    "3023323617": {
+        "id": "3023323617",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3296031213": {
+        "id": "3296031213",
+        "name": "Blasted",
+        "type": "ability",
+        "cost": 0
+    },
+    "3762861984": {
+        "id": "3762861984",
+        "name": "Chain Gang",
+        "type": "ability",
+        "cost": 0
+    },
+    "1792773251": {
+        "id": "1792773251",
+        "name": "Rising Ram",
+        "type": "ability",
+        "cost": 0
+    },
+    "1841661392": {
+        "id": "1841661392",
+        "name": "Bashdown",
+        "type": "ability",
+        "cost": 0
+    },
+    "160782216": {
+        "id": "160782216",
+        "name": "Crimson Grasp",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2201766712": {
+        "id": "2201766712",
+        "name": "Drifter Alt Weapon",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1184405291": {
+        "id": "1184405291",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3120550633": {
+        "id": "3120550633",
+        "name": "Rend",
+        "type": "ability",
+        "cost": 0
+    },
+    "1264175662": {
+        "id": "1264175662",
+        "name": "Stalker's Mark",
+        "type": "ability",
+        "cost": 0
+    },
+    "3534684567": {
+        "id": "3534684567",
+        "name": "Ambush",
+        "type": "ability",
+        "cost": 0
+    },
+    "1033019133": {
+        "id": "1033019133",
+        "name": "Bloodscent",
+        "type": "ability",
+        "cost": 0
+    },
+    "1168182161": {
+        "id": "1168182161",
+        "name": "Eternal Night",
+        "type": "ability",
+        "cost": 0
+    },
+    "10546756": {
+        "id": "10546756",
+        "name": "weapon_upgrade_t1",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1620942471": {
+        "id": "1620942471",
+        "name": "weapon_upgrade_t2",
+        "type": "weapon",
+        "cost": 0
+    },
+    "506109244": {
+        "id": "506109244",
+        "name": "weapon_upgrade_t3",
+        "type": "weapon",
+        "cost": 0
+    },
+    "361904051": {
+        "id": "361904051",
+        "name": "weapon_upgrade_t4",
+        "type": "weapon",
+        "cost": 0
+    },
+    "349524508": {
+        "id": "349524508",
+        "name": "weapon_upgrade_t5",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1548066885": {
+        "id": "1548066885",
+        "name": "Extended Magazine",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "1009965641": {
+        "id": "1009965641",
+        "name": "Monster Rounds",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "709540378": {
+        "id": "709540378",
+        "name": "Cultist Sacrifice",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "1248737459": {
+        "id": "1248737459",
+        "name": "Ammo Scavenger",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "3535785353": {
+        "id": "3535785353",
+        "name": "upgrade_clip_size_fixed",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2861048274": {
+        "id": "2861048274",
+        "name": "upgrade_clip_size_fixed_t3",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "811521119": {
+        "id": "811521119",
+        "name": "Tesla Bullets",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "710436191": {
+        "id": "710436191",
+        "name": "Capacitor",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "3316018900": {
+        "id": "3316018900",
+        "name": "upgrade_galvanic_storm",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "2678489038": {
+        "id": "2678489038",
+        "name": "Hollow Point",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "2064029594": {
+        "id": "2064029594",
+        "name": "Opening Rounds",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1544322593": {
+        "id": "1544322593",
+        "name": "upgrade_stabilizer",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "3077079169": {
+        "id": "3077079169",
+        "name": "High-Velocity Rounds",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "1437614329": {
+        "id": "1437614329",
+        "name": "Melee Lifesteal",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "4204808176": {
+        "id": "4204808176",
+        "name": "Rebuttal",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "1414025773": {
+        "id": "1414025773",
+        "name": "Counterspell",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "3791587546": {
+        "id": "3791587546",
+        "name": "Weighted Shots",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4238249888": {
+        "id": "4238249888",
+        "name": "Ancient Shield",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "1342610602": {
+        "id": "1342610602",
+        "name": "Close Quarters",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "3331811235": {
+        "id": "3331811235",
+        "name": "Long Range",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "393974127": {
+        "id": "393974127",
+        "name": "Slowing Bullets",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2037039379": {
+        "id": "2037039379",
+        "name": "Inhibitor",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1889400890": {
+        "id": "1889400890",
+        "name": "upgrade_small_attack_speed",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "1144549437": {
+        "id": "1144549437",
+        "name": "Spirit Shredder Bullets",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1109351073": {
+        "id": "1109351073",
+        "name": "upgrade_attack_speed_1",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1100809516": {
+        "id": "1100809516",
+        "name": "upgrade_nearby_enemy_boost",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "2108215830": {
+        "id": "2108215830",
+        "name": "Heroic Aura",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "775925321": {
+        "id": "775925321",
+        "name": "upgrade_weapon_detention_ammo",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "619484391": {
+        "id": "619484391",
+        "name": "Silence Wave",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "3927044172": {
+        "id": "3927044172",
+        "name": "Haunting Scream",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "1113837674": {
+        "id": "1113837674",
+        "name": "Silencer",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "3133167885": {
+        "id": "3133167885",
+        "name": "Silencer",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "1503218332": {
+        "id": "1503218332",
+        "name": "upgrade_proc_disarm",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1414319208": {
+        "id": "1414319208",
+        "name": "Berserker",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "339443430": {
+        "id": "339443430",
+        "name": "Frenzy",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "1282141666": {
+        "id": "1282141666",
+        "name": "Siphon Bullets",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2010028405": {
+        "id": "2010028405",
+        "name": "Headshot Booster",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "1770441818": {
+        "id": "1770441818",
+        "name": "Weakening Headshot",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2152872419": {
+        "id": "2152872419",
+        "name": "Sharpshooter",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4053935515": {
+        "id": "4053935515",
+        "name": "Headhunter",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4075861416": {
+        "id": "4075861416",
+        "name": "Spirit Rend",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3884003354": {
+        "id": "3884003354",
+        "name": "Crippling Headshot",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "184951197": {
+        "id": "184951197",
+        "name": "upgrade_proc_tech_damage",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "395867183": {
+        "id": "395867183",
+        "name": "Mystic Shot",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1396247347": {
+        "id": "1396247347",
+        "name": "Lucky Shot",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "2095565695": {
+        "id": "2095565695",
+        "name": "Point Blank",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4284855775": {
+        "id": "4284855775",
+        "name": "upgrade_clip_size_2",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "3449296332": {
+        "id": "3449296332",
+        "name": "upgrade_clip_size_3",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3696726732": {
+        "id": "3696726732",
+        "name": "Toxic Bullets",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3791295884": {
+        "id": "3791295884",
+        "name": "upgrade_attack_speed_2",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4190165534": {
+        "id": "4190165534",
+        "name": "upgrade_drum_magazine",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "2480592370": {
+        "id": "2480592370",
+        "name": "Ricochet",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "4149380528": {
+        "id": "4149380528",
+        "name": "Apex Combat",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "weapon"
+    },
+    "3633614685": {
+        "id": "3633614685",
+        "name": "Extra Health",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "2858617477": {
+        "id": "2858617477",
+        "name": "Toughness",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1448361452": {
+        "id": "1448361452",
+        "name": "upgrade_toughness_3",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3713423303": {
+        "id": "3713423303",
+        "name": "Bullet Armor",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "223594321": {
+        "id": "223594321",
+        "name": "Spirit Armor",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1575167590": {
+        "id": "1575167590",
+        "name": "upgrade_health_regen_1",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "499683006": {
+        "id": "499683006",
+        "name": "Bullet Lifesteal",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "790496977": {
+        "id": "790496977",
+        "name": "upgrade_double_jump",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "3321728133": {
+        "id": "3321728133",
+        "name": "upgrade_health_regen_aura",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1047818222": {
+        "id": "1047818222",
+        "name": "Debuff Reducer",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3731635960": {
+        "id": "3731635960",
+        "name": "Dispel Magic",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1825391146": {
+        "id": "1825391146",
+        "name": "upgrade_high_impact_armor",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1711193274": {
+        "id": "1711193274",
+        "name": "upgrade_slow_immunity",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "471704443": {
+        "id": "471704443",
+        "name": "upgrade_weapon_power_and_health_drain",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1319649491": {
+        "id": "1319649491",
+        "name": "upgrade_active_bullet_shield",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2163598980": {
+        "id": "2163598980",
+        "name": "Spirit Resilience",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "3140772621": {
+        "id": "3140772621",
+        "name": "Bullet Resilience",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1378931225": {
+        "id": "1378931225",
+        "name": "Metal Skin",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "2566692615": {
+        "id": "2566692615",
+        "name": "Healing Booster",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3585132399": {
+        "id": "3585132399",
+        "name": "Fortitude",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "865846625": {
+        "id": "865846625",
+        "name": "Leech",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1298427343": {
+        "id": "1298427343",
+        "name": "upgrade_bullet_damage_reduction_aura",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3399065363": {
+        "id": "3399065363",
+        "name": "Sprint Boots",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "3074274290": {
+        "id": "3074274290",
+        "name": "Trophy Collector",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "2447176615": {
+        "id": "2447176615",
+        "name": "Enduring Speed",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "334300056": {
+        "id": "334300056",
+        "name": "Stamina Mastery",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "564937160": {
+        "id": "564937160",
+        "name": "Aerial Supremacy",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "668299740": {
+        "id": "668299740",
+        "name": "Rapid Rounds",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "4139877411": {
+        "id": "4139877411",
+        "name": "Extra Stamina",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "2481177645": {
+        "id": "2481177645",
+        "name": "Hunter's Aura",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "1962740586": {
+        "id": "1962740586",
+        "name": "upgrade_camouflage",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3038950099": {
+        "id": "3038950099",
+        "name": "upgrade_regenerative_armor",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1672893796": {
+        "id": "1672893796",
+        "name": "Grit",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "805079544": {
+        "id": "805079544",
+        "name": "Weapon Shielding",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "112198670": {
+        "id": "112198670",
+        "name": "Spirit Shielding",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1235347618": {
+        "id": "1235347618",
+        "name": "Battle Vest",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "3970837787": {
+        "id": "3970837787",
+        "name": "Enchanter's Emblem",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "968099481": {
+        "id": "968099481",
+        "name": "Extra Spirit",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "1439347412": {
+        "id": "1439347412",
+        "name": "Mystic Regeneration",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "7409189": {
+        "id": "7409189",
+        "name": "Improved Spirit",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "2226497419": {
+        "id": "2226497419",
+        "name": "Spiritual Overflow",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "3361075077": {
+        "id": "3361075077",
+        "name": "Return Fire",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1193964439": {
+        "id": "1193964439",
+        "name": "Greater Expansion",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "754480263": {
+        "id": "754480263",
+        "name": "Mystic Expansion",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "3776945997": {
+        "id": "3776945997",
+        "name": "Extra Charge",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "876563814": {
+        "id": "876563814",
+        "name": "Spirit Lifesteal",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "2645639421": {
+        "id": "2645639421",
+        "name": "upgrade_disarm",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "2971868509": {
+        "id": "2971868509",
+        "name": "Bullet Resist Shredder",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3577481646": {
+        "id": "3577481646",
+        "name": "Mystic Reverb",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "1998374645": {
+        "id": "1998374645",
+        "name": "Mystic Burst",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "2121044373": {
+        "id": "2121044373",
+        "name": "Tankbuster",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1052584266": {
+        "id": "1052584266",
+        "name": "upgrade_arcane_medallion",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "2081037738": {
+        "id": "2081037738",
+        "name": "Mystic Vulnerability",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "2603935618": {
+        "id": "2603935618",
+        "name": "Healbane",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1102081447": {
+        "id": "1102081447",
+        "name": "Mystic Slow",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3005970438": {
+        "id": "3005970438",
+        "name": "Escalating Exposure",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "787198704": {
+        "id": "787198704",
+        "name": "Rapid Recharge",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "424779525": {
+        "id": "424779525",
+        "name": "Omnicharge Signet",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "380806748": {
+        "id": "380806748",
+        "name": "Compress Cooldown",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3261353684": {
+        "id": "3261353684",
+        "name": "Superior Cooldown",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "915014646": {
+        "id": "915014646",
+        "name": "Transcendent Cooldown",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "3893702034": {
+        "id": "3893702034",
+        "name": "Timeless Emblem",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "3456645009": {
+        "id": "3456645009",
+        "name": "Shadow Step",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "3789823638": {
+        "id": "3789823638",
+        "name": "upgrade_duration_extender",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3013879715": {
+        "id": "3013879715",
+        "name": "upgrade_slowing_tech",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "1813726886": {
+        "id": "1813726886",
+        "name": "Slowing Hex",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "1219329868": {
+        "id": "1219329868",
+        "name": "Spirit Sap",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "2142980412": {
+        "id": "2142980412",
+        "name": "Focus Lens",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "2922054143": {
+        "id": "2922054143",
+        "name": "Rusted Barrel",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "2061878743": {
+        "id": "2061878743",
+        "name": "Disarming Hex",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1804594021": {
+        "id": "1804594021",
+        "name": "Rescue Beam",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "2329546537": {
+        "id": "2329546537",
+        "name": "Rebirth",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "4003032160": {
+        "id": "4003032160",
+        "name": "Soul Rebirth",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1993213427": {
+        "id": "1993213427",
+        "name": "upgrade_long_range_slowing_tech",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "3064545951": {
+        "id": "3064545951",
+        "name": "upgrade_full_spectrum",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "4249800570": {
+        "id": "4249800570",
+        "name": "upgrade_tech_cleave",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1288322878": {
+        "id": "1288322878",
+        "name": "upgrade_bonus_ability_charge_3",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "4245766497": {
+        "id": "4245766497",
+        "name": "upgrade_charge_mastery",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "3144988365": {
+        "id": "3144988365",
+        "name": "Decay",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "2417568017": {
+        "id": "2417568017",
+        "name": "Scourge",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "776145721": {
+        "id": "776145721",
+        "name": "upgrade_aoe_tech_shield",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "1254091416": {
+        "id": "1254091416",
+        "name": "Knockdown",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1371725689": {
+        "id": "1371725689",
+        "name": "Phantom Strike",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "3270001687": {
+        "id": "3270001687",
+        "name": "Warp Stone",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1152158042": {
+        "id": "1152158042",
+        "name": "Vortex Web",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "677738769": {
+        "id": "677738769",
+        "name": "Refresher",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "630839635": {
+        "id": "630839635",
+        "name": "Echo Shard",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "395944548": {
+        "id": "395944548",
+        "name": "Torment Pulse",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "3361811174": {
+        "id": "3361811174",
+        "name": "Cheat Death",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "3276909180": {
+        "id": "3276909180",
+        "name": "upgrade_reload_speed",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2560018361": {
+        "id": "2560018361",
+        "name": "upgrade_cloaking_device",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1798666702": {
+        "id": "1798666702",
+        "name": "Shadow Weave",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3662153307": {
+        "id": "3662153307",
+        "name": "upgrade_fire_rate_aura",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "607292868": {
+        "id": "607292868",
+        "name": "upgrade_weapon_overdrive_clip",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3830846077": {
+        "id": "3830846077",
+        "name": "Majestic Leap - Disabled",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "600033864": {
+        "id": "600033864",
+        "name": "Majestic Leap",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "271801138": {
+        "id": "271801138",
+        "name": "upgrade_aerial_assault",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2956256701": {
+        "id": "2956256701",
+        "name": "Healing Nova",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "2059712766": {
+        "id": "2059712766",
+        "name": "Restorative Locket",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1710079648": {
+        "id": "1710079648",
+        "name": "Healing Rite",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "4121584236": {
+        "id": "4121584236",
+        "name": "Shrink Ray",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "1797283378": {
+        "id": "1797283378",
+        "name": "Infuser",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "857669956": {
+        "id": "857669956",
+        "name": "Guardian Ward",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "1662311306": {
+        "id": "1662311306",
+        "name": "Divine Barrier",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "937242723": {
+        "id": "937242723",
+        "name": "upgrade_aoe_smoke_bomb",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1932939246": {
+        "id": "1932939246",
+        "name": "Alchemical Fire",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "989206714": {
+        "id": "989206714",
+        "name": "Blood Tribute",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3403085434": {
+        "id": "3403085434",
+        "name": "Fleetfoot",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "3977876567": {
+        "id": "3977876567",
+        "name": "Kinetic Dash",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1150006784": {
+        "id": "1150006784",
+        "name": "Arcane Surge",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "389243496": {
+        "id": "389243496",
+        "name": "upgrade_weapon_eater",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "315518818": {
+        "id": "315518818",
+        "name": "upgrade_weapon_instant_reload",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "3357231760": {
+        "id": "3357231760",
+        "name": "Unstoppable",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2407781327": {
+        "id": "2407781327",
+        "name": "Colossus",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1976391348": {
+        "id": "1976391348",
+        "name": "Cold Front",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3812615317": {
+        "id": "3812615317",
+        "name": "Arctic Blast",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "486220748": {
+        "id": "486220748",
+        "name": "upgrade_aoe_silence",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "2533252781": {
+        "id": "2533252781",
+        "name": "Ethereal Shift",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "385745034": {
+        "id": "385745034",
+        "name": "upgrade_stasis_bomb",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1641353616": {
+        "id": "1641353616",
+        "name": "upgrade_quarantine",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "2617435668": {
+        "id": "2617435668",
+        "name": "Cursed Relic",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "1959600032": {
+        "id": "1959600032",
+        "name": "upgrade_imbued_ability",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "2951612397": {
+        "id": "2951612397",
+        "name": "Duration Extender",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "2717651715": {
+        "id": "2717651715",
+        "name": "Superior Duration",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "365620721": {
+        "id": "365620721",
+        "name": "Glass Cannon",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "1409190604": {
+        "id": "1409190604",
+        "name": "Fury Trance",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1055679805": {
+        "id": "1055679805",
+        "name": "Vampiric Burst",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "481022061": {
+        "id": "481022061",
+        "name": "upgrade_mod_disruptor",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "2039312305": {
+        "id": "2039312305",
+        "name": "upgrade_frenzy",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "253917113": {
+        "id": "253917113",
+        "name": "upgrade_burst_fire_actuator",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "1252627263": {
+        "id": "1252627263",
+        "name": "Lifestrike",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "465043967": {
+        "id": "465043967",
+        "name": "Spirit Strike",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "3190916303": {
+        "id": "3190916303",
+        "name": "Spirit Snatch",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "26002154": {
+        "id": "26002154",
+        "name": "Melee Charge",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "800008313": {
+        "id": "800008313",
+        "name": "Crushing Fists",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "3572021243": {
+        "id": "3572021243",
+        "name": "upgrade_charmed_wraps",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "1326137213": {
+        "id": "1326137213",
+        "name": "upgrade_belt_fed_magazine",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "2820116164": {
+        "id": "2820116164",
+        "name": "Diviner's Kevlar",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2672389724": {
+        "id": "2672389724",
+        "name": "upgrade_stabilizing_tripod",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "2947183272": {
+        "id": "2947183272",
+        "name": "Radiant Regeneration",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "2519598785": {
+        "id": "2519598785",
+        "name": "Boundless Spirit",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "2739107182": {
+        "id": "2739107182",
+        "name": "Burst Fire",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "558396679": {
+        "id": "558396679",
+        "name": "Enduring Spirit",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "2829638276": {
+        "id": "2829638276",
+        "name": "Extra Regen",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "2985482185": {
+        "id": "2985482185",
+        "name": "upgrade_magic_clarity",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "1292979587": {
+        "id": "1292979587",
+        "name": "Surge of Power",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "1925087134": {
+        "id": "1925087134",
+        "name": "Suppressor",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "84321454": {
+        "id": "84321454",
+        "name": "Quicksilver Reload",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "spirit"
+    },
+    "3919289022": {
+        "id": "3919289022",
+        "name": "Mercurial Magnum",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "2717142638": {
+        "id": "2717142638",
+        "name": "upgrade_arcane_eater",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2574520834": {
+        "id": "2574520834",
+        "name": "upgrade_predator_precision",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2407033488": {
+        "id": "2407033488",
+        "name": "Intensifying Magazine",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2463960640": {
+        "id": "2463960640",
+        "name": "Escalating Resilience",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "4104549924": {
+        "id": "4104549924",
+        "name": "Swift Striker",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "865958998": {
+        "id": "865958998",
+        "name": "Veil Walker",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "1644605047": {
+        "id": "1644605047",
+        "name": "Reactive Barrier",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "vitality"
+    },
+    "951866250": {
+        "id": "951866250",
+        "name": "Indomitable",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "3862866912": {
+        "id": "3862866912",
+        "name": "Restorative Shot",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "weapon"
+    },
+    "2356412290": {
+        "id": "2356412290",
+        "name": "Titanic Magazine",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "3647584222": {
+        "id": "3647584222",
+        "name": "Split Shot",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "381961617": {
+        "id": "381961617",
+        "name": "Active Reload",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2800629741": {
+        "id": "2800629741",
+        "name": "Magic Carpet",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "1200177229": {
+        "id": "1200177229",
+        "name": "Hexafoil Ward",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "vitality"
+    },
+    "2331566268": {
+        "id": "2331566268",
+        "name": "Hex-Sealed Knuckles",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "194116661": {
+        "id": "194116661",
+        "name": "Conjure Missiles",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "138320648": {
+        "id": "138320648",
+        "name": "Patron's Healing",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "vitality"
+    },
+    "343572757": {
+        "id": "343572757",
+        "name": "Spirit Burn",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "493591231": {
+        "id": "493591231",
+        "name": "Lightning Scroll",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "spirit"
+    },
+    "3913864662": {
+        "id": "3913864662",
+        "name": "Soul Explosion",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "spirit"
+    },
+    "3028234315": {
+        "id": "3028234315",
+        "name": "Witchmail",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1427630806": {
+        "id": "1427630806",
+        "name": "Healing Tempo",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "3346798998": {
+        "id": "3346798998",
+        "name": "Endless Magazine",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "1497973293": {
+        "id": "1497973293",
+        "name": "Glass Cannon v2",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "673001892": {
+        "id": "673001892",
+        "name": "Armor Piercing Rounds",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "3269957497": {
+        "id": "3269957497",
+        "name": "Infinite Rounds",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "weapon"
+    },
+    "3491236900": {
+        "id": "3491236900",
+        "name": "Plated Armor",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1955841979": {
+        "id": "1955841979",
+        "name": "Spellbreaker",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "1250307611": {
+        "id": "1250307611",
+        "name": "Juggernaut",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "vitality"
+    },
+    "2221211450": {
+        "id": "2221211450",
+        "name": "Spellslinger",
+        "type": "upgrade",
+        "cost": 6400,
+        "slot_type": "weapon"
+    },
+    "98582110": {
+        "id": "98582110",
+        "name": "Stalker",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "690458959": {
+        "id": "690458959",
+        "name": "Express Shot",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "1736094134": {
+        "id": "1736094134",
+        "name": "Seraphim Wings",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "2054088113": {
+        "id": "2054088113",
+        "name": "Mystical Piano",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "3949773228": {
+        "id": "3949773228",
+        "name": "Nullification Burst",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "3729138568": {
+        "id": "3729138568",
+        "name": "Celestial Blessing",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "230297145": {
+        "id": "230297145",
+        "name": "Eternal Gift",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "4050602737": {
+        "id": "4050602737",
+        "name": "Mystic Conduit",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "3568217437": {
+        "id": "3568217437",
+        "name": "Haunting Shot",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "weapon"
+    },
+    "3523480953": {
+        "id": "3523480953",
+        "name": "Cloak of Opportunity",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "64550694": {
+        "id": "64550694",
+        "name": "Runed Gauntlets",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "weapon"
+    },
+    "1825399334": {
+        "id": "1825399334",
+        "name": "Electric Slippers",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "1132564516": {
+        "id": "1132564516",
+        "name": "Prism Blast",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "1558545403": {
+        "id": "1558545403",
+        "name": "Unstable Concoction",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "2068250483": {
+        "id": "2068250483",
+        "name": "Frostbite Charm",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "spirit"
+    },
+    "2319629810": {
+        "id": "2319629810",
+        "name": "Shadow Strike",
+        "type": "upgrade",
+        "cost": 9999,
+        "slot_type": "vitality"
+    },
+    "3294954488": {
+        "id": "3294954488",
+        "name": "Ballistic Enchantment",
+        "type": "upgrade",
+        "cost": 3200,
+        "slot_type": "weapon"
+    },
+    "1763073141": {
+        "id": "1763073141",
+        "name": "Recharging Rush",
+        "type": "upgrade",
+        "cost": 1600,
+        "slot_type": "weapon"
+    },
+    "2462046703": {
+        "id": "2462046703",
+        "name": "Golden Goose Egg",
+        "type": "upgrade",
+        "cost": 800,
+        "slot_type": "spirit"
+    },
+    "2029849853": {
+        "id": "2029849853",
+        "name": "51:20",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2559648467": {
+        "id": "2559648467",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "1764146857": {
+        "id": "1764146857",
+        "name": "Gutshot",
+        "type": "ability",
+        "cost": 0
+    },
+    "3093645682": {
+        "id": "3093645682",
+        "name": "Potent Vapors",
+        "type": "ability",
+        "cost": 0
+    },
+    "2260066289": {
+        "id": "2260066289",
+        "name": "Grit",
+        "type": "ability",
+        "cost": 0
+    },
+    "4158849812": {
+        "id": "4158849812",
+        "name": "Witching Hour",
+        "type": "ability",
+        "cost": 0
+    },
+    "519002049": {
+        "id": "519002049",
+        "name": "Ira Domini",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2918874166": {
+        "id": "2918874166",
+        "name": "Ira Domini",
+        "type": "ability",
+        "cost": 0
+    },
+    "476551004": {
+        "id": "476551004",
+        "name": "Teargas Grenade",
+        "type": "ability",
+        "cost": 0
+    },
+    "1034605902": {
+        "id": "1034605902",
+        "name": "Blessed Tac-Vest",
+        "type": "ability",
+        "cost": 0
+    },
+    "2443795083": {
+        "id": "2443795083",
+        "name": "Choking Incense",
+        "type": "ability",
+        "cost": 0
+    },
+    "911307831": {
+        "id": "911307831",
+        "name": "Consecrating Grenade",
+        "type": "ability",
+        "cost": 0
+    },
+    "11154161": {
+        "id": "11154161",
+        "name": "Hex-Lined Snap Trap",
+        "type": "ability",
+        "cost": 0
+    },
+    "932332550": {
+        "id": "932332550",
+        "name": "ability_familiar_alt_weapon",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1961336982": {
+        "id": "1961336982",
+        "name": "Gun Damage",
+        "type": "weapon",
+        "cost": 0
+    },
+    "2247993425": {
+        "id": "2247993425",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3692321247": {
+        "id": "3692321247",
+        "name": "Pillow Toss",
+        "type": "ability",
+        "cost": 0
+    },
+    "2396527575": {
+        "id": "2396527575",
+        "name": "Naptime",
+        "type": "ability",
+        "cost": 0
+    },
+    "536278136": {
+        "id": "536278136",
+        "name": "Lil Helpers",
+        "type": "ability",
+        "cost": 0
+    },
+    "1568845221": {
+        "id": "1568845221",
+        "name": "Tag Along",
+        "type": "ability",
+        "cost": 0
+    },
+    "2975289954": {
+        "id": "2975289954",
+        "name": "Hop To Ally",
+        "type": "ability",
+        "cost": 0
+    },
+    "1769657144": {
+        "id": "1769657144",
+        "name": "Pride of Ixia",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1470169038": {
+        "id": "1470169038",
+        "name": "Pride of Ixia",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1224118768": {
+        "id": "1224118768",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "725153709": {
+        "id": "725153709",
+        "name": "Disengaging Sigil",
+        "type": "ability",
+        "cost": 0
+    },
+    "2463759749": {
+        "id": "2463759749",
+        "name": "ability_fencer_riposte_target_select",
+        "type": "ability",
+        "cost": 0
+    },
+    "2006773718": {
+        "id": "2006773718",
+        "name": "Riposte",
+        "type": "ability",
+        "cost": 0
+    },
+    "147493976": {
+        "id": "147493976",
+        "name": "Flawless Advance",
+        "type": "ability",
+        "cost": 0
+    },
+    "494112189": {
+        "id": "494112189",
+        "name": "Itani Lo Sahn",
+        "type": "ability",
+        "cost": 0
+    },
+    "2834635521": {
+        "id": "2834635521",
+        "name": "The Teacher",
+        "type": "weapon",
+        "cost": 0
+    },
+    "406697186": {
+        "id": "406697186",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "2001589780": {
+        "id": "2001589780",
+        "name": "Grasping Hands",
+        "type": "ability",
+        "cost": 0
+    },
+    "3214055642": {
+        "id": "3214055642",
+        "name": "Jar of Dead",
+        "type": "ability",
+        "cost": 0
+    },
+    "4110547059": {
+        "id": "4110547059",
+        "name": "Borrowed Decree",
+        "type": "ability",
+        "cost": 0
+    },
+    "2750845124": {
+        "id": "2750845124",
+        "name": "Borrow Life",
+        "type": "ability",
+        "cost": 0
+    },
+    "152191637": {
+        "id": "152191637",
+        "name": "ability_necro_nukemap",
+        "type": "ability",
+        "cost": 0
+    },
+    "3708354687": {
+        "id": "3708354687",
+        "name": "ability_necro_killsummon_trigger",
+        "type": "ability",
+        "cost": 0
+    },
+    "1777769116": {
+        "id": "1777769116",
+        "name": "Back Off!",
+        "type": "ability",
+        "cost": 0
+    },
+    "629925354": {
+        "id": "629925354",
+        "name": "Essence Theft",
+        "type": "ability",
+        "cost": 0
+    },
+    "1991038380": {
+        "id": "1991038380",
+        "name": "Haunting Spectres",
+        "type": "ability",
+        "cost": 0
+    },
+    "2462670856": {
+        "id": "2462670856",
+        "name": "Wither & Die",
+        "type": "ability",
+        "cost": 0
+    },
+    "2362587754": {
+        "id": "2362587754",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3922245490": {
+        "id": "3922245490",
+        "name": "citadel_weapon_werewolf_rifle",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3995444919": {
+        "id": "3995444919",
+        "name": "Lycan Claws",
+        "type": "weapon",
+        "cost": 0
+    },
+    "1385849824": {
+        "id": "1385849824",
+        "name": "Slam Fire",
+        "type": "ability",
+        "cost": 0
+    },
+    "2717130900": {
+        "id": "2717130900",
+        "name": "Boot Kick",
+        "type": "ability",
+        "cost": 0
+    },
+    "4009459244": {
+        "id": "4009459244",
+        "name": "Mauling Leap",
+        "type": "ability",
+        "cost": 0
+    },
+    "3983754897": {
+        "id": "3983754897",
+        "name": "Entangling Bola",
+        "type": "ability",
+        "cost": 0
+    },
+    "3117047651": {
+        "id": "3117047651",
+        "name": "Tail Whack",
+        "type": "ability",
+        "cost": 0
+    },
+    "3200615766": {
+        "id": "3200615766",
+        "name": "ability_werewolf_trackingbomb",
+        "type": "ability",
+        "cost": 0
+    },
+    "515791019": {
+        "id": "515791019",
+        "name": "Lycan Curse",
+        "type": "ability",
+        "cost": 0
+    },
+    "2074867748": {
+        "id": "2074867748",
+        "name": "ability_werewolf_hunt",
+        "type": "ability",
+        "cost": 0
+    },
+    "1532069386": {
+        "id": "1532069386",
+        "name": "ability_werewolf_passive",
+        "type": "ability",
+        "cost": 0
+    },
+    "2554327994": {
+        "id": "2554327994",
+        "name": "On The Hunt",
+        "type": "ability",
+        "cost": 0
+    },
+    "2792879300": {
+        "id": "2792879300",
+        "name": "End the Curse",
+        "type": "ability",
+        "cost": 0
+    },
+    "2565763509": {
+        "id": "2565763509",
+        "name": "Go For The Throat",
+        "type": "ability",
+        "cost": 0
+    },
+    "3867044190": {
+        "id": "3867044190",
+        "name": "Crushing Leap",
+        "type": "ability",
+        "cost": 0
+    },
+    "3744272782": {
+        "id": "3744272782",
+        "name": "Carny Life",
+        "type": "weapon",
+        "cost": 0
+    },
+    "3021389868": {
+        "id": "3021389868",
+        "name": "Melee",
+        "type": "ability",
+        "cost": 0
+    },
+    "3443575800": {
+        "id": "3443575800",
+        "name": "Light Eater",
+        "type": "ability",
+        "cost": 0
+    },
+    "1950738949": {
+        "id": "1950738949",
+        "name": "Dazzling Trick",
+        "type": "ability",
+        "cost": 0
+    },
+    "2590796390": {
+        "id": "2590796390",
+        "name": "Shining Wonder",
+        "type": "ability",
+        "cost": 0
+    },
+    "1011349580": {
+        "id": "1011349580",
+        "name": "Radiant Daggers",
+        "type": "ability",
+        "cost": 0
+    }
+}
