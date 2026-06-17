@@ -30,10 +30,10 @@ class DeadlockBuildGenerator:
             self.ability_mapping = {int(k): int(v) for k, v in json.load(f).items()}
             
         # Загрузка моделей
-        self.item_model = xgb.XGBClassifier()
+        self.item_model = xgb.XGBClassifier(n_jobs=1)
         self.item_model.load_model(os.path.join(self.models_dir, f"xgb_items_hero_{hero_id}.json"))
         
-        self.ability_model = xgb.XGBClassifier()
+        self.ability_model = xgb.XGBClassifier(n_jobs=1)
         self.ability_model.load_model(os.path.join(self.models_dir, f"xgb_abilities_hero_{hero_id}.json"))
         
         # Инициализация состояния
