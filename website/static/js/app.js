@@ -65,18 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("createRoomBtn").addEventListener("click", () => {
             let nick = document.getElementById("nicknameInput").value.trim();
             if(!nick) nick = "Player_" + Math.floor(1000 + Math.random() * 9000);
-            myNickname = nick;
+            sessionStorage.setItem("myNickname", nick);
             const code = Math.random().toString(36).substring(2, 7).toUpperCase();
-            window.location.href = `/room/${code}/?nick=${myNickname}`;
+            window.location.href = `/room/${code}/`;
         });
         document.getElementById("joinRoomBtn").addEventListener("click", () => {
             let nick = document.getElementById("nicknameInput").value.trim();
             if(!nick) nick = "Player_" + Math.floor(1000 + Math.random() * 9000);
-            myNickname = nick;
+            sessionStorage.setItem("myNickname", nick);
             const code = document.getElementById("roomCodeInput").value.toUpperCase();
-            if(code) window.location.href = `/room/${code}/?nick=${myNickname}`;
+            if(code) window.location.href = `/room/${code}/`;
         });
         document.getElementById("leaveRoomBtn").addEventListener("click", () => {
+            sessionStorage.removeItem("myState");
             window.location.href = `/`;
         });
     }
@@ -105,9 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     archetype: data.archetype
                 };
                 
+                sessionStorage.setItem("myState", JSON.stringify(playersState[myNickname]));
+                
                 renderPlayers();
                 renderAbilityTimeline(data.abilities);
-                
                 addHistory(data.items);
                 
                 if (ws) {
@@ -243,6 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("historyList").innerHTML = "";
             abilityPath.innerHTML = '<div style="color: #666; font-family: var(--font-body); font-style: italic;">AWAITING INPUT...</div>';
             playersState[myNickname] = { hero: 0, items: [], abilities: [], cost: 0, archetype: "" };
+            sessionStorage.removeItem("myState");
             renderPlayers();
             if (ws) {
                 ws.send(JSON.stringify({ type: 'update', nick: myNickname, state: playersState[myNickname] }));
@@ -252,8 +255,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- WebSocket ---
     function connectWebSocket() {
-        const params = new URLSearchParams(window.location.search);
-        myNickname = params.get('nick') || ("Player_" + Math.floor(1000 + Math.random() * 9000));
+        myNickname = sessionStorage.getItem("myNickname");
+        if (!myNickname) {
+            const params = new URLSearchParams(window.location.search);
+            myNickname = params.get('nick') || ("Player_" + Math.floor(1000 + Math.random() * 9000));
+            sessionStorage.setItem("myNickname", myNickname);
+        }
         
         document.getElementById("partyControlsInputs").style.display = "none";
         document.getElementById("roomInfo").style.display = "flex";
@@ -264,10 +271,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ws = new WebSocket(`${protocol}//${window.location.host}/ws/room/${roomCode}/`);
         
         ws.onopen = () => {
-            playersState[myNickname] = { hero: 0, items: [], abilities: [], cost: 0 };
+            let savedState = sessionStorage.getItem("myState");
+            if (savedState) {
+                playersState[myNickname] = JSON.parse(savedState);
+            } else {
+                playersState[myNickname] = { hero: 0, items: [], abilities: [], cost: 0 };
+            }
+            
             ws.send(JSON.stringify({ type: 'join', nick: myNickname, state: playersState[myNickname] }));
             renderPlayers();
-            addHistory("Connected to room " + roomCode);
         };
         
         ws.onmessage = (e) => {
@@ -276,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 playersState[data.nick] = data.state;
                 renderPlayers();
                 if (data.type === 'join') {
-                    // Send my state back to the new player
+                    // Always respond to new joins with our current state so they can see us
                     ws.send(JSON.stringify({ type: 'update', nick: myNickname, state: playersState[myNickname] }));
                 }
             }
