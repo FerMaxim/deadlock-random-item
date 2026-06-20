@@ -10,6 +10,5 @@ db.sqlite3
 website/staticfiles/
 .DS_Store
 *.parquet
-*.csv
-main/ml/models/
+# *.csv
 website/db.sqlite3
