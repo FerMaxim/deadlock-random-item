@@ -31,11 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     function initHeroGrid() {
-        const activeHeroes = [1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 27, 31, 35, 50, 52, 58, 60, 63, 64, 65, 66, 67, 69, 72, 76, 77, 79, 80, 81];
+        const activeHeroes = ['random', 1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 27, 31, 35, 50, 52, 58, 60, 63, 64, 65, 66, 67, 69, 72, 76, 77, 79, 80, 81];
         activeHeroes.forEach(id => {
             const div = document.createElement("div");
             div.className = "hero-avatar";
-            div.innerHTML = `<img src="/static/images/heroes/${id}.png" alt="Hero ${id}" onerror="this.style.display='none'">`;
+            if (id === 'random') {
+                div.innerHTML = `<div style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; font-size:24px; font-weight:bold;">?</div>`;
+            } else {
+                div.innerHTML = `<img src="/static/images/heroes/${id}.png" alt="Hero ${id}" onerror="this.style.display='none'">`;
+            }
             div.onclick = () => {
                 document.querySelectorAll(".hero-avatar").forEach(el => el.classList.remove("selected"));
                 div.classList.add("selected");
@@ -186,6 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="slot-number">${i+1}</span>
                         <img src="/static/images/items/${item.slot}/${encodeURIComponent(item.name)}.png" alt="${item.name}" onerror="this.style.display='none'">
                         <div class="item-cost">${item.cost}</div>
+                        ${isMe ? `<button class="remove-item-btn" data-index="${i}">×</button>` : ''}
                     </div>
                 `;
             } else {
@@ -252,6 +257,23 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+    
+    // Remove Item Listener
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('remove-item-btn')) {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            const state = playersState[myNickname];
+            if (state && state.items && state.items.length > index) {
+                state.cost -= state.items[index].cost;
+                state.items.splice(index, 1);
+                sessionStorage.setItem("myState", JSON.stringify(state));
+                renderPlayers();
+                if (ws) {
+                    ws.send(JSON.stringify({ type: 'update', nick: myNickname, state: state }));
+                }
+            }
+        }
+    });
     
     // --- WebSocket ---
     function connectWebSocket() {

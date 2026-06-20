@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Items Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0b10;
+            --bg-card: rgba(20, 22, 30, 0.6);
+            --bg-card-hover: rgba(30, 34, 45, 0.8);
+            --primary-accent: #6d28d9;
+            --primary-accent-glow: rgba(109, 40, 217, 0.4);
+            
+            --weapon-color: #f59e0b;
+            --vitality-color: #10b981;
+            --spirit-color: #a855f7;
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(109, 40, 217, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.05), transparent 25%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 1rem 0;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .category-section {
+            margin-bottom: 4rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .category-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-title.Weapon { color: var(--weapon-color); text-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+        .category-title.Vitality { color: var(--vitality-color); text-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+        .category-title.Spirit { color: var(--spirit-color); text-shadow: 0 0 15px rgba(168, 85, 247, 0.2); }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .item-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .item-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: var(--bg-card-hover);
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .item-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Specific glows based on category */
+        .category-Weapon .item-card:hover { border-color: rgba(245, 158, 11, 0.3); box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1); }
+        .category-Vitality .item-card:hover { border-color: rgba(16, 185, 129, 0.3); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1); }
+        .category-Spirit .item-card:hover { border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1); }
+
+        .item-icon-wrapper {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .item-card:hover .item-icon {
+            transform: scale(1.1);
+        }
+
+        .item-info {
+            flex-grow: 1;
+            z-index: 1;
+        }
+
+        .item-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .item-cost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(0,0,0,0.4);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            color: #fbbf24; /* Soul color */
+        }
+
+        .item-cost::before {
+            content: '⚡';
+            font-size: 0.8rem;
+        }
+
+        .item-type-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-muted);
+        }
+        
+        .active-badge {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .items-grid { grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Deadlock Arsenal</h1>
+            <p class="subtitle">Complete database of all available items in Deadlock, categorized by their respective affinities and power tiers.</p>
+        </header>
+
+        {% for cat, cost_groups in categories.items %}
+        {% if cost_groups %}
+        <section class="category-section category-{{ cat }}">
+            <div class="category-header">
+                <h2 class="category-title {{ cat }}">
+                    {% if cat == 'Weapon' %}⚔️
+                    {% elif cat == 'Vitality' %}❤️
+                    {% elif cat == 'Spirit' %}🔮
+                    {% endif %}
+                    {{ cat }} Items
+                </h2>
+            </div>
+
+            {% for cost, items in cost_groups %}
+            <div class="cost-group">
+                <h3 class="cost-group-title" style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin: 2rem 0 1rem 0; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #fbbf24;">⚡ {{ cost }} Souls</span>
+                    <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">(Количество: {{ items|length }})</span>
+                </h3>
+                <div class="items-grid">
+                    {% for item in items %}
+                    <div class="item-card">
+                        {% if item.is_active or 'Active' in item.description %}
+                        <div class="item-type-badge active-badge">Active</div>
+                        {% endif %}
+                        
+                        <div class="item-icon-wrapper">
+                            <img src="{% static 'images/items/'|add:cat|add:'/'|add:item.name|add:'.png' %}" 
+                                 alt="{{ item.name }}" 
+                                 class="item-icon"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzMzMyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiM2NjYiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4/PC90ZXh0Pjwvc3ZnPg=='" />
+                        </div>
+                        
+                        <div class="item-info">
+                            <h3 class="item-name">{{ item.name }}</h3>
+                            <div class="item-cost">{{ item.cost }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

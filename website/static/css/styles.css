@@ -195,3 +195,32 @@ body {
 .history-item.cat-Weapon .hist-cost { color: var(--color-weapon); }
 .history-item.cat-Vitality .hist-cost { color: var(--color-vitality); }
 .history-item.cat-Spirit .hist-cost { color: var(--color-spirit); }
+
+/* Remove Item Button */
+.remove-item-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+    transition: transform 0.2s;
+}
+.remove-item-btn:hover {
+    transform: scale(1.1);
+}
+.inv-slot.filled:hover .remove-item-btn {
+    display: block;
+}

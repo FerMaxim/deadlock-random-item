@@ -682,5 +682,203 @@
             "name": "Rake",
             "type": "signature"
         }
+    },
+    "64": {
+        "1033019133": {
+            "name": "Bloodscent",
+            "type": "signature"
+        },
+        "1168182161": {
+            "name": "Eternal Night",
+            "type": "signature"
+        },
+        "1264175662": {
+            "name": "Stalker's Mark",
+            "type": "signature"
+        },
+        "3120550633": {
+            "name": "Rend",
+            "type": "ultimate"
+        }
+    },
+    "65": {
+        "11154161": {
+            "name": "Hex-Lined Snap Trap",
+            "type": "signature"
+        },
+        "911307831": {
+            "name": "Consecrating Grenade",
+            "type": "signature"
+        },
+        "1764146857": {
+            "name": "Gutshot",
+            "type": "signature"
+        },
+        "2918874166": {
+            "name": "Ira Domini",
+            "type": "ultimate"
+        }
+    },
+    "66": {
+        "1472593493": {
+            "name": "Aura of Suffering",
+            "type": "signature"
+        },
+        "2043074967": {
+            "name": "Pain Battery",
+            "type": "signature"
+        },
+        "3493884851": {
+            "name": "Shocking Reanimation",
+            "type": "signature"
+        },
+        "3727084744": {
+            "name": "Jumpstart",
+            "type": "ultimate"
+        }
+    },
+    "67": {
+        "604448162": {
+            "name": "Bookwyrm",
+            "type": "signature"
+        },
+        "1841901343": {
+            "name": "Rallying Charge",
+            "type": "signature"
+        },
+        "3054993162": {
+            "name": "Captivating Read",
+            "type": "signature"
+        },
+        "3553292912": {
+            "name": "Plot Armor",
+            "type": "ultimate"
+        }
+    },
+    "69": {
+        "103496908": {
+            "name": "Call Bell",
+            "type": "signature"
+        },
+        "109766091": {
+            "name": "Doorway",
+            "type": "signature"
+        },
+        "1703045691": {
+            "name": "Hotel Guest",
+            "type": "signature"
+        },
+        "1719512318": {
+            "name": "Luggage Cart",
+            "type": "ultimate"
+        }
+    },
+    "72": {
+        "1792773251": {
+            "name": "Rising Ram",
+            "type": "signature"
+        },
+        "1841661392": {
+            "name": "Bashdown",
+            "type": "signature"
+        },
+        "3296031213": {
+            "name": "Blasted",
+            "type": "signature"
+        },
+        "3762861984": {
+            "name": "Chain Gang",
+            "type": "ultimate"
+        }
+    },
+    "76": {
+        "629925354": {
+            "name": "Essence Theft",
+            "type": "signature"
+        },
+        "2001589780": {
+            "name": "Grasping Hands",
+            "type": "signature"
+        },
+        "3214055642": {
+            "name": "Jar of Dead",
+            "type": "signature"
+        },
+        "4110547059": {
+            "name": "Borrowed Decree",
+            "type": "ultimate"
+        }
+    },
+    "77": {
+        "147493976": {
+            "name": "Flawless Advance",
+            "type": "signature"
+        },
+        "494112189": {
+            "name": "Itani Lo Sahn",
+            "type": "signature"
+        },
+        "725153709": {
+            "name": "Disengaging Sigil",
+            "type": "signature"
+        },
+        "2006773718": {
+            "name": "Riposte",
+            "type": "ultimate"
+        }
+    },
+    "79": {
+        "536278136": {
+            "name": "Lil Helpers",
+            "type": "signature"
+        },
+        "1568845221": {
+            "name": "Tag Along",
+            "type": "signature"
+        },
+        "2396527575": {
+            "name": "Naptime",
+            "type": "signature"
+        },
+        "3692321247": {
+            "name": "Pillow Toss",
+            "type": "ultimate"
+        }
+    },
+    "80": {
+        "515791019": {
+            "name": "Lycan Curse",
+            "type": "signature"
+        },
+        "1385849824": {
+            "name": "Slam Fire",
+            "type": "signature"
+        },
+        "2717130900": {
+            "name": "Boot Kick",
+            "type": "signature"
+        },
+        "3983754897": {
+            "name": "Entangling Bola",
+            "type": "ultimate"
+        }
+    },
+    "81": {
+        "1011349580": {
+            "name": "Radiant Daggers",
+            "type": "signature"
+        },
+        "1950738949": {
+            "name": "Dazzling Trick",
+            "type": "signature"
+        },
+        "2590796390": {
+            "name": "Shining Wonder",
+            "type": "signature"
+        },
+        "3443575800": {
+            "name": "Light Eater",
+            "type": "ultimate"
+        }
     }
 }

@@ -146,8 +146,20 @@ class DeadlockBuildGenerator:
                 continue
                 
             candidate_info = self.shop_dict.get(str(candidate_item_id), {})
-            candidate_class = candidate_info.get("class_name")
+            candidate_class = candidate_info.get("class_name", "")
+            candidate_name = candidate_info.get("name", "").lower()
             
+            BLACKLISTED_ITEMS = {
+                "conjure missiles", "endless magazine", "glass cannon v2", 
+                "enduring spirit", "patron's healing", "bullet armor", 
+                "toughness", "spirit armor", "hexafoil ward", 
+                "majestic leap - disabled", "soul rebirth", "ammo scavenger", 
+                "hex-sealed knuckles", "soul explosion", "rebirth"
+            }
+            # Проверка на служебные/скрытые предметы
+            if candidate_name.startswith("upgrade_") or candidate_name.startswith("item_") or candidate_name in BLACKLISTED_ITEMS:
+                continue
+                
             # Проверка 2: Лимит активных предметов
             if candidate_info.get("is_active", False) and self.count_active_items() >= 4:
                 continue
@@ -170,9 +182,18 @@ class DeadlockBuildGenerator:
         if not valid_candidates:
             # Fallback: pick any item not in inventory
             available = []
+            BLACKLISTED_ITEMS = {
+                "conjure missiles", "endless magazine", "glass cannon v2", 
+                "enduring spirit", "patron's healing", "bullet armor", 
+                "toughness", "spirit armor", "hexafoil ward", 
+                "majestic leap - disabled", "soul rebirth", "ammo scavenger", 
+                "hex-sealed knuckles", "soul explosion", "rebirth"
+            }
             for item_id_str, info in self.shop_dict.items():
                 iid = int(item_id_str)
-                if iid not in self.inventory:
+                name = info.get("name", "").lower()
+                c_class = info.get("class_name", "").lower()
+                if iid not in self.inventory and not name.startswith("upgrade_") and not name.startswith("item_") and name not in BLACKLISTED_ITEMS:
                     available.append(iid)
             if not available:
                 return False
